@@ -7,3 +7,5 @@ Of course, that someone had no idea what you (or anyone) might want to print on 
 In `print.py` in the text editor at top-right, write a program that prints anything other than `hello, world`.
 
 Recall that you can run (and therefore test) your program by running `python print.py` in the terminal window at bottom-right.
+
+{% check %}
