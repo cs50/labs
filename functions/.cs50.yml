@@ -1,0 +1,5 @@
+lab50:
+  file: print.py
+  window:
+    - editor
+    - terminal
