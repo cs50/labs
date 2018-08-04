@@ -22,6 +22,6 @@ Modify `types.py` in the text editor at top-right in such a way that the program
 
 {% check %}
 
-{% hint %}
+{% spoiler %}
 TODO
-{% endhint %}
+{% endspoiler %}
