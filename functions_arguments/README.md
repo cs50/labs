@@ -9,3 +9,5 @@ In `print.py` in the text editor at top-right, write a program that prints anyth
 Recall that you can run (and therefore test) your program by running `python print.py` in the terminal window at bottom-right.
 
 {% check %}
+
+{% submit %}
