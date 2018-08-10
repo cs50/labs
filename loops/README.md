@@ -8,7 +8,7 @@ Let's recreate a bit of that game, albeit in text!
 
 In `mario.py` in the text editor at top-right, implement a program that prints, quite simply, `????`, without using a loop.
 
-{% if check50 foo/bar/baz qux %}
+{% if 1 %}
 IN README
 {% endif %}
 
