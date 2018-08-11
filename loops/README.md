@@ -8,9 +8,13 @@ Let's recreate a bit of that game, albeit in text!
 
 In `mario.py` in the text editor at top-right, implement a program that prints, quite simply, `????`, without using a loop.
 
-{% if 1 %}
+{% check foo/bar/baz "Check your code" %}
+{% if qux %}
 IN README
+{% else %}
+IN README TOO
 {% endif %}
+{% endcheck %}
 
 {% next %}
 
