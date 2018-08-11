@@ -12,8 +12,6 @@ In `mario.py` in the text editor at top-right, implement a program that prints, 
 IN README
 {% endif %}
 
-{% check %}
-
 {% next %}
 
 Elsewhere in Super Mario Bros., there might be more (or even fewer) than four question marks in the sky. Let's prepare for as much.
