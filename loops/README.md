@@ -13,7 +13,7 @@ In `mario.py` in the text editor at top-right, implement a program that prints, 
 IN README
 {% else %}
 IN README TOO
-{% enif %}
+{% endif %}
 {% endcheck %}
 
 {% next %}
