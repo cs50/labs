@@ -18,8 +18,6 @@ Elsewhere in Super Mario Bros., there might be more (or even fewer) than four qu
 
 Modify `mario.py` in the text editor at top-right in such a way that the program prints, quite simply, `????`, this time using a loop to print each question mark one at a time, each on the same line.
 
-{% check %}
-
 {% spoiler Hint %}
 To print a question mark without a newline (i.e., carriage return) after it, use
 
@@ -52,7 +50,5 @@ Modify `mario.py` in the text editor at top-right in such a way that the program
 
 1. prompts the user for a positive integer, and
 2. prints that many question marks, all on the same line.
-
-{% check %}
 
 {% submit %}
