@@ -18,11 +18,7 @@ In `mario.py` in the text editor at top-right, implement a program that prints, 
 {% endspoiler %}
 
 {% check "Does your code compile?" %}
-{% if results.qux %}
-IN README
-{% else %}
-IN README TOO
-{% endif %}
+FROM README
 {% endcheck %}
 
 {% video https://www.youtube.com/watch?v=ivyseNMVt-4 %}
