@@ -19,12 +19,7 @@ In `mario.py` in the text editor at top-right, implement a program that prints, 
 
 {% endspoiler %}
 
-A
-{% for i in (1..5) %}
-* {{ i }}{% endfor %}
-B
-
-{% check foo/bar/baz "Check your code" %}
+{% check "Does your code compile?" %}
 {% if qux %}
 IN README
 {% else %}
