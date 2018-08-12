@@ -8,7 +8,7 @@ Let's recreate a bit of that game, albeit in text!
 
 In `mario.py` in the text editor at top-right, implement a program that prints, quite simply, `????`, without using a loop.
 
-{% spoiler "Does your code work?" %}
+{% spoiler %}
 - [x] caesar.c exists
     * checking that caesar.c exists...
 - [x] caesar.c compiles
