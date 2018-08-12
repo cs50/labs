@@ -11,7 +11,7 @@ In `mario.py` in the text editor at top-right, implement a program that prints, 
 A
 {% for i in (1..5) %}
 
-x
+* {{ i }}
 
 {% endfor %}
 B
