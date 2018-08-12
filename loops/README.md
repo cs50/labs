@@ -8,6 +8,12 @@ Let's recreate a bit of that game, albeit in text!
 
 In `mario.py` in the text editor at top-right, implement a program that prints, quite simply, `????`, without using a loop.
 
+{% spoiler "Does your code work?" %}
+1. caesar.c exists
+1. caesar.c compiles
+1. encrypts "a" as "b" using 1 as key
+{% endspoiler %}
+
 A
 {% for i in (1..5) %}
 * {{ i }}{% endfor %}
