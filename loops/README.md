@@ -10,12 +10,12 @@ In `mario.py` in the text editor at top-right, implement a program that prints, 
 
 {% spoiler "Does your code work?" %}
 
-1. caesar.c exists
+- [x] caesar.c exists
     * checking that caesar.c exists...
-1. caesar.c compiles
+- [x] caesar.c compiles
     * running `clang caesar.c -o caesar -std=c11 -ggdb -lm -lcs50`...
     * checking that program exited with status 0...
-1. encrypts "a" as "b" using 1 as key
+- [ ] encrypts "a" as "b" using 1 as key
 
 {% endspoiler %}
 
