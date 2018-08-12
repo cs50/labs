@@ -18,8 +18,8 @@ In `mario.py` in the text editor at top-right, implement a program that prints, 
 {% endspoiler %}
 
 {% check "Does your code compile?" %}
-{% for result in results -%}
-\* {{ result.status }}
+{% for result in results %}
+* {{ result.status }}
 {% endfor %}
 {% endcheck %}
 
