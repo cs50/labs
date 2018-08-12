@@ -9,14 +9,12 @@ Let's recreate a bit of that game, albeit in text!
 In `mario.py` in the text editor at top-right, implement a program that prints, quite simply, `????`, without using a loop.
 
 {% spoiler "Does your code work?" %}
-
 - [x] caesar.c exists
     * checking that caesar.c exists...
 - [x] caesar.c compiles
     * running `clang caesar.c -o caesar -std=c11 -ggdb -lm -lcs50`...
     * checking that program exited with status 0...
 - [ ] encrypts "a" as "b" using 1 as key
-
 {% endspoiler %}
 
 {% check "Does your code compile?" %}
