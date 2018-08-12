@@ -9,7 +9,7 @@ Let's recreate a bit of that game, albeit in text!
 In `mario.py` in the text editor at top-right, implement a program that prints, quite simply, `????`, without using a loop.
 
 A
-{% for i in [1,2,3,4,5] %}
+{% for i in (1..5) %}
 
 x
 
