@@ -20,7 +20,7 @@ In `mario.py` in the text editor at top-right, implement a program that prints, 
 {% endspoiler %}
 
 {% check "Does your code compile?" %}
-{% if qux %}
+{% if results.qux %}
 IN README
 {% else %}
 IN README TOO
