@@ -10,7 +10,7 @@ In `mario.py` in the text editor at top-right, implement a program that prints, 
 
 {% for i in [1,2,3,4,5] %}
 
-* {{ i }}
+x
 
 {% endfor %}
 
