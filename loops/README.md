@@ -2,7 +2,16 @@
 
 If you ever played Super Mario Bros. back in the day, you might recall this scene, wherein four  question marks were hovering in the sky:
 
-![bricks](bricks.png)
+{% raw %}
+
+* this
+* is 
+* a
+* test
+
+{% endraw %}
+
+![bricks](bricks.pn)
 
 Let's recreate a bit of that game, albeit in text!
 
