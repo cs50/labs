@@ -25,9 +25,9 @@ In `mario.py` in the text editor at top-right, implement a program that prints, 
 {% endspoiler %}
 
 {% check "Does your code compile?" %}
-{%- for result in results -%}
-* {{ result.status }}
-{%- endfor -%}
+{% for result in results %}
+\* {{ result.status }}
+{% endfor %}
 {% endcheck %}
 
 {% video https://www.youtube.com/watch?v=ivyseNMVt-4 %}
