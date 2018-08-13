@@ -8,7 +8,16 @@ Let's recreate a bit of that game, albeit in text!
 
 In `mario.py`, implement a program that prints, quite simply, `????`, without using a loop.
 
-{% check "Does your code print `????` without using a loop?" %}
+
+{% check "Does your compile?" %}
+TODO
+{% endcheck %}
+
+{% check "Does your code print `????`?" %}
+TODO
+{% endcheck %}
+
+{% check "Does your code avoid using a loop?" %}
 TODO
 {% endcheck %}
 
