@@ -1,34 +1,16 @@
 # Loops
 
-If you ever played Super Mario Bros. back in the day, you might recall this scene, wherein four  question marks were hovering in the sky:
+If you ever played Super Mario Bros. back in the day, you might recall this scene, wherein four question marks were hovering in the sky:
 
 ![bricks](bricks.png)
 
 Let's recreate a bit of that game, albeit in text!
 
-In `mario.py` in the text editor at top-right, implement a program that prints, quite simply, `????`, without using a loop.
+In `mario.py`, implement a program that prints, quite simply, `????`, without using a loop.
 
-{% spoiler %}
-- [x] caesar.c exists
-    * checking that caesar.c exists...
-- [x] caesar.c compiles
-    * running `clang caesar.c -o caesar -std=c11 -ggdb -lm -lcs50`...
-    * checking that program exited with status 0...
-- [ ] encrypts "a" as "b" using 1 as key
-{% endspoiler %}
-
-{% check "Does your code compile?" %}
-{% for result in results %}
-* {{ result.status }} - :smile:
-{% endfor %}
-
-Summary:
-
-{{ results | render }}
-
+{% check "Does your code print `????` without using a loop?" %}
+TODO
 {% endcheck %}
-
-{% video https://www.youtube.com/watch?v=ivyseNMVt-4 %}
 
 {% next %}
 
