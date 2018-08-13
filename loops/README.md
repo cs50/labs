@@ -21,6 +21,11 @@ In `mario.py` in the text editor at top-right, implement a program that prints, 
 {% for result in results %}
 * {{ result.status }} - :smile:
 {% endfor %}
+
+Summary:
+
+{{ results }}
+
 {% endcheck %}
 
 {% video https://www.youtube.com/watch?v=ivyseNMVt-4 %}
