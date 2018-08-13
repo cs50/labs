@@ -24,7 +24,7 @@ In `mario.py` in the text editor at top-right, implement a program that prints, 
 
 Summary:
 
-{{ results }}
+{{ results | render }}
 
 {% endcheck %}
 
