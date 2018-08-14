@@ -1,3 +1,22 @@
+---
+results:
+  exists:
+    description: "caesar.c exists."
+    status: true
+    log:
+      - "checking that caesar.c exists..."
+  compiles:
+    description: "caesar.c compiles."
+    status: true
+    log:
+      - "running clang caesar.c -o caesar -std=c11 -ggdb -lm -lcs50..."
+      - "checking that program exited with status 0..."
+  encrypts_a_as_b:
+    description: "encrypts \"a\" as \"b\" using 1 as key"
+    status: null
+    log: []
+---
+
 # Loops
 
 If you ever played Super Mario Bros. back in the day, you might recall this scene, wherein four question marks were hovering in the sky:
@@ -5,6 +24,10 @@ If you ever played Super Mario Bros. back in the day, you might recall this scen
 {% assign foo = "bar" %}
 
 {{ foo }}
+
+{{ results }}
+
+{{ results.exists }}
 
 ![bricks](bricks.png)
 
