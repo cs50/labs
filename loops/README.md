@@ -1,4 +1,5 @@
 ---
+foo: bar
 results:
   exists:
     description: "caesar.c exists."
