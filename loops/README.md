@@ -18,6 +18,12 @@ results:
     log: []
 ---
 
+{% assign site = {} %}
+{% assign layout = {} %}
+{% assign page = {} %}
+{% assign page.path = nil %}
+
+
 # Loops
 
 page title: {{ page.title }}
