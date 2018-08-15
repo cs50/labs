@@ -18,23 +18,7 @@ results:
     log: []
 ---
 
-{% assign site = {} %}
-{% assign layout = {} %}
-{% assign page = {} %}
-{% assign page.path = nil %}
-
-
 # Loops
-
-page title: {{ page.title }}
-
-site title: {{ site.title }}
-
-page url: {{ page.url }}
-
-page path: {{ page.path }}
-
-frontmatter: {{ foo }}
 
 If you ever played Super Mario Bros. back in the day, you might recall this scene, wherein four question marks were hovering in the sky:
 
@@ -54,11 +38,11 @@ In `mario.py`, implement a program that prints, quite simply, `????`, without us
 
 
 {% check "Does your compile?" %}
-TODO
+{{ compiles }}
 {% endcheck %}
 
 {% check "Does your code print `????`?" %}
-TODO
+{{ nope }}
 {% endcheck %}
 
 {% check "Does your code avoid using a loop?" %}
