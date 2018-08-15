@@ -20,7 +20,14 @@ results:
 
 # Loops
 
-title: {{ page.title }}
+page title: {{ page.title }}
+
+site title: {{ site.title }}
+
+page url: {{ page.url }}
+
+page path: {{ page.path }}
+
 frontmatter: {{ foo }}
 
 If you ever played Super Mario Bros. back in the day, you might recall this scene, wherein four question marks were hovering in the sky:
