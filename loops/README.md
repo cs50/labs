@@ -38,7 +38,7 @@ In `mario.py`, implement a program that prints, quite simply, `????`, without us
 
 
 {% check "Does your compile?" %}
-Results are: {{ compiles }}, good job
+Results are: {{ compiles }}, good job, which {{ compiles.passed }}.
 {% endcheck %}
 
 {% check "Does your code print `????`?" %}
