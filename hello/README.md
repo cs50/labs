@@ -95,19 +95,23 @@ Modify this program in such a way that it first prompts the user for their name 
 ### Don't recall how to prompt the user for their name?
 
 {% spoiler "Hint" %}
+
 Recall that you can use `get_string` as follows, storing its *return value* in a variable called `name` of type `string`.
 
 ```c
 string name = get_string("What is your name?\n");
 ```
+
 {% endspoiler %}
 
 ### Seeing `use of undeclared identifier 'string'; did you mean 'stdin'?`?
 
 {% spoiler "Hint" %}
+
 Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_string` is *declared*) atop a file, as with:
 
 ```c
 #include <cs50.h>
 ```
+
 {% endspoiler %}
