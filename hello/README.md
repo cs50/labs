@@ -32,7 +32,7 @@ And then execute this one again:
 ls
 ```
 
-This time, you should see not only `hello.c` but `a.out` listed as well? (You can see the same graphically if you click that folder icon again.) That's because `clang` has translated the source code in `hello.c` into machine code in `a.out` (which happens to stand for "assembler output," but more on that another time).
+This time, you should see not only `hello.c` but `a.out` listed as well? (You can see the same graphically if you click that folder icon again.) That's because `clang` has translated the source code in `hello.c` into machine code in `a.out`, which happens to stand for "assembler output," but more on that another time.
 
 Now run the program by executing the below.
 
@@ -76,10 +76,38 @@ Recall that we can automate the process of executing `clang`, letting `make` fig
 make hello
 ```
 
-And then execute the program itself one last time by executing the below.
+You should see that `make` executes `clang` with even more command-line arguments for you? More on those, too, another time!
+
+Now execute the program itself one last time by executing the below.
 
 ```
 ./hello
 ```
 
 Phew!
+
+## Getting User Input
+
+Suffice it to say, no matter how you compile or execute this program, it only ever prints `hello, world`. Let's personalize it a bit so that, just as we did in class.
+
+Modify this program in such a way that it first prompts the user for their name and then prints `hello, so-and-so`, where `so-and-so` is their actual name.
+
+### Don't recall how to prompt the user for their name?
+
+{% spoiler "Hint" %}
+Recall that you can use `get_string` as follows, storing its *return value* in a variable called `name` of type `string`.
+
+```c
+string name = get_string("What is your name?\n");
+```
+{% endspoiler %}
+
+### Seeing `use of undeclared identifier 'string'; did you mean 'stdin'?`?
+
+{% spoiler "Hint" %}
+Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_string` is *declared*) atop a file, as with:
+
+```c
+#include <cs50.h>
+```
+{% endspoiler %}
