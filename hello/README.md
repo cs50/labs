@@ -1,6 +1,6 @@
 # Hello
 
-Hello, indeed! At right, in the *text editor*, is the very first program we wrote in C, in a file called `hello.c`. 
+Hello, world! At right, in the *text editor*, is the very first program we wrote in C, in a file called `hello.c`. 
 
 Click the folder icon, and you'll see that `hello.c` is the only file that's present at the moment. Per the mention of `/root/sandbox` below that icon, `hello.c` happens to be in a folder (otherwise known as a *directory*) called `sandbox`, which itself is in another folder called `root`. Click the folder icon again to hide all those details.
 
