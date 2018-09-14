@@ -90,9 +90,10 @@ Phew!
 
 ## Getting User Input
 
-Suffice it to say, no matter how you compile or execute this program, it only ever prints `hello, world`. Let's personalize it a bit so that, just as we did in class.
+Suffice it to say, no matter how you compile or execute this program, it only ever prints `hello, world`. Let's personalize it a bit, just as we did in class.
 
 Modify this program in such a way that it first prompts the user for their name and then prints `hello, so-and-so`, where `so-and-so` is their actual name.
+{:.flash.flash-success}
 
 ### Hints
 
@@ -125,6 +126,8 @@ Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_st
 ```c
 #include <cs50.h>
 ```
+
+{% next %}
 
 ## How to Submit
 
