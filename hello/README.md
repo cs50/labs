@@ -125,3 +125,11 @@ Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_st
 ```c
 #include <cs50.h>
 ```
+
+## How to Submit
+
+Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+
+```
+submit50 cs50/2018/fall/hello
+```
