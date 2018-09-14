@@ -1,5 +1,7 @@
 # Hello
 
+{% video https://www.youtube.com/watch?v=DmE9lCvrxgU %}
+
 ## Listing Files
 
 Hello, world! At right, in the *text editor*, is the very first program we wrote in C, in a file called `hello.c`. 
@@ -92,9 +94,9 @@ Suffice it to say, no matter how you compile or execute this program, it only ev
 
 Modify this program in such a way that it first prompts the user for their name and then prints `hello, so-and-so`, where `so-and-so` is their actual name.
 
-### Don't recall how to prompt the user for their name?
+### Hints
 
-{% spoiler "Hint" %}
+#### Don't recall how to prompt the user for their name?
 
 Recall that you can use `get_string` as follows, storing its *return value* in a variable called `name` of type `string`.
 
@@ -102,16 +104,24 @@ Recall that you can use `get_string` as follows, storing its *return value* in a
 string name = get_string("What is your name?\n");
 ```
 
-{% endspoiler %}
+#### Don't recall how to format a string?
 
-### Seeing `use of undeclared identifier 'string'; did you mean 'stdin'?`?
+Don't recall how to join (i.e., concatenate) the user's name with a greeting? Recall that you can use `printf` not only to print but to format a string (hence, the `f` in `printf`), a la the below, wherein `name` is a `string`.
 
-{% spoiler "Hint" %}
+```c
+printf("hello, %s\n", name);
+```
+
+#### Use of undeclared identifier?
+
+Seeing the below, perhaps atop other errors?
+
+```
+error: use of undeclared identifier 'string'; did you mean 'stdin'?
+```
 
 Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_string` is *declared*) atop a file, as with:
 
 ```c
 #include <cs50.h>
 ```
-
-{% endspoiler %}
