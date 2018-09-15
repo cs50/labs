@@ -78,7 +78,7 @@ Height: 4
 
 Notice that width of the "gap" between adjacent pyramids is equal to the width of two hashes, irrespective of the pyramids' heights.
 
-Modify `mario.c` at right in such a way that it implements this program as prescribed.
+Modify `mario.c` at right in such a way that it implements this program as prescribed!
 
 ## How to Submit
 
