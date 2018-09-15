@@ -93,10 +93,16 @@ First, write in `pseudocode.txt` at right some pseudocode that implements this p
 
 There's more than one way to do this, so here's just one!
 
-1. Prompt user for height
-1. If height is less than 1 or greater than 8 (or not an integer at all), go back one step
-1. Iterate from 1 through height:
-  * On iteration *i*, print *i* hashes and then a newline
+<ol>
+  <li>Prompt user for height</li>
+  <li>If height is less than 1 or greater than 8 (or not an integer at all), go back one step</li>
+  <li>
+    Iterate from 1 through height:
+    <ol>
+      <li>On iteration *i*, print *i* hashes and then a newline</li>
+    </ol>
+  </li>
+</ol>
 
 It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste ours into your own!
 
