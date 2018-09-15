@@ -83,6 +83,18 @@ Height: 4
 ####
 ```
 
+{% spoiler "Try It" %}
+
+To try out the staff's implementation of this problem, execute
+
+<pre>
+./mario
+</pre>
+
+within <a href="">this sandbox</a>.
+
+{% endspoiler %}
+
 How to begin? Let's approach this problem one step at a time.
 
 {% next %}

@@ -80,6 +80,18 @@ Notice that width of the "gap" between adjacent pyramids is equal to the width o
 
 Modify `mario.c` at right in such a way that it implements this program as prescribed!
 
+{% spoiler "Staff's Solution" %}
+
+To try out the staff's own implementation of <code>mario</code>, execute
+
+<pre>
+./mario
+</pre>
+
+within <a href="">this sandbox</a>.
+
+{% endspoiler %}
+
 ## How to Submit
 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
