@@ -29,7 +29,11 @@ Implement, in `cash.c` at right, a program that first asks the user how much cha
 * If the user fails to provide a non-negative value, your program should re-prompt the user for a valid amount again and again until the user complies.
 * So that we can automate some tests of your code, be sure that your program's last line of output is only the minimum number of coins possible: an integer followed by `\n`.
 * Beware the inherent imprecision of floating-point values. Recall [`floats.c`](https://sandbox.cs50.io/575cd269-8b4e-4a01-bc9f-3de38614b43e) from class, wherein, if `x` is `2`, and `y` is `10`, `x / y` is not precisely two tenths! And so, before making change, you'll probably want to convert the user's inputted dollars to cents (i.e., from a `float` to an `int`) to avoid tiny errors that might otherwise add up! 
-* Take care to [round](https://reference.cs50.net/math/round) your cents (to the nearest penny); don't "truncate" (i.e., floor) your cents!
+* Take care to round your cents to the nearest penny, as with `round`, which is declared in `math.h`. For instance, if `dollars` is a `float` with the user's input (e.g., `0.20`), then code like
+  ```
+  int coins = round(dollars * 100);
+  ```
+  will safely convert `0.20` (or even `0.200000002980232238769531250`) to `20`.
 
 Your program should behave per the examples below.
 
