@@ -1,0 +1,4 @@
+lab50:
+  files:
+    - !include mario.c
+    - !exclude README.md
