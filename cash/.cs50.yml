@@ -1,0 +1,4 @@
+lab50:
+  files:
+    - !include cash.c
+    - !exclude README.md
