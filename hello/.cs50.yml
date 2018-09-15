@@ -1,4 +1,4 @@
 lab50:
   files:
+    - !exclude "*"
     - !include hello.c
-    - !exclude README.md
