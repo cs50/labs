@@ -58,7 +58,7 @@ Change owed: 0.41
 To try out the staff's implementation of this problem, execute
 
 <pre>
-./mario
+./cash
 </pre>
 
 within <a href="https://sandbox.cs50.io/e3d386b6-eba2-4e7d-951f-a849f8e336f1">this sandbox</a>.
