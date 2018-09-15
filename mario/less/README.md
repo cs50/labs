@@ -224,6 +224,17 @@ Notice how the number of dots needed on each line is the "opposite" of the numbe
 
 {% endspoiler %}
 
+### How to Test Your Code
+
+Does your code work as prescribed when you input
+
+* `-1` (or other negative numbers)?
+* `0`?
+* `1` through `8`?
+* `9` or other positive numbers?
+* letters or words?
+* no input at all, when you only hit Enter?
+
 {% next %}
 
 ## Removing the Dots
