@@ -88,7 +88,7 @@ To try out the staff's own implementation of <code>mario</code>, execute
 ./mario
 </pre>
 
-within <a href="https://sandbox.cs50.io/2d45b7af-031e-42e2-af83-9552d1baf2bb">this sandbox</a>.
+within <a href="https://sandbox.cs50.io/060e683a-837c-4bb0-96b2-04319987df17">this sandbox</a>.
 
 {% endspoiler %}
 

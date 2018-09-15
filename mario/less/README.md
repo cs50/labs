@@ -91,7 +91,7 @@ To try out the staff's implementation of this problem, execute
 ./mario
 </pre>
 
-within <a href="https://sandbox.cs50.io/c9768375-7b26-4bfb-a276-328759223ded">this sandbox</a>.
+within <a href="https://sandbox.cs50.io/fd78b740-81f3-4ab4-adfa-c3e3636ccb2e">this sandbox</a>.
 
 {% endspoiler %}
 
