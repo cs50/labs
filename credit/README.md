@@ -30,7 +30,7 @@ That's kind of confusing, so let's try an example with David's Visa: 40036000000
 
    8 + 0 + 1 + 2 + 0 + 0 + 0 + 0 + 2 = 13
 
-1. Now let's add that sum (27) to the sum of the digits that weren't multiplied by 2:
+1. Now let's add that sum (13) to the sum of the digits that weren't multiplied by 2:
 
    13 + 0 + 3 + 0 + 0 + 0 + 0 + 0 + 4 = 20
 
