@@ -92,6 +92,8 @@ within <a href="">this sandbox</a>.
 
 {% endspoiler %}
 
+{% next %}
+
 ## How to Submit
 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.

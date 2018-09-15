@@ -81,3 +81,13 @@ To try out the staff's own implementation of <code>credit</code>, execute
 within <a href="">this sandbox</a>.
 
 {% endspoiler %}
+
+{% next %}
+
+## How to Submit
+
+Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+
+```
+submit50 cs50/2018/fall/credit
+```
