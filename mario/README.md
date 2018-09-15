@@ -8,7 +8,7 @@ Toward the end of World 1-1 in Nintendo's Super Mario Brothers, Mario must ascen
 
 ![screenshot of Mario jumping up a right-aligned pyramid](pyramid.png)
 
-Let's recreate that pyramid in C, albeit in text, using hashes (`#`) for bricks, a la the below.
+Let's recreate that pyramid in C, albeit in text, using hashes (`#`) for bricks, a la the below. Each hash is a bit taller than it is wide, so the pyramid itself is also be taller than it is wide.
 
 ```
        #
@@ -21,7 +21,7 @@ Let's recreate that pyramid in C, albeit in text, using hashes (`#`) for bricks,
 ########
 ```
 
-The program shall be called `mario`, implemented in a file called `mario.c`. But let's allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between, say, 1 and 8, inclusive.
+The program we'll write will be called `mario`. And let's allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between, say, 1 and 8, inclusive. 
 
 Here's how the program might work if the user inputs `8`:
 
@@ -99,7 +99,7 @@ There's more than one way to do this, so here's just one!
   <li>
     Iterate from 1 through height:
     <ol>
-      <li>On iteration *i*, print *i* hashes and then a newline</li>
+      <li>On iteration <em>i</em>, print <em>i</em> hashes and then a newline</li>
     </ol>
   </li>
 </ol>
