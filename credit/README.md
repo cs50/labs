@@ -20,19 +20,19 @@ That's kind of confusing, so let's try an example with David's Visa: 40036000000
 
    Okay, let's multiply each of the underlined digits by 2:
 
-   4•2 + 0•2 + 6•2 + 0•2 + 0•2 + 0•2 + 0•2 + 1•2
+   1•2 + 0•2 + 0•2 + 0•2 + 0•2 + 6•2 + 0•2 + 4•2
 
    That gives us:
 
-   8 + 0 + 12 + 0 + 0 + 0 + 0 + 2
+   2 + 0 + 0 + 0 + 0 + 12 + 0 + 8
 
    Now let's add those products' digits (i.e., not the products themselves) together:
 
-   8 + 0 + 1 + 2 + 0 + 0 + 0 + 0 + 2 = 13
+   2 + 0 + 0 + 0 + 0 + 1 + 2 + 0 + 8 = 13
 
-1. Now let's add that sum (13) to the sum of the digits that weren't multiplied by 2:
+1. Now let's add that sum (13) to the sum of the digits that weren't multiplied by 2 (starting from the end):
 
-   13 + 0 + 3 + 0 + 0 + 0 + 0 + 0 + 4 = 20
+   13 + 4 + 0 + 0 + 0 + 0 + 0 + 3 + 0 = 20
 
 1. Yup, the last digit in that sum (20) is a 0, so David's card is legit!
 
@@ -46,18 +46,18 @@ Consider the below representative of how your own program should behave when pas
 
 ```
 $ ./credit
-Number: 378282246310005
-AMEX
+Number: 4003600000000014
+VISA
 ```
 
 Now, `get_long` itself will reject hyphens (and more) anyway:
 
 ```
 $ ./credit
-Number: 3782-822-463-10005
+Number: 4003-6000-0000-0014
 Number: foo
-Number: 378282246310005
-AMEX
+Number: 4003600000000014
+VISA
 ```
 
 But it's up to you to catch inputs that are not credit card numbers (e.g., a phone number), even if numeric:
