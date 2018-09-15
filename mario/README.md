@@ -1,10 +1,10 @@
 # Mario
 
-## Itsa Zamyla.
-
 {% video https://www.youtube.com/watch?v=C-5-22ZvW40 %}
 
 {% next %}
+
+## Itsa `mario`
 
 Toward the end of World 1-1 in Nintendo's Super Mario Brothers, Mario must ascend right-aligned pyramid of blocks, a la the below.
 
