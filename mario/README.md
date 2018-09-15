@@ -139,7 +139,7 @@ Stored: 4
   <li>Recall that you can print an <code>int</code> with <code>printf</code> using <code>%i</code>.</li>
   <li>Recall that you can get an integer from the user with <code>get_int</code>.</li>
   <li>Recall that <code>get_int</code> is declared in <code>cs50.h</code>.</li>
-  <li>Recall that we prompted the user for a positive integer in class via <a href="https://sandbox.cs50.io/b56865fd-c861-425f-aad7-4adcf6831139"><code>positive.c</code>.</li>
+  <li>Recall that we prompted the user for a positive integer in class via <a href="https://sandbox.cs50.io/b56865fd-c861-425f-aad7-4adcf6831139"><code>positive.c</code></a>.</li>
 </ul>
 
 {% endspoiler %}
