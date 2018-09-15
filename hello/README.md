@@ -108,6 +108,16 @@ And be sure to execute your program, testing it a few times with different input
 ./hello
 ```
 
+### Staff's Solution
+
+To try out the staff's implementation of this problem, execute
+
+<pre>
+./hello
+</pre>
+
+within <a href="https://sandbox.cs50.io/0c8ebcaa-ca6e-45fa-bff2-043e5e6d83ec">this sandbox</a>.
+
 ### Hints
 
 #### Don't recall how to prompt the user for their name?

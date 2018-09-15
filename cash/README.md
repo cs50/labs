@@ -61,7 +61,7 @@ To try out the staff's implementation of this problem, execute
 ./cash
 </pre>
 
-within <a href="https://sandbox.cs50.io/e3d386b6-eba2-4e7d-951f-a849f8e336f1">this sandbox</a>.
+within <a href="https://sandbox.cs50.io/0551a578-189e-4989-9e89-99e41a4f2c6d">this sandbox</a>.
 
 ### How to Test Your Code
 
