@@ -29,7 +29,7 @@ Implement, in `cash.c` at right, a program that first asks the user how much cha
 * If the user fails to provide a non-negative value, your program should re-prompt the user for a valid amount again and again until the user complies.
 * So that we can automate some tests of your code, be sure that your program's last line of output is only the minimum number of coins possible: an integer followed by `\n`.
 * Beware the inherent imprecision of floating-point values. Recall [`floats.c`](https://sandbox.cs50.io/575cd269-8b4e-4a01-bc9f-3de38614b43e) from class, wherein, if `x` is `2`, and `y` is `10`, `x / y` is not precisely two tenths! And so, before making change, you'll probably want to convert the user's inputted dollars to cents (i.e., from a `float` to an `int`) to avoid tiny errors that might otherwise add up! 
-* Take care to https://reference.cs50.net/math/round[round] your cents (to the nearest penny); don't "truncate" (i.e., floor) your cents!
+* Take care to [round](https://reference.cs50.net/math/round) your cents (to the nearest penny); don't "truncate" (i.e., floor) your cents!
 
 Your program should behave per the examples below.
 
@@ -52,6 +52,16 @@ Change owed: 0.41
 {% video https://www.youtube.com/watch?v=2QZSsaSfB3A %}
 
 {% endspoiler %}
+
+### Staff's Solution
+
+To try out the staff's implementation of this problem, execute
+
+<pre>
+./mario
+</pre>
+
+within <a href="https://sandbox.cs50.io/e3d386b6-eba2-4e7d-951f-a849f8e336f1">this sandbox</a>.
 
 ### How to Test Your Code
 

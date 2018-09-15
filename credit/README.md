@@ -80,7 +80,7 @@ To try out the staff's own implementation of <code>credit</code>, execute
 ./credit
 </pre>
 
-within <a href="">this sandbox</a>.
+within <a href="https://sandbox.cs50.io/9277604f-ea43-4508-8f9d-4b83d16d7009">this sandbox</a>.
 
 {% endspoiler %}
 
