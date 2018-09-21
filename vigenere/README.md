@@ -197,7 +197,7 @@ And as before, be sure to preserve case, but do so only based on the case of the
 
 <ul>
   <li>You'll probably need one counter, <code>i</code> for iterating over the plaintext and one counter, <code>j</code> for iterating over the keyword.</li>
-  <li>You'll probably find it easiest to control the keyword counter yourself, rather than relying on the <code>for</code> loop you're using to iterate over the plaintext!</code></li>
+  <li>You'll probably find it easiest to control the keyword counter yourself, rather than relying on the <code>for</code> loop you're using to iterate over the plaintext!</li>
   <li>If the length of the keyword is, say, 4 characters, then the last character of that keyword can be found at <code>keyword[3]</code>. Then, for the next character you encipher, you'll want to use <code>keyword[0]</code>.</li>
 </ul>
 
