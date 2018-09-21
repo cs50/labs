@@ -87,10 +87,10 @@ Error: Program requires exactly one key
 To try out the staff's implementation of this problem, execute
 
 <pre>
-./caesar <KEY>
+./caesar KEY
 </pre>
 
-substituting a valid integer in place of <code><KEY></code>, within <a href="https://sandbox.cs50.io/fd78b740-81f3-4ab4-adfa-c3e3636ccb2e">this sandbox</a>.
+substituting a valid integer in place of <code>KEY</code>, within <a href="https://sandbox.cs50.io/fd78b740-81f3-4ab4-adfa-c3e3636ccb2e">this sandbox</a>.
 
 {% endspoiler %}
 
