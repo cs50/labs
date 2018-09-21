@@ -151,7 +151,7 @@ Your program should print a 0 if run with the keyword `A` or `a`. Try running th
 
 ## One-character keywords
 
-Time to get start using that enciphering code you wrote before again! You may have noticed that if your keyword _k_ consists of exactly one letter (say, `H` or `h`), Vigenère's cipher effectively becomes a Caesar cipher (of, in this example, 7). Let's for now just assume the user's keyword will just be a single letter. Use your newly-written `shift` function to calculate the shift value for the letter they provided, assign the return value of that function to an integer variable `key`, and use `key` exactly as you did in the Caesar cipher! It should suffice, in fact, to simply delete the recently-added `printf` and the `return 0;` line now, letting the program finally proceed to your previously-written Caesar cipher code!
+Time to get back to using that enciphering code you wrote before! You may have noticed that if your keyword _k_ consists of exactly one letter (say, `H` or `h`), Vigenère's cipher effectively becomes a Caesar cipher (of, in this example, 7). Let's for now indeed assume the user's keyword will just be a single letter. Use your newly-written `shift` function to calculate the shift value for the letter they provided, assign the return value of that function to an integer variable `key`, and use `key` exactly as you did in the Caesar cipher! It should suffice, in fact, to simply delete the recently-added `printf` and the `return 0;` line now, letting the program finally proceed to your previously-written Caesar cipher code!
 
 ```
 $ ./vigenere A
@@ -178,7 +178,7 @@ ciphertext: JgNnQ
 {% spoiler "Hints" %}
 
 <ul>
-  <li>If some of your variables in your Caesar solution don't match what they've been called here, just edit the names of things so they do match!</li>
+  <li>If some of your variables in your Caesar solution don't match what they've been called so far in this lab, just edit the names of things so they do match!</li>
 </ul>
 
 {% endspoiler %}
@@ -189,7 +189,7 @@ ciphertext: JgNnQ
 
 Now it's your turn to take things across the finish line by implementing the remaining functionality in `vigenere.c`. Remember that the user's keyword will probably consist of multiple letters, so you may need to calculate a new shift value for each letter of the plaintext; you may then want to move your `shift` function into your loop somehow.
 
-Remember also that every time you successfully encipher a character, you need to move to the next letter of the keyword (and wraparound to the beginning of the keyword if you exhaust all of its characters). But if you don't encipher a character (e.g., a space or a punctuation mark), don't advance to the next character of the keyword!
+Remember also that every time you encipher a character, you need to move to the next letter of _k_, the keyword (and wrap around to the beginning of the keyword if you exhaust all of its characters). But if you don't encipher a character (e.g., a space or a punctuation mark), don't advance to the next character of _k_!
 
 And as before, be sure to preserve case, but do so only based on the case of the original message. Whether or not a letter in the keyword is capitalized should have no bearing on whether a letter in the ciphertext is!
 
