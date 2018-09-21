@@ -132,9 +132,9 @@ First, write in `pseudocode.txt` at right some pseudocode that implements this p
 
 ## Counting Command-Line Arguments
 
-Whatever your pseudocode, let's first write only the C code that checks whether the program was run with a single command-line argument.
+Whatever your pseudocode, let's first write only the C code that checks whether the program was run with a single command-line argument before adding additional functionality.
 
-Specifically, modify `caesar.c` at right in such a way that: if the user provides exactly one command-line argument, it prints out the message `"Success"`; if the user provides no command-line arguments, or two or more, it prints out `Usage: ./caesar k`. Remember, since this key is coming from the command line at runtime, and not via `get_string`, we don't have an opportunity to re-prompt the user. The behavior of the resulting program should be like the below.
+Specifically, modify `caesar.c` at right in such a way that: if the user provides exactly one command-line argument, it prints `Success`; if the user provides no command-line arguments, or two or more, it prints `Usage: ./caesar k`. Remember, since this key is coming from the command line at runtime, and not via `get_string`, we don't have an opportunity to re-prompt the user. The behavior of the resulting program should be like the below.
 
 ```
 $ ./caesar 20
@@ -202,7 +202,7 @@ Success
 
 ## Validating the Key
 
-Now that you know how to read the key, let's analyze it. Modify `caesar.c` at right such that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., `0`, `1`, `2`, etc.) and, if any of them are not, terminates after printing the message `"Usage: ./caesar k"`. But if the argument consists solely of digit characters, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer, and print out the *integer*. So, for example, the behavior might look like this:
+Now that you know how to read the key, let's analyze it. Modify `caesar.c` at right such that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., `0`, `1`, `2`, etc.) and, if any of them are not, terminates after printing the message `"Usage: ./caesar k"`. But if the argument consists solely of digit characters, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer, and print out the *integer*, as via `%i` with `printf`. So, for example, the behavior might look like this:
 
 ```
 $ ./caesar 20
@@ -250,7 +250,7 @@ ciphertext: ifmmp
 
 <ul>
   <li>Try to iterate over every character in the plaintext and literally add 1 to it, then print it.</li>
-  <li>If <code>ch</code> is a <code>char</code> variable in C, what happens when you <code>printf("%c", ch + 1);</code>?</li>
+  <li>If <code>c</code> is a variable of type <code>char</code> in C, what happens when you call <code>printf("%c", c + 1)</code>?</li>
 </ul>
 
 {% endspoiler %}
@@ -259,15 +259,15 @@ ciphertext: ifmmp
 
 ## Your Turn
 
-Now it's time to tie everything together! Instead of shifting the characters by 1, modify `caesar.c` to instead shift them by the actual key value. And be sure to preserve case! Capital letters should stay capital, lowercase letters should stay lowercase, and things that aren't letters...
+Now it's time to tie everything together! Instead of shifting the characters by 1, modify `caesar.c` to instead shift them by the actual key value. And be sure to preserve case! Uppercase letters should stay uppercase, lowercase letters should stay lowercase, and characters that aren't alphbetical should remain unchanged.
 
 {% spoiler "Hints" %}
 
 <ul>
-  <li>Best to use the modulo operator, <code>%</code>, to handle wraparound from Z to A!</li>
+  <li>Best to use the modulo (i.e., remainder) operator, <code>%</code>, to handle wraparound from Z to A! But how?</li>
   <li>Things get weird if we try to wrap <code>Z</code> or <code>z</code> by 1 using the technique in the previous section.</li>
   <li>Things get weird also if we try to wrap punctuation marks using that technique.</li>
-  <li>Recall that the ASCII table maps all printable characters to numbers.</li>
+  <li>Recall that ASCII maps all printable characters to numbers.</li>
   <li>Recall that the ASCII value of <code>A</code> is 65. The ASCII value of <code>a</code>, meanwhile, is 97.</li>
 </ul>
 
