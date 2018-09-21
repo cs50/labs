@@ -13,10 +13,11 @@ Even though passwords in `/etc/shadow` are hashed, the hash function is not alwa
 ```
 brian:51.xJagtPnb6s
 bjbrown:50GApilQSG3E2
+emc:502sDZxA/ybHs
+greg:50C6B0oz0HWzo
 jana:50WUNAFdX/yjA
 lloyd:50n0AAUD.pL8g
 malan:50CcfIk1QrPr6
-maria:50Acmky3y.OJ2
 natmelo:50JIIyhDORqMU
 rob:51v3Nh6ZWGHOQ
 veronica:61v1CDwwP95bY
@@ -63,6 +64,21 @@ Usage: ./crack hash
 $ ./crack 50cI2vYkF0YU2
 ROFL
 ```
+
+{% spoiler "Hints" %}
+
+<ul>
+  <li>Recall that <code>argc</code> and <code>argv</code> give us information about what was typed at the command line.</li>
+  <li>Recall that a string is just an array of characters (<code>char</code>s).</li>
+  <li>Recall that we can access individual elements of an array using square brackets (<code>[ ]</code>).</li>
+  <li>Recall that the salt is the first two characters of the hash.</li>
+  <li>Recall that sometimes, people use passwords that are actual words. Perhaps there's an optimization that can be employed?</li>
+  <li>Brute force algorithms aren't the fastest, and that's okay! Recall that shorter passwords are usually easier to crack than longer ones.</li>
+</ul>
+
+{% endspoiler %}
+
+{% next %}
 
 ## How to Submit
 
