@@ -250,7 +250,7 @@ ciphertext: ifmmp
 
 <ul>
   <li>Try to iterate over every character in the plaintext and literally add 1 to it, then print it.</li>
-  <li>If <code>ch</code> is a <code>char</code> variable in C, what happens when you <code>printf("%c", ch + 1);</code>?
+  <li>If <code>ch</code> is a <code>char</code> variable in C, what happens when you <code>printf("%c", ch + 1);</code>?</li>
 </ul>
 
 {% endspoiler %}
