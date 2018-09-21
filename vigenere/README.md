@@ -127,18 +127,19 @@ In place of that `TODO` is where we'll do the work of converting that character 
 To test this out, delete the line where you printed `"Success"` (but leave the `return 0;` for now), and in place of the just-deleted line, add the below lines to test whether your code works.
 
 ```
-int key = shift('A');
+int key = shift(argv[1][0]);
 printf("%i\n", key);
 ```
 
-Your program should print a 0! Replace the `'A'` with other capital and lowercase letters. Is the behavior what you expect?
+Your program should print a 0 if run with the keyword `A` or `a`. Try running the program with other capital and lowercase letters as the keyword. Is the behavior what you expect?
 
 {% spoiler "Hints" %}
 
 <ul>
   <li>Functions have inputs and outputs.</li>
   <li>When we <i>declare</i> a function, we need to provide its return type, name, and an argument list, each of which also has a type.</li>
-  <li>When we <i>use</i> or <i>call</i> a function, we just plug in appropriate values in the argument list, and assign the output of the function to a variable that correspond's to the function's return type.</li>
+  <li>When we <i>use</i> or <i>call</i> a function, we just plug in appropriate values in the argument list, and assign the output of the function to a variable that corresponds to the function's return type.</li>
+  <li>If <code>argv[1]</code> is a string, then <code>argv[1][0]</code> is just the first character of that string.</li>
   <li>Recall that the <code>ctype.h</code> header file contains a number of useful functions that tell us things about characters.</li>
   <li>The ASCII value of <code>A</code> is 65. The ASCII value of <code>a</code> is 97.</li>
   <li>The ASCII value of <code>B</code> is 66. The ASCII value of <code>b</code> is 98. See a potential pattern emerging?</li>
@@ -150,7 +151,7 @@ Your program should print a 0! Replace the `'A'` with other capital and lowercas
 
 ## One-character keywords
 
-Time to get start using that enciphering code you wrote before again! You may have noticed that if your keyword _k_ consists of exactly one letter (say, `H` or `h`), Vigenère's cipher effectively becomes a Caesar cipher (of, in this example, 7). Let's for now just assume the user's keyword will just be a single letter. Use your newly-written `shift` function to calculate the shift value for the letter they provided, assign the return value of that function to an integer variable `key`, and use `key` exactly as you did in the Caesar cipher!
+Time to get start using that enciphering code you wrote before again! You may have noticed that if your keyword _k_ consists of exactly one letter (say, `H` or `h`), Vigenère's cipher effectively becomes a Caesar cipher (of, in this example, 7). Let's for now just assume the user's keyword will just be a single letter. Use your newly-written `shift` function to calculate the shift value for the letter they provided, assign the return value of that function to an integer variable `key`, and use `key` exactly as you did in the Caesar cipher! It should suffice, in fact, to simply delete the recently-added `printf` and the `return 0;` line now, letting the program finally proceed to your previously-written Caesar cipher code!
 
 ```
 $ ./vigenere A
@@ -177,15 +178,14 @@ ciphertext: JgNnQ
 {% spoiler "Hints" %}
 
 <ul>
-  <li>Try to iterate over every character in the plaintext and literally add 1 to it, then print it.</li>
-  <li>If <code>ch</code> is a <code>char</code> variable in C, what happens when you <code>printf("%c", ch + 1);</code>?</li>
+  <li>If some of your variables in your Caesar cipher code don't match what they've been called here, just edit the names of things so they do match!</li>
 </ul>
 
 {% endspoiler %}
 
 {% next %}
 
-## Your Turn
+## Final Steps
 
 Now it's time to tie everything together! Instead of shifting the characters by 1, modify `caesar.c` to instead shift them by the actual key value. And be sure to preserve case! Capital letters should stay capital, lowercase letters should stay lowercase, and things that aren't letters...
 
