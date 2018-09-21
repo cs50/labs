@@ -65,21 +65,21 @@ And what if a user doesn't cooperate?
 
 ```
 $ ./caesar HELLO
-Usage: ./caesar k
+Usage: ./caesar key
 ```
 
 Or really doesn't cooperate?
 
 ```
 $ ./caesar
-Usage: ./caesar k
+Usage: ./caesar key
 ```
 
 Or even...
 
 ```
 $ ./caesar 1 2 3
-Usage: ./caesar k
+Usage: ./caesar key
 ```
 
 {% spoiler "Try It" %}
@@ -134,7 +134,7 @@ First, write in `pseudocode.txt` at right some pseudocode that implements this p
 
 Whatever your pseudocode, let's first write only the C code that checks whether the program was run with a single command-line argument before adding additional functionality.
 
-Specifically, modify `caesar.c` at right in such a way that: if the user provides exactly one command-line argument, it prints `Success`; if the user provides no command-line arguments, or two or more, it prints `Usage: ./caesar k`. Remember, since this key is coming from the command line at runtime, and not via `get_string`, we don't have an opportunity to re-prompt the user. The behavior of the resulting program should be like the below.
+Specifically, modify `caesar.c` at right in such a way that: if the user provides exactly one command-line argument, it prints `Success`; if the user provides no command-line arguments, or two or more, it prints `Usage: ./caesar key`. Remember, since this key is coming from the command line at runtime, and not via `get_string`, we don't have an opportunity to re-prompt the user. The behavior of the resulting program should be like the below.
 
 ```
 $ ./caesar 20
@@ -145,14 +145,14 @@ or
 
 ```
 $ ./caesar
-Usage: ./caesar k
+Usage: ./caesar key
 ```
 
 or
 
 ```
 $ ./caesar 1 2 3
-Usage: ./caesar k
+Usage: ./caesar key
 ```
 
 {% spoiler "Hints" %}
@@ -202,7 +202,7 @@ Success
 
 ## Validating the Key
 
-Now that you know how to read the key, let's analyze it. Modify `caesar.c` at right such that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., `0`, `1`, `2`, etc.) and, if any of them are not, terminates after printing the message `"Usage: ./caesar k"`. But if the argument consists solely of digit characters, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer, and print out the *integer*, as via `%i` with `printf`. So, for example, the behavior might look like this:
+Now that you know how to read the key, let's analyze it. Modify `caesar.c` at right such that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., `0`, `1`, `2`, etc.) and, if any of them are not, terminates after printing the message `Usage: ./caesar key`. But if the argument consists solely of digit characters, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer, and print out the *integer*, as via `%i` with `printf`. So, for example, the behavior might look like this:
 
 ```
 $ ./caesar 20
@@ -214,7 +214,7 @@ or
 
 ```
 $ ./caesar 20x
-Usage: ./caesar k
+Usage: ./caesar key
 ```
 
 {% spoiler "Hints" %}
@@ -238,7 +238,7 @@ Usage: ./caesar k
 
 As human beings it's easy for us to intuitively understand the formula described above, inasmuch as we can say "H + 1 = I". But can a computer understand that same logic? Let's find out. For now, we're going to temporarily ignore the key the user provided and instead prompt the user for a secret message and attempt to shift all of its characters by just 1.
 
-Extend the functionality of `caesar.c` at right such that, after validating the key, we prompt the user for a string and then shift all of its characters by 1, printing out the result. We can also at this point probably remove the line of code we wrote earlier that prints `"Success"`. All told, this might result in this behavior:
+Extend the functionality of `caesar.c` at right such that, after validating the key, we prompt the user for a string and then shift all of its characters by 1, printing out the result. We can also at this point probably remove the line of code we wrote earlier that prints `Success`. All told, this might result in this behavior:
 
 ```
 $ ./caesar 20

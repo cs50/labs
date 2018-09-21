@@ -6,15 +6,15 @@
 
 ## Ooh, la la!
 
-Vigenère’s cipher improves upon Caesar’s cipher by encrypting messages using a _sequence_ of keys (or, put another way, a _keyword_).
+Vigenère's cipher improves upon Caesar's cipher by encrypting messages using a _sequence_ of keys (or, put another way, a _keyword_).
 
-In other words, if _p_ is some plaintext and _k_ is a keyword (i.e., an alphabetical string, whereby A (or a) represents 0, B (or b) represents 1, C (or c) represents 2, …​, and Z (or z) represents 25), then each letter, _c<sub>i</sub>_, in the ciphertext, _c_, is computed as:
+In other words, if _p_ is some plaintext and _k_ is a keyword (i.e., an alphabetical string, whereby A (or a) represents 0, B (or b) represents 1, C (or c) represents 2, ..., and Z (or z) represents 25), then each letter, _c<sub>i</sub>_, in the ciphertext, _c_, is computed as:
 
 c<sub>i</sub> = (p<sub>i</sub> + k<sub>j</sub>) % 26
 
-Note this cipher’s use of _k<sub>j</sub>_ as opposed to just _k_. And if _k_ is shorter than _p_, then the letters in _k_ must be reused cyclically as many times as it takes to encrypt _p_.
+Note this cipher's use of _k<sub>j</sub>_ as opposed to just _k_. And if _k_ is shorter than _p_, then the letters in _k_ must be reused cyclically as many times as it takes to encrypt _p_.
 
-In other words, if Vigenère himself wanted to say HELLO to someone confidentially, using a keyword of, say, ABC, he would encrypt the H with a key of 0 (i.e., A), the E with a key of 1 (i.e., B), and the first L with a key of 2 (i.e., C), at which point he’d be out of letters in the keyword, and so he’d reuse (part of) it to encrypt the second L with a key of 0 (i.e., A) again, and the O with a key of 1 (i.e., B) again. And so he’d write HELLO as HFNLP, per the below:
+In other words, if Vigenère himself wanted to say HELLO to someone confidentially, using a keyword of, say, ABC, he would encrypt the H with a key of 0 (i.e., A), the E with a key of 1 (i.e., B), and the first L with a key of 2 (i.e., C), at which point he'd be out of letters in the keyword, and so he'd reuse (part of) it to encrypt the second L with a key of 0 (i.e., A) again, and the O with a key of 1 (i.e., B) again. And so he'd write HELLO as HFNLP, per the below:
 
 | plaintext    | H | E | L | L | O |
 |--------------|---|---|---|---|---|
@@ -36,21 +36,21 @@ or for when the user provides a keyword that is not fully alphabetic:
 
 ```
 $ ./vigenere 13
-Usage: ./vigenere k
+Usage: ./vigenere keyword
 ```
 
 or for when they don't provide a keyword at all:
 
 ```
 $ ./vigenere
-Usage: ./vigenere k
+Usage: ./vigenere keyword
 ```
 
 or for when they provide too many keywords:
 
 ```
 $ ./vigenere bacon and eggs
-Usage: ./vigenere k
+Usage: ./vigenere keyword
 ```
 
 {% spoiler "Try It" %}
@@ -58,10 +58,10 @@ Usage: ./vigenere k
 To try out the staff's implementation of this problem, execute
 
 <pre>
-./vigenere KEYWORD
+./vigenere keyword
 </pre>
 
-substituting a valid alphabetic string in place of <code>KEYWORD</code>, within <a href="https://sandbox.cs50.io/00b9fb06-1219-46d9-a94c-210340ead1fb">this sandbox</a>.
+substituting a valid alphabetic string in place of <code>keyword</code>, within <a href="https://sandbox.cs50.io/00b9fb06-1219-46d9-a94c-210340ead1fb">this sandbox</a>.
 
 {% endspoiler %}
 
@@ -71,9 +71,9 @@ How to begin? Let's start with something familiar.
 
 ## Déjà vu
 
-As you may have gleaned from the write-up above, the basic idea for this cipher is strikingly similar to the idea underlying the Caesar cipher. As such, our code from Caesar seems like a good place to begin, so feel free to start by replacing the entire contents of `vigenere.c`, at right, with your solution to `caesar.c`.
+As you may have gleaned already, the basic idea for this cipher is strikingly similar to the idea underlying Caesar's cipher. As such, our code from Caesar seems like a good place to begin, so feel free to start by replacing the entire contents of `vigenere.c`, at right, with your solution to `caesar.c`.
 
-One difference between Caesar's and Vigenère's ciphers is that the Vigenère cipher key is a series of letters, rather than a number. So let's make sure that the user actually gave us a keyword! Modify the check you implemented in Caesar to instead ensure every character of the keyword is alphabetic, rather than a digit. If any of them isn't, print `"Usage: ./vigenere k"` and return a nonzero value as we did before. If they are all alphabetic, after checking you should print `"Success"` and then, `return 0;` immediately (for now), since our enciphering code is not quite ready to work just yet, so we won't have our program execute it.
+One difference between Caesar's and Vigenère's ciphers is that the key for Vigenère's cipher is a series of letters, rather than a number. So let's make sure that the user actually gave us a keyword! Modify the check you implemented in Caesar to instead ensure every character of the keyword is alphabetic, rather than a digit. If any of them isn't, print `Usage: ./vigenere keyword` and return a non-zero value as we did before. If they are all alphabetic, after checking you should print `Success` and then, `return 0;` immediately (for now), since our enciphering code is not quite ready to work just yet, so we won't have our program execute it.
 
 Sample behavior:
 
@@ -86,15 +86,15 @@ or
 
 ```
 $ ./vigenere 123
-Usage: ./vigenere k
+Usage: ./vigenere keyword
 ```
 
 {% spoiler "Hints" %}
 
 <ul>
-  <li>Recall that the <code>string.h</code> header file contains a number of useful functions that work with strings.</li>
+  <li>Recall that the <code>string.h</code> header file contains a number of useful functions that work with strings. See [CS50 Reference](https://reference.cs50.net/)'s menu for some!</li>
   <li>Recall that we can use a loop to iterate over each character of a string if we know its length.</li>
-  <li>Recall that the <code>ctype.h</code> header file contains a number of useful functions that tell us things about characters.</li>
+  <li>Recall that the <code>ctype.h</code> header file contains a number of useful functions that tell us things about characters. See [CS50 Reference](https://reference.cs50.net/)'s menu for some!</li>
 </ul>
 
 {% endspoiler %}
@@ -105,7 +105,7 @@ Usage: ./vigenere k
 
 Let's for now assume that the user is providing single-character keywords. Can we convert that character into the correct shift value? Let's do so by writing a _function_.
 
-Near the top of your file, below the `#include` lines, let's _declare_ a new function whose purpose is to do just that. It will take a single character as input, and it will output the shift value for that character.
+Near the top of your file, below the `#include` lines, let's _declare_ the _prototype_ for a new function whose purpose is to do just that. It will take a single character as input, and it will output the shift value for that character.
 
 ```
 int shift(char c);
@@ -113,7 +113,7 @@ int shift(char c);
 
 Now we've declared a function called `shift` that takes a single character (`c`) as input, and will output an integer.
 
-Now, down below the closing curly brace of `main`, let's give ourselves a place to _define_ this new function.
+Now, down below the closing curly brace of `main`, let's give ourselves a place to _define_ (i.e., implement) this new function.
 
 ```
 int shift(char c)
@@ -151,7 +151,7 @@ Your program should print a 0 if run with the keyword `A` or `a`. Try running th
 
 ## One-character keywords
 
-Time to get back to using that enciphering code you wrote before! You may have noticed that if your keyword _k_ consists of exactly one letter (say, `H` or `h`), Vigenère's cipher effectively becomes a Caesar cipher (of, in this example, 7). Let's for now indeed assume the user's keyword will just be a single letter. Use your newly-written `shift` function to calculate the shift value for the letter they provided, assign the return value of that function to an integer variable `key`, and use `key` exactly as you did in the Caesar cipher! It should suffice, in fact, to simply delete the recently-added `printf` and the `return 0;` line now, letting the program finally proceed to your previously-written Caesar cipher code!
+Time to get back to using that enciphering code you wrote before! You may have noticed that if your keyword _k_ consists of exactly one letter (say, `H` or `h`), Vigenère's cipher effectively becomes a Caesar cipher (of, in this example, 7). Let's for now indeed assume the user's keyword will just be a single letter. Use your newly-written `shift` function to calculate the shift value for the letter they provided, assign the return value of that function to an integer variable `key`, and use `key` exactly as you did in Caesar's cipher! It should suffice, in fact, to simply delete the recently-added `printf` and the `return 0;` line now, letting the program finally proceed to your previously-written Caesar cipher code!
 
 ```
 $ ./vigenere A
