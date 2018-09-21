@@ -99,6 +99,8 @@ Usage: ./vigenere k
 
 {% endspoiler %}
 
+{% next %}
+
 ## Getting the shift value
 
 Let's for now assume that the user is providing single-character keywords. Can we convert that character into the correct shift value? Let's do so by writing a _function_.
@@ -143,6 +145,8 @@ Your program should print a 0! Replace the `'A'` with other capital and lowercas
 </ul>
 
 {% endspoiler %}
+
+{% next %}
 
 ## One-character keywords
 
