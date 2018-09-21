@@ -150,8 +150,6 @@ Error: Program requires exactly one key
 
 or
 
-or
-
 ```
 $ ./caesar 1 2 3
 Error: Program requires exactly one key
@@ -167,6 +165,8 @@ Error: Program requires exactly one key
 </ul>
 
 {% endspoiler %}
+
+{% next %}
 
 ## Accessing the Key
 
