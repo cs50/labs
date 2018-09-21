@@ -187,16 +187,18 @@ ciphertext: JgNnQ
 
 ## Final Steps
 
-Now it's time to tie everything together! Instead of shifting the characters by 1, modify `caesar.c` to instead shift them by the actual key value. And be sure to preserve case! Capital letters should stay capital, lowercase letters should stay lowercase, and things that aren't letters...
+Now it's your turn to take things across the finish line by implementing the remaining functionality in `vigenere.c`. Remember that the user's keyword will probably consist of multiple letters, so you may need to calculate a new shift value for each letter of the plaintext; you may then want to move your `shift` function into your loop somehow.
+
+Remember also that every time you successfully encipher a character, you need to move to the next letter of the keyword (and wraparound to the beginning of the keyword if you exhaust all of its characters). But if you don't encipher a character (e.g., a space or a punctuation mark), don't advance to the next character of the keyword!
+
+And as before, be sure to preserve case, but do so only based on the case of the original message. Whether or not a letter in the keyword is capitalized should have no bearing on whether a letter in the ciphertext is!
 
 {% spoiler "Hints" %}
 
 <ul>
-  <li>Best to use the modulo operator, <code>%</code>, to handle wraparound from Z to A!</li>
-  <li>Things get weird if we try to wrap <code>Z</code> or <code>z</code> by 1 using the technique in the previous section.</li>
-  <li>Things get weird also if we try to wrap punctuation marks using that technique.</li>
-  <li>Recall that the ASCII table maps all printable characters to numbers.</li>
-  <li>Recall that the ASCII value of <code>A</code> is 65. The ASCII value of <code>a</code>, meanwhile, is 97.</li>
+  <li>You'll probably need one counter, <code>i</code> for iterating over the plaintext and one counter, <code>j</code> for iterating over the keyword.</li>
+  <li>You'll probably find it easiest to control the keyword counter yourself, rather than relying on the <code>for</code> loop you're using to iterate over the plaintext!</code></li>
+  <li>If the length of the keyword is, say, 4 characters, then the last character of that keyword can be found at <code>keyword[3]</code>. Then, for the next character you encipher, you'll want to use <code>keyword[0]</code>.</li>
 </ul>
 
 {% endspoiler %}
