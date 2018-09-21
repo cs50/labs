@@ -264,15 +264,17 @@ Now it's time to tie everything together! Instead of shifting the characters by 
 {% spoiler "Hints" %}
 
 <ul>
+  <li>Be sure to use the modulo operator, <code>%</code>, to handle wrap-arounds!</li>
   <li>Things get weird if we try to wrap <code>Z</code> or <code>z</code> by 1 using the technique in the previous section.</li>
   <li>Things get weird also if we try to wrap punctuation marks using that technique.</li>
   <li>Recall that the ASCII table maps all printable characters to numbers.</li>
   <li>Recall that the ASCII value of <code>A</code> is 65 and the ASCII value of <code>a</code> is 97.</li>
   <li>Recall that the Caesar cipher as explained at the beginning of this specification leverages a positional system, so <code>A</code> and <code>a</code> are treated as 0.</li>
-  <li>
 </ul>
 
 {% endspoiler %}
+
+{% next %}
 
 ## How to Submit
 
