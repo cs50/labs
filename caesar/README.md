@@ -90,7 +90,7 @@ To try out the staff's implementation of this problem, execute
 ./caesar KEY
 </pre>
 
-substituting a valid integer in place of <code>KEY</code>, within <a href="https://sandbox.cs50.io/fd78b740-81f3-4ab4-adfa-c3e3636ccb2e">this sandbox</a>.
+substituting a valid integer in place of <code>KEY</code>, within <a href="https://sandbox.cs50.io/84a23ab4-95c6-4db1-9d80-356c3318616d">this sandbox</a>.
 
 {% endspoiler %}
 

@@ -61,7 +61,7 @@ To try out the staff's implementation of this problem, execute
 ./vigenere KEYWORD
 </pre>
 
-substituting a valid alphabetic string in place of <code>KEYWORD</code>, within <a href="https://sandbox.cs50.io/fd78b740-81f3-4ab4-adfa-c3e3636ccb2e">this sandbox</a>.
+substituting a valid alphabetic string in place of <code>KEYWORD</code>, within <a href="https://sandbox.cs50.io/00b9fb06-1219-46d9-a94c-210340ead1fb">this sandbox</a>.
 
 {% endspoiler %}
 
