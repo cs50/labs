@@ -178,7 +178,7 @@ ciphertext: JgNnQ
 {% spoiler "Hints" %}
 
 <ul>
-  <li>If some of your variables in your Caesar cipher code don't match what they've been called here, just edit the names of things so they do match!</li>
+  <li>If some of your variables in your Caesar solution don't match what they've been called here, just edit the names of things so they do match!</li>
 </ul>
 
 {% endspoiler %}
