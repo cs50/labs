@@ -1,4 +1,8 @@
 # Mario
+{:.no_toc}
+
+* TOC
+{:toc}
 
 {% video https://www.youtube.com/watch?v=C-5-22ZvW40 %}
 
