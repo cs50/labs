@@ -74,13 +74,13 @@ If your program behaves incorrectly on some inputs (or doesn't compile at all), 
 
 {% spoiler "Staff's Solution" %}
 
-To try out the staff's own implementation of <code>credit</code>, execute
+To try out the staff's own implementation of `credit`, execute
 
-<pre>
+```
 ./credit
-</pre>
+```
 
-within <a href="https://sandbox.cs50.io/f6ba8639-111c-4d66-9831-7fc781174ca8">this sandbox</a>.
+within [this sandbox](https://sandbox.cs50.io/f6ba8639-111c-4d66-9831-7fc781174ca8).
 
 {% endspoiler %}
 
