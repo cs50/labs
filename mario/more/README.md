@@ -82,13 +82,13 @@ Modify `mario.c` at right in such a way that it implements this program as descr
 
 {% spoiler "Staff's Solution" %}
 
-To try out the staff's own implementation of <code>mario</code>, execute
+To try out the staff's own implementation of `mario`, execute
 
-<pre>
+```
 ./mario
-</pre>
+```
 
-within <a href="https://sandbox.cs50.io/060e683a-837c-4bb0-96b2-04319987df17">this sandbox</a>.
+within [this sandbox](https://sandbox.cs50.io/060e683a-837c-4bb0-96b2-04319987df17).
 
 {% endspoiler %}
 
