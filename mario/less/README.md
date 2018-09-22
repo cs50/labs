@@ -170,6 +170,7 @@ Modify `mario.c` at right such that it no longer simply prints the user's input 
 * Keep in mind that a hash is just a character like any other, so you can print it with `printf`.
 * Just as Scratch has a [Repeat](https://cdn.cs50.net/2018/fall/lectures/0/lecture0.pdf) block, so does C have a [`for`](https://cdn.cs50.net/2018/fall/lectures/1/lecture1.pdf) loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many hashes?
 * You can actually "nest" loops, iterating with one variable (e.g., `i`) in the "outer" loop and another (e.g., `j`) in the "inner" loop. For instance, here's how you might print a square of height and width `n`, below. Of course, it's not a square that you want to print!
+
     ```
     for (int i = 0; i < n; i++)
     {
