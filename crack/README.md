@@ -67,14 +67,12 @@ ROFL
 
 {% spoiler "Hints" %}
 
-<ul>
-  <li>Recall that <code>argc</code> and <code>argv</code> give us information about what was typed at the command line.</li>
-  <li>Recall that a string is just an array of characters (<code>char</code>s).</li>
-  <li>Recall that we can access individual elements of an array using square brackets (<code>[ ]</code>).</li>
-  <li>Recall that the salt is the first two characters of the hash.</li>
-  <li>Recall that sometimes, people use passwords that are actual words. Perhaps there's an optimization that can be employed?</li>
-  <li>Brute force algorithms aren't the fastest, and that's okay! Recall that shorter passwords are usually easier to crack than longer ones.</li>
-</ul>
+* Recall that `argc` and `argv` give us information about what was typed at the command line.
+* Recall that a string is just an array of characters (`char`s).
+* Recall that we can access individual elements of an array using square brackets (`[ ]`).
+* Recall that the salt is the first two characters of the hash.
+* Recall that sometimes, people use passwords that are actual words. Perhaps there's an optimization that can be employed?
+* Brute force algorithms aren't the fastest, and that's okay! Recall that shorter passwords are usually easier to crack than longer ones.
 
 {% endspoiler %}
 
