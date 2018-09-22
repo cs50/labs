@@ -86,11 +86,11 @@ Usage: ./caesar key
 
 To try out the staff's implementation of this problem, execute
 
-<pre>
+```
 ./caesar KEY
-</pre>
+```
 
-substituting a valid integer in place of <code>KEY</code>, within <a href="https://sandbox.cs50.io/84a23ab4-95c6-4db1-9d80-356c3318616d">this sandbox</a>.
+substituting a valid integer in place of `key`, within [this sandbox](https://sandbox.cs50.io/84a23ab4-95c6-4db1-9d80-356c3318616d).
 
 {% endspoiler %}
 
@@ -104,27 +104,19 @@ First, write in `pseudocode.txt` at right some pseudocode that implements this p
 
 {% spoiler %}
 
-<p>
-  There's more than one way to do this, so here's just one!
-</p>
+There's more than one way to do this, so here's just one!
 
-<ol>
-  <li>Check that program was run with one command-line argument</li>
-  <li>Iterate over the provided argument to make sure all characters are digits</li>
-  <li>Convert that command-line argument from a `string` to an `int`</li>
-  <li>Prompt user for plaintext</li>
-  <li>Iterate over each character of the plaintext:
-    <ol>
-      <li>If it is an uppercase letter, rotate it, preserving case, then print out the rotated character</li>
-      <li>If it is a lowercase letter, shift it, preserving case, then print out the rotated character</li>
-      <li>If it is neither, print out the character as is</li>
-    </ol></li>
-  <li>Print a newline</li>
-</ol>
+1. Check that program was run with one command-line argument
+1. Iterate over the provided argument to make sure all characters are digits
+1. Convert that command-line argument from a `string` to an `int`
+1. Prompt user for plaintext
+1. Iterate over each character of the plaintext:
+    1. If it is an uppercase letter, rotate it, preserving case, then print out the rotated character
+    1. If it is a lowercase letter, shift it, preserving case, then print out the rotated character
+    1. If it is neither, print out the character as is
+1. Print a newline
 
-<p>
-  It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste ours into your own!
-</p>
+It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste ours into your own!
 
 {% endspoiler %}
 
@@ -157,12 +149,10 @@ Usage: ./caesar key
 
 {% spoiler "Hints" %}
 
-<ul>
-  <li>Recall that you can compile your program with <code>make</code>.</li>
-  <li>Recall that you can print with <code>printf</code>.</li>
-  <li>Recall that <code>argc</code> and <code>argv</code> give you information about what was provided at the command line.</li>
-  <li>Recall that the name of the program itself (here, <code>./caesar</code>) is in `argv[0]`.</li>
-</ul>
+* Recall that you can compile your program with `make`.
+* Recall that you can print with `printf`.
+* Recall that `argc` and `argv` give you information about what was provided at the command line.
+* Recall that the name of the program itself (here, `./caesar`) is in `argv[0]`.
 
 {% endspoiler %}
 
@@ -188,13 +178,11 @@ Success
 
 {% spoiler "Hints" %}
 
-<ul>
-  <li>Recall that <code>argc</code> and <code>argv</code> give you information about what was provided at the command line.</li>
-  <li>Recall that <code>argv</code> is an array of strings.</li>
-  <li>Recall that with <code>printf</code> we can print a string using <code>%s</code> as the placeholder.</li>
-  <li>Recall that computer scientists like counting starting from 0.</li>
-  <li>Recall that we can access individual elements of an array, such as <code>argv</code> using square brackets, for example: <code>argv[0]</code></li>
-</ul>
+* Recall that `argc` and `argv` give you information about what was provided at the command line.
+* Recall that `argv` is an array of strings.
+* Recall that with `printf` we can print a string using `%s` as the placeholder.
+* Recall that computer scientists like counting starting from 0.
+* Recall that we can access individual elements of an array, such as `argv` using square brackets, for example: `argv[0]`.
 
 {% endspoiler %}
 
@@ -219,16 +207,14 @@ Usage: ./caesar key
 
 {% spoiler "Hints" %}
 
-<ul>
-  <li>Recall that <code>argv</code> is an array of strings.</li>
-  <li>Recall that a string, meanwhile, is just an array of <code>char</code>s.</li>
-  <li>Recall that the <code>string.h</code> header file contains a number of useful functions that work with strings.</li>
-  <li>Recall that we can use a loop to iterate over each character of a string if we know its length.</li>
-  <li>Recall that the <code>ctype.h</code> header file contains a number of useful functions that tell us things about characters.</li>
-  <li>Recall that we can <code>return</code> nonzero values from <code>main</code> to indicate that our program did not finish successfully.</li>
-  <li>Recall that with <code>printf</code> we can print an integer using <code>%i</code> as the placeholder.</li>
-  <li>Recall that the <code>atoi</code> function converts a string that looks like a number into that number.</li>
-</ul>
+* Recall that `argv` is an array of strings.
+* Recall that a string, meanwhile, is just an array of `char`s.
+* Recall that the `string.h` header file contains a number of useful functions that work with strings.
+* Recall that we can use a loop to iterate over each character of a string if we know its length.
+* Recall that the `ctype.h` header file contains a number of useful functions that tell us things about characters.
+* Recall that we can `return` nonzero values from `main` to indicate that our program did not finish successfully.
+* Recall that with `printf` we can print an integer using `%i` as the placeholder.
+* Recall that the `atoi` function converts a string that looks like a number into that number.
 
 {% endspoiler %}
 
@@ -248,10 +234,8 @@ ciphertext: ifmmp
 
 {% spoiler "Hints" %}
 
-<ul>
-  <li>Try to iterate over every character in the plaintext and literally add 1 to it, then print it.</li>
-  <li>If <code>c</code> is a variable of type <code>char</code> in C, what happens when you call <code>printf("%c", c + 1)</code>?</li>
-</ul>
+* Try to iterate over every character in the plaintext and literally add 1 to it, then print it.
+* If `c` is a variable of type `char` in C, what happens when you call `printf("%c", c + 1)`?
 
 {% endspoiler %}
 
@@ -263,13 +247,11 @@ Now it's time to tie everything together! Instead of shifting the characters by 
 
 {% spoiler "Hints" %}
 
-<ul>
-  <li>Best to use the modulo (i.e., remainder) operator, <code>%</code>, to handle wraparound from Z to A! But how?</li>
-  <li>Things get weird if we try to wrap <code>Z</code> or <code>z</code> by 1 using the technique in the previous section.</li>
-  <li>Things get weird also if we try to wrap punctuation marks using that technique.</li>
-  <li>Recall that ASCII maps all printable characters to numbers.</li>
-  <li>Recall that the ASCII value of <code>A</code> is 65. The ASCII value of <code>a</code>, meanwhile, is 97.</li>
-</ul>
+* Best to use the modulo (i.e., remainder) operator, `%`, to handle wraparound from Z to A! But how?
+* Things get weird if we try to wrap `Z` or `z` by 1 using the technique in the previous section.
+* Things get weird also if we try to wrap punctuation marks using that technique.
+* Recall that ASCII maps all printable characters to numbers.
+* Recall that the ASCII value of `A` is 65. The ASCII value of `a`, meanwhile, is 97.
 
 {% endspoiler %}
 
