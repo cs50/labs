@@ -87,11 +87,11 @@ Height: 4
 
 To try out the staff's implementation of this problem, execute
 
-<pre>
+```
 ./mario
-</pre>
+```
 
-within <a href="https://sandbox.cs50.io/fd78b740-81f3-4ab4-adfa-c3e3636ccb2e">this sandbox</a>.
+within [this sandbox](https://sandbox.cs50.io/fd78b740-81f3-4ab4-adfa-c3e3636ccb2e).
 
 {% endspoiler %}
 
@@ -105,24 +105,14 @@ First, write in `pseudocode.txt` at right some pseudocode that implements this p
 
 {% spoiler %}
 
-<p>
-  There's more than one way to do this, so here's just one!
-</p>
+There's more than one way to do this, so here's just one!
 
-<ol>
-  <li>Prompt user for height</li>
-  <li>If height is less than 1 or greater than 8 (or not an integer at all), go back one step</li>
-  <li>
-    Iterate from 1 through height:
-    <ol>
-      <li>On iteration <em>i</em>, print <em>i</em> hashes and then a newline</li>
-    </ol>
-  </li>
-</ol>
+1. Prompt user for height
+1. If height is less than 1 or greater than 8 (or not an integer at all), go back one step</li>
+1. Iterate from 1 through height:
+    1. On iteration *i*, print *i* hashes and then a newline
 
-<p>
-  It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste ours into your own!
-</p>
+It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste ours into your own!
 
 {% endspoiler %}
 
@@ -146,13 +136,11 @@ Stored: 4
 
 {% spoiler "Hints" %}
 
-<ul>
-  <li>Recall that you can compile your program with <code>make</code>.</li>
-  <li>Recall that you can print an <code>int</code> with <code>printf</code> using <code>%i</code>.</li>
-  <li>Recall that you can get an integer from the user with <code>get_int</code>.</li>
-  <li>Recall that <code>get_int</code> is declared in <code>cs50.h</code>.</li>
-  <li>Recall that we prompted the user for a positive integer in class via <a href="https://sandbox.cs50.io/b56865fd-c861-425f-aad7-4adcf6831139"><code>positive.c</code></a>.</li>
-</ul>
+* Recall that you can compile your program with `make`.
+* Recall that you can print an `int` with `printf` using `%i`.
+* Recall that you can get an integer from the user with `get_int`.
+* Recall that `get_int` is declared in `cs50.h`.
+* Recall that we prompted the user for a positive integer in class via [`positive.c`](https://sandbox.cs50.io/b56865fd-c861-425f-aad7-4adcf6831139).
 
 {% endspoiler %}
 
@@ -179,23 +167,19 @@ Modify `mario.c` at right such that it no longer simply prints the user's input 
 
 {% spoiler "Hints" %}
 
-<ul>
-  <li>Keep in mind that a hash is just a character like any other, so you can print it with <code>printf</code>.</li>
-  <li>Just as Scratch has a <a href="https://cdn.cs50.net/2018/fall/lectures/0/lecture0.pdf">Repeat</a> block, so does C have a <a href="https://cdn.cs50.net/2018/fall/lectures/1/lecture1.pdf"><code>for</code></a> loop, via which you can iterate some number times. Perhaps on each iteration, <em>i</em>, you could print that many hashes?</li>
-  <li>
-    You can actually "nest" loops, iterating with one variable (e.g., <code>i</code>) in the "outer" loop and another (e.g., <code>j</code>) in the "inner" loop. For instance, here's how you might print a square of height and width <code>n</code>, below. Of course, it's not a square that you want to print!
-<pre>
-for (int i = 0; i < n; i++)
-{
-    for (int j = 0; j < n; j++)
+* Keep in mind that a hash is just a character like any other, so you can print it with `printf`.
+* Just as Scratch has a [Repeat](https://cdn.cs50.net/2018/fall/lectures/0/lecture0.pdf) block, so does C have a [`for`](https://cdn.cs50.net/2018/fall/lectures/1/lecture1.pdf) loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many hashes?
+* You can actually "nest" loops, iterating with one variable (e.g., `i`) in the "outer" loop and another (e.g., `j`) in the "inner" loop. For instance, here's how you might print a square of height and width `n`, below. Of course, it's not a square that you want to print!
+    ```
+    for (int i = 0; i < n; i++)
     {
-        printf("#");
+        for (int j = 0; j < n; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
     }
-    printf("\n");
-}
-</pre>
-  </li>
-</ul>
+    ```
 
 {% endspoiler %}
 
