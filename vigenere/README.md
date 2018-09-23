@@ -160,7 +160,7 @@ or
 ```
 $ ./vigenere b
 plaintext:  HELLO
-ciphertext: ifmmp
+ciphertext: IFMMP
 ```
 
 or
