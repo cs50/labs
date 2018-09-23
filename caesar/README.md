@@ -227,7 +227,7 @@ As human beings it's easy for us to intuitively understand the formula described
 Extend the functionality of `caesar.c` at right such that, after validating the key, we prompt the user for a string and then shift all of its characters by 1, printing out the result. We can also at this point probably remove the line of code we wrote earlier that prints `Success`. All told, this might result in this behavior:
 
 ```
-$ ./caesar 20
+$ ./caesar 1
 plaintext:  hello
 ciphertext: ifmmp
 ```
