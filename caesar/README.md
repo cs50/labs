@@ -252,6 +252,7 @@ Now it's time to tie everything together! Instead of shifting the characters by 
 * Things get weird also if we try to wrap punctuation marks using that technique.
 * Recall that ASCII maps all printable characters to numbers.
 * Recall that the ASCII value of `A` is 65. The ASCII value of `a`, meanwhile, is 97.
+* If you're not seeing any output at all when you call `printf`, odds are it's because you're printing characters outside of the valid ASCII range from 0 to 127. Try printing characters as numbers (using `%i` instead of `%c`) at first to see what values you're printing, and make sure you're only ever trying to print valid characters!
 
 {% endspoiler %}
 
