@@ -62,7 +62,7 @@ Usage: ./crack hash
 
 ```
 $ ./crack 50cI2vYkF0YU2
-ROFL
+LOL
 ```
 
 {% spoiler "Hints" %}
