@@ -55,7 +55,7 @@ To be clear, recall that a hexadecimal digit represents 4 bits. Accordingly, `ff
 
 {% next %}
 
-## Structurally Sound
+## Copycat
 
 Let's now explore the underlying nature of these bitmaps in C. In `copy.c` at right is a program whose sole purpose in life is to create a copy of a BMP.
 
@@ -73,6 +73,10 @@ diff smiley.bmp copy.bmp
 
 If that command tells you nothing, the files are indeed identical. (Note that some programs, like Photoshop, include trailing zeroes at the ends of some BMPs. Our version of `copy` throws those away, so don't be too worried if you try to copy a BMP that you've downloaded or made only to find that the copy is actually a few bytes smaller than the original.) Feel free to open both files (as by double-clicking each) to confirm as much visually. But `diff` does a byte-by-byte comparison, so its eye is probably sharper than yours!
 
+{% next %}
+
+## Structurally Sound
+
 So how now did that copy get made? You'll notice that `copy.c` relies on another file `bmp.h`. Click on the little folder icon near the top of the lab window to open the file browser, and double-click on `bmp.h` to open it up and have a look.
 
 Open up `bmp.h`, and you'll see actual definitions of those headers we've mentioned, adapted from Microsoft's own implementations thereof. In addition, that file defines `BYTE`, `DWORD`, `LONG`, and `WORD`, data types normally found in the world of Windows programming. Notice how they're just aliases for primitives with which you are (hopefully) already familiar. It appears that `BITMAPFILEHEADER` and `BITMAPINFOHEADER` make use of these types. This file also defines a `struct` called `RGBTRIPLE` that, quite simply, "encapsulates" three bytes: one blue, one green, and one red (the order, recall, in which we expect to find RGB triples actually on disk).
@@ -85,7 +89,7 @@ Recall that `smiley.bmp` is 8 by 8 pixels, and so it should take up 14 + 40 + (8
 
 As this figure suggests, order does matter when it comes to `struct`s' members. Byte 57 is `rgbtBlue` (and not, say, `rgbtRed`), because `rgbtBlue` is defined first in `RGBTRIPLE`. Our use, incidentally, of the attribute called `packed` ensures that `clang` does not try to "word-align" members (whereby the address of each member's first byte is a multiple of 4), lest we end up with "gaps" in our structs that don't actually exist on disk. No need to worry about that particular implementation detail, though.
 
-## Copycat
+## Q & A
 
 Go ahead and pull up the URLs to which `BITMAPFILEHEADER` and `BITMAPINFOHEADER` are attributed, per the comments in `bmp.h`. Rather than hold your hand further on a stroll through `copy.c`, we're instead going to ask you some questions and let you teach yourself how the code therein works.
 
