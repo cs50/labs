@@ -93,7 +93,7 @@ As this figure suggests, order does matter when it comes to `struct`s' members. 
 
 Go ahead and pull up the URLs to which `BITMAPFILEHEADER` and `BITMAPINFOHEADER` are attributed, per the comments in `bmp.h`. Rather than hold your hand further on a stroll through `copy.c`, we're instead going to ask you some questions and let you teach yourself how the code therein works.
 
-Open up `questions.md` and replace every `TODO` therein with your answer to the question above it. That file happens to be written in Markdown, a lightweight format for text files that makes it easy to stylize text. For instance, we've prefixed each question with `##` so that, when viewed on GitHub, it renders in a larger, bold font. And we've surrounded code-related keywords with backticks (<code>`</code>) so that they render on GitHub in a monospaced (i.e., code-like) font.
+Open up `questions.md` and replace every `TODO` therein with your answer to the question above it. That file happens to be written in Markdown, a lightweight format for text files that makes it easy to stylize text. For instance, we've prefixed each question with `##` so that, when viewed on GitHub, it renders in a larger, bold font. And we've surrounded code-related keywords with backticks so that they render on GitHub in a monospaced (i.e., code-like) font.
 
 No need to write your answers in Markdown; plaintext suffices. But if you'd like to format your answers somehow, see [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/) for a tutorial.
 
@@ -101,4 +101,42 @@ No need to write your answers in Markdown; plaintext suffices. But if you'd like
 
 ## Manipulating the Bitmap
 
-Let's finally put aside
+Let's finally write a few lines of code to see how we can manipulate images. First, let's create the program we ultimately want to write for this lab, called Whodunit. Seems like `copy.c` would make a great place to start, so why don't we go ahead and copy that file using the terminal's `cp` command:
+
+```
+cp copy.c whodunit.c
+```
+
+Then, go ahead and click the little folder icon near the top left of your lab environment to open the file browser and double-click on the newly created `whodunit.c`. The interesting lines of code in `copy.c`, where the copying work itself actually happened, are lines 75 and 78, where the program reads from the source file and writes to the destination file, respectively, one `RGBTRIPLE`s worth of data.
+
+Instead of reading the source file's `RGBTRIPLE`, let's just write our own. Go ahead and delete line 75 and its associated comment. In place of what you just deleted, can you think of a way to define what a <span style="color:purple;font-weight:bold">purple</span> pixel might look like? Let's just write a purple pixel in place of every pixel in the original source. It turns out, the hexadecimal color code for purple is `800080`. When you think you've got it, compile `whodunit` and run
+
+```
+./whodunit clue.bmp verdict.bmp
+```
+
+and double-click on the resulting image to hopefully see a wall of purple!
+
+{% spoiler "Hints" %}
+
+<ul>
+  <li>Because of <code>bmp.h</code>, <code>RGBTRIPLE</code> is just a new data type we can work with, like <code>int</code> or <code>float</code>.</li>
+  <li>If we have a piece of data of type <code>RGBTRIPLE</code>, we can access its properties using dot notation.</li>
+  <li>Recall that <code>triple</code> is a variable of type <code>RGBTRIPLE</code>.</li>
+  <li>Recall that we can introduce a number in hexadecimal format in C by prepending it with <code>0x</code>.</li>
+  <li>Recall that a pixel can be defined as having a red, green, and blue component (RGB).</li>
+  <li>Recall that the first two hexdigits of a hexadecimal color code refer to its red component, the second two to its green component, and the third two to its blue component.</li>
+</ul>
+{% endspoiler %}
+Make sure you've tried on your own first, before viewing the below!
+
+{% spoiler "Solution %"}
+<code>
+triple.rgbtRed = 0x80;
+triple.rgbtGreen = 0x00;
+triple.rgbtBlue = 0x80;
+</code>
+
+{% endspoiler %}
+
+{% next %}
