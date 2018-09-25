@@ -52,3 +52,17 @@ ffffff  ffffff  <span style="color:red;font-weight:bold">0000ff</span>  <span st
 Because we’ve presented these bits from left to right, top to bottom, in 8 columns, you can actually see the red smiley if you take a step back or squint a bit!
 
 To be clear, recall that a hexadecimal digit represents 4 bits. Accordingly, `ffffff` in hexadecimal actually signifies `111111111111111111111111` in binary.
+
+{% next %}
+
+## Structurally Sound
+
+Let's now explore the underlying nature of these bitmaps in C. You'll notice that we've have included a file, `copy.c`, which relies on another file `bmp.h`. Click on the little folder icon near the top of the lab window to open the file browser, and double-click on `bmp.h` to open it up and have a look.
+
+Open up `bmp.h`, and you’ll see actual definitions of those headers we’ve mentioned, adapted from Microsoft’s own implementations thereof. In addition, that file defines `BYTE`, `DWORD`, `LONG`, and `WORD`, data types normally found in the world of Windows programming. Notice how they’re just aliases for primitives with which you are (hopefully) already familiar. It appears that `BITMAPFILEHEADER` and `BITMAPINFOHEADER` make use of these types. This file also defines a `struct` called `RGBTRIPLE` that, quite simply, "encapsulates" three bytes: one blue, one green, and one red (the order, recall, in which we expect to find RGB triples actually on disk).
+
+Why are these `struct`s useful? Well, recall that a file is just a sequence of bytes (or, ultimately, bits) on disk. But those bytes are generally ordered in such a way that the first few represent something, the next few represent something else, and so on. "File formats" exist because the world has standardized what bytes mean what. Now, we could just read a file from disk into RAM as one big array of bytes. And we could just remember that the byte at `array[i]` represents one thing, while the byte at `array[j]` represents another. But why not give some of those bytes names so that we can retrieve them from memory more easily? That’s precisely what the structs in `bmp.h` allow us to do. Rather than think of some file as one long sequence of bytes, we can instead think of it as a sequence of `struct`s.
+
+Recall that `smiley.bmp` is 8 by 8 pixels, and so it should take up 14 + 40 + (8 × 8) × 3 = 246 bytes on disk. (Confirm as much if you’d like using `ls -l`.) Here’s what it thus looks like on disk according to Microsoft:
+
+![on disk](disk.png)
