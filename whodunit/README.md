@@ -87,9 +87,9 @@ As this figure suggests, order does matter when it comes to `struct`s' members. 
 
 ## Copycat
 
-Go ahead and pull up the URLs to which BITMAPFILEHEADER and BITMAPINFOHEADER are attributed, per the comments in `bmp.h`. Rather than hold your hand further on a stroll through `copy.c`, we're instead going to ask you some questions and let you teach yourself how the code therein works.
+Go ahead and pull up the URLs to which `BITMAPFILEHEADER` and `BITMAPINFOHEADER` are attributed, per the comments in `bmp.h`. Rather than hold your hand further on a stroll through `copy.c`, we're instead going to ask you some questions and let you teach yourself how the code therein works.
 
-Open up `questions.md` and replace every `TODO` therein with your answer to the question above it. That file happens to be written in Markdown, a lightweight format for text files that makes it easy to stylize text. For instance, we've prefixed each question with `##` so that, when viewed on GitHub, it renders in a larger, bold font. And we've surrounded code-related keywords with backticks (\`) so that they render on GitHub in a monospaced (i.e., code-like) font.
+Open up `questions.md` and replace every `TODO` therein with your answer to the question above it. That file happens to be written in Markdown, a lightweight format for text files that makes it easy to stylize text. For instance, we've prefixed each question with `##` so that, when viewed on GitHub, it renders in a larger, bold font. And we've surrounded code-related keywords with backticks (`\``) so that they render on GitHub in a monospaced (i.e., code-like) font.
 
 No need to write your answers in Markdown; plaintext suffices. But if you'd like to format your answers somehow, see [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/) for a tutorial.
 
