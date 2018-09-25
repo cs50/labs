@@ -121,7 +121,7 @@ and double-click on the resulting image to hopefully see a wall of purple!
 
 <ul>
   <li>Because of <code>bmp.h</code>, <code>RGBTRIPLE</code> is just a new data type we can work with, like <code>int</code> or <code>float</code>.</li>
-  <li>If we have a variable of type <code>RGBTRIPLE</code>, we can access its properties, such as `rgbtRed`, using dot notation.</li>
+  <li>If we have a variable of type <code>RGBTRIPLE</code>, we can access its properties, such as <code>rgbtRed</code>, using dot notation.</li>
   <li>Recall that <code>triple</code> is a variable of type <code>RGBTRIPLE</code>.</li>
   <li>Recall that we can introduce a number in hexadecimal format in C by prepending it with <code>0x</code>.</li>
   <li>Recall that a pixel can be defined as having a red, green, and blue component (RGB).</li>
@@ -132,8 +132,8 @@ Make sure you've tried on your own first, before viewing the below!
 
 {% spoiler "Solution" %}
 <code>
-triple.rgbtRed = 0x80;
-triple.rgbtGreen = 0x00;
+triple.rgbtRed = 0x80;<br />
+triple.rgbtGreen = 0x00;<br />
 triple.rgbtBlue = 0x80;
 </code>
 
