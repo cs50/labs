@@ -3,5 +3,6 @@ lab50:
   files:
     - !exclude "*"
     - !include copy.c
+    - !include bmp.h
     - !include clue.bmp
     - !include smiley.bmp
