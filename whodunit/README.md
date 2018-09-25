@@ -141,7 +141,7 @@ triple.rgbtBlue = 0x80;
 
 {% next %}
 
-## Double Negative
+## Digital Detective
 
 Now, instead of just ignoring the pixels in the source file, let's actually do something with them. Head back over to `copy.c` and replace the lines you deleted in the last example. Perhaps, to help Mr. Boddy, we can try and change the pixels at some point between reading from the source and writing to the destination?
 
