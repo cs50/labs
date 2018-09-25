@@ -49,9 +49,7 @@ ffffff  <span style="color:red;font-weight:bold">0000ff</span>  ffffff  ffffff  
 ffffff  ffffff  <span style="color:red;font-weight:bold">0000ff</span>  <span style="color:red;font-weight:bold">0000ff</span>  <span style="color:red;font-weight:bold">0000ff</span>  <span style="color:red;font-weight:bold">0000ff</span>  ffffff  ffffff
 </div>
 
-Because we've presented these bits from left to right, top to bottom, in 8 columns, you can actually see the red smiley if you take a step back or squint a bit!
-
-To be clear, recall that a hexadecimal digit represents 4 bits. Accordingly, `ffffff` in hexadecimal actually signifies `111111111111111111111111` in binary.
+Because we've presented these bits from left to right, top to bottom, in 8 columns, you can actually see the red smiley if you take a step back or squint a bit! And to be clear, recall that a hexadecimal digit represents 4 bits. Accordingly, `ffffff` in hexadecimal actually signifies `111111111111111111111111` in binary.
 
 {% next %}
 
@@ -89,13 +87,17 @@ Recall that `smiley.bmp` is 8 by 8 pixels, and so it should take up 14 + 40 + (8
 
 As this figure suggests, order does matter when it comes to `struct`s' members. Byte 57 is `rgbtBlue` (and not, say, `rgbtRed`), because `rgbtBlue` is defined first in `RGBTRIPLE`. Our use, incidentally, of the attribute called `packed` ensures that `clang` does not try to "word-align" members (whereby the address of each member's first byte is a multiple of 4), lest we end up with "gaps" in our structs that don't actually exist on disk. No need to worry about that particular implementation detail, though.
 
+{% next %}
+
 ## Q & A
 
 Go ahead and pull up the URLs to which `BITMAPFILEHEADER` and `BITMAPINFOHEADER` are attributed, per the comments in `bmp.h`. Rather than hold your hand further on a stroll through `copy.c`, we're instead going to ask you some questions and let you teach yourself how the code therein works.
 
-Open up `questions.md` and replace every `TODO` therein with your answer to the question above it. That file happens to be written in Markdown, a lightweight format for text files that makes it easy to stylize text. For instance, we've prefixed each question with `##` so that, when viewed on GitHub, it renders in a larger, bold font. And we've surrounded code-related keywords with backticks (`\``) so that they render on GitHub in a monospaced (i.e., code-like) font.
+Open up `questions.md` and replace every `TODO` therein with your answer to the question above it. That file happens to be written in Markdown, a lightweight format for text files that makes it easy to stylize text. For instance, we've prefixed each question with `##` so that, when viewed on GitHub, it renders in a larger, bold font. And we've surrounded code-related keywords with backticks (<code>\`</code>) so that they render on GitHub in a monospaced (i.e., code-like) font.
 
 No need to write your answers in Markdown; plaintext suffices. But if you'd like to format your answers somehow, see [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/) for a tutorial.
+
+{% next %}
 
 ## Manipulating the Bitmap
 
