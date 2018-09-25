@@ -121,7 +121,7 @@ and double-click on the resulting image to hopefully see a wall of purple!
 
 <ul>
   <li>Because of <code>bmp.h</code>, <code>RGBTRIPLE</code> is just a new data type we can work with, like <code>int</code> or <code>float</code>.</li>
-  <li>If we have a piece of data of type <code>RGBTRIPLE</code>, we can access its properties using dot notation.</li>
+  <li>If we have a variable of type <code>RGBTRIPLE</code>, we can access its properties, such as `rgbtRed`, using dot notation.</li>
   <li>Recall that <code>triple</code> is a variable of type <code>RGBTRIPLE</code>.</li>
   <li>Recall that we can introduce a number in hexadecimal format in C by prepending it with <code>0x</code>.</li>
   <li>Recall that a pixel can be defined as having a red, green, and blue component (RGB).</li>
@@ -140,3 +140,34 @@ triple.rgbtBlue = 0x80;
 {% endspoiler %}
 
 {% next %}
+
+## Double Negative
+
+Now, instead of just ignoring the pixels in the source file, let's actually do something with them. Head back over to `copy.c` and replace the lines you deleted in the last example. Perhaps, to help Mr. Boddy, we can try and change the pixels at some point between reading from the source and writing to the destination?
+
+What if, say, we wanted to turn all of the white pixels black, reasoning that the higher contrast might make for better readability? Sounds reasonable enough! A white pixel, recall, is one whose red, green, **and** blue components are turned up all the way to the maximum (`0xff`). We can use some conditional logic, perhaps, to check that `triple` is white first, and then if it is, turn all of those components down to the minimum value (`0x00`) before writing the pixel to the destination file.
+
+This is your final challenge for now -- do it for Mr. Boddy! If you succeed, then after recompiling your code,
+
+```
+./whodunit clue.bmp verdict.bmp
+```
+
+should reveal the answer to this mystery!
+
+{% spoiler "Hints" %}
+
+<ul>
+  <li>Recall that we can create more complex boolean expressions using <code>&&</code> and <code>||</code>.</li>
+  <li>Recall that <code>==</code> tests for equality, though <code><=</code> and <code>>=</code> might also be valid operators in this case.</li>
+</ul>
+
+{% endspoiler %}
+
+## How to Submit
+
+Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+
+```
+submit50 cs50/2018/fall/whodunit
+```
