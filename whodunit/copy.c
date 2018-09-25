@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     if (outptr == NULL)
     {
         fclose(inptr);
-        fprintf("Could not create %s.\n", outfile);
+        printf("Could not create %s.\n", outfile);
         return 3;
     }
 
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
     {
         fclose(outptr);
         fclose(inptr);
-        fprintf("Unsupported file format.\n");
+        printf("Unsupported file format.\n");
         return 4;
     }
 
