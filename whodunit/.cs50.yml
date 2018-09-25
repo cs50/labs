@@ -1,0 +1,6 @@
+lab50:
+  cmd: alias check50="echo 'Unavailable for this lab'"
+  files:
+    - !include copy.c
+    - !include clue.bmp
+    - !include smiley.bmp
