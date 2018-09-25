@@ -4,5 +4,7 @@ lab50:
     - !exclude "*"
     - !include copy.c
     - !include bmp.h
+    - !include questions.md
+    - !include bitmap.png
     - !include clue.bmp
     - !include smiley.bmp
