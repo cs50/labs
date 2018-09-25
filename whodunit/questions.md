@@ -32,7 +32,7 @@ TODO
 
 TODO
 
-## Why is the third argument to `fread` always `1` in our code?
+## Why is the third argument to `fread` always `1` in our code? (For example, see lines 40, 44, and 75.)
 
 TODO
 
