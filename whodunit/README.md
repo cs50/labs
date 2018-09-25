@@ -1,10 +1,10 @@
 # Whodunit
 
-{% video https://www.youtube.com/watch?v=NkUf9vj1iFA %}
+{% video https://www.youtube.com/watch?v=2VAaVwnSOVg %}
 
 {% next %}
 
-## The Shadow Knows
+## A Murder Most Foul
 
 Welcome to Tudor Mansion. Your host, Mr. John Boddy, has met an untimely end—he’s the victim of foul play. It is your job to determine whodunit.
 
@@ -14,61 +14,39 @@ Unfortunately for you (though even more unfortunately for Mr. Boddy), the only e
 
 {% next %}
 
-## Safecracker
+You long ago threw away that piece of red plastic from your childhood which you could hold in front of this clue to solve this mystery for you, and so you must attack it as a computer scientist instead.
 
-Your task is to design and implement a program, `crack`, that cracks passwords. We're not going to give too many hints on this one, but to get started you may want to read up on how the `crypt` function works on Unix/Linux systems, such as this lab environment. To do so, type:
+But, first, some background.
 
-```
-man crypt
-```
+## Bitmaps
 
-in the terminal. Take particular note of that program's mention of "salt". Per that "`man` page", you'll likely want to put
+Perhaps the simplest way to represent an image is with a grid of pixels (i.e., dots), each of which can be of a different color. For black-and-white images, we thus need 1 bit per pixel, as 0 could represent black and 1 could represent white, as in the below.
 
-```
-#define _XOPEN_SOURCE
-#include <unistd.h>
-```
+![a simple bitmap](bitmap.png)
 
-at the top of your file in order to use `crypt`. Use `pseudocode.txt` as a notepad for ideas as to how you should organize your program!
+In this sense, then, is an image just a bitmap (i.e., a map of bits). For more colorful images, you simply need more bits per pixel. A file format (like [GIF](https://en.wikipedia.org/wiki/GIF)) that supports "8-bit color" uses 8 bits per pixel. A file format (like [BMP](https://en.wikipedia.org/wiki/BMP_file_format), [JPEG](https://en.wikipedia.org/wiki/JPEG), or [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)) that supports "24-bit color" uses 24 bits per pixel. (BMP actually supports 1-, 4-, 8-, 16-, 24-, and 32-bit color.)
 
-### Specification
+A 24-bit BMP like Mr. Boddy’s uses 8 bits to signify the amount of red in a pixel’s color, 8 bits to signify the amount of green in a pixel’s color, and 8 bits to signify the amount of blue in a pixel’s color. If you’ve ever heard of RGB color, well, there you have it: red, green, blue.
 
-* Your program should accept one and only one command-line argument: a hashed password.
-* If your program is executed without any command-line arguments or with more than one command-line argument, your program should print an error (of your choice) and exit immediately, with `main` returning `1` (thereby signifying an error).
-* Otherwise, your program must proceed to crack the given password, ideally as quickly as possible, ultimately printing the password in the clear followed by `\n`, nothing more, nothing less, with `main` returning `0`.
-* Assume that each password has been hashed with C's DES-based (not MD5-based) `crypt` function.
-* Assume that each password is no longer than five (5) characters. Gasp!
-* Assume that each password is composed entirely of alphabetical characters (uppercase and/or lowercase).
+If the R, G, and B values of some pixel in a BMP are, say, `0xff`, `0x00`, and `0x00` in hexadecimal, that pixel is purely red, as `0xff` (otherwise known as `255` in decimal) implies "a lot of red," while `0x00` and `0x00` imply "no green" and "no blue," respectively. Given how red Mr. Boddy’s BMP is, it clearly has a lot of pixels with those RGB values. But it also has a few with other values.
 
-Below, then, is some example behavior.
+Incidentally, HTML and CSS (languages in which webpages can be written) model colors in this same way. If curious, see [http://en.wikipedia.org/wiki/Web_colors]() for more details.
+
+## A Bit More Technical
+
+Recall that a file is just a sequence of bits, arranged in some fashion. A 24-bit BMP file, then, is essentially just a sequence of bits, (almost) every 24 of which happen to represent some pixel’s color. But a BMP file also contains some "metadata," information like an image’s height and width. That metadata is stored at the beginning of the file in the form of two data structures generally referred to as "headers," not to be confused with C’s header files. (Incidentally, these headers have evolved over time. This problem only expects that you support the latest version of Microsoft’s BMP format, 4.0, which debuted with Windows 95.) The first of these headers, called `BITMAPFILEHEADER`, is 14 bytes long. (Recall that 1 byte equals 8 bits.) The second of these headers, called `BITMAPINFOHEADER`, is 40 bytes long. Immediately following these headers is the actual bitmap: an array of bytes, triples of which represent a pixel’s color. (In 1-, 4-, and 16-bit BMPs, but not 24- or 32-, there’s an additional header right after `BITMAPINFOHEADER` called `RGBQUAD`, an array that defines "intensity values" for each of the colors in a device’s palette.) However, BMP stores these triples backwards (i.e., as BGR), with 8 bits for blue, followed by 8 bits for green, followed by 8 bits for red. (Some BMPs also store the entire bitmap backwards, with an image’s top row at the end of the BMP file. But we’ve stored this problem set’s BMPs as described herein, with each bitmap’s top row first and bottom row last.) In other words, were we to convert the 1-bit smiley above to a 24-bit smiley, substituting red for black, a 24-bit BMP would store this bitmap as follows, where `0000ff` signifies red and `ffffff` signifies white; we’ve highlighted in red all instances of `0000ff`.
 
 ```
-$ ./crack
-Usage: ./crack hash
+<span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  0000ff  0000ff  0000ff  0000ff  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>
+<span style="color:red">ffffff</span>  0000ff  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  0000ff  <span style="color:red">ffffff</span>
+0000ff  <span style="color:red">ffffff</span>  0000ff  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  0000ff  <span style="color:red">ffffff</span>  0000ff
+0000ff  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  0000ff
+0000ff  <span style="color:red">ffffff</span>  0000ff  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  0000ff  <span style="color:red">ffffff</span>  0000ff
+0000ff  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  0000ff  0000ff  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  0000ff
+<span style="color:red">ffffff</span>  0000ff  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  0000ff  <span style="color:red">ffffff</span>
+<span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>  0000ff  0000ff  0000ff  0000ff  <span style="color:red">ffffff</span>  <span style="color:red">ffffff</span>
 ```
 
-```
-$ ./crack 50cI2vYkF0YU2
-LOL
-```
+Because we’ve presented these bits from left to right, top to bottom, in 8 columns, you can actually see the red smiley if you take a step back.
 
-{% spoiler "Hints" %}
-
-* Recall that `argc` and `argv` give us information about what was typed at the command line.
-* Recall that a string is just an array of characters (`char`s).
-* Recall that we can access individual elements of an array using square brackets (`[ ]`).
-* Recall that the salt is the first two characters of the hash.
-* Recall that sometimes, people use passwords that are actual words. Perhaps there's an optimization that can be employed?
-* Brute force algorithms aren't the fastest, and that's okay! Recall that shorter passwords are usually easier to crack than longer ones.
-
-{% endspoiler %}
-
-{% next %}
-
-## How to Submit
-
-Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
-
-```
-submit50 cs50/2018/fall/crack
-```
+To be clear, recall that a hexadecimal digit represents 4 bits. Accordingly, `ffffff` in hexadecimal actually signifies `111111111111111111111111` in binary.
