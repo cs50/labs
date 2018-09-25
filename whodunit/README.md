@@ -130,7 +130,7 @@ and double-click on the resulting image to hopefully see a wall of purple!
 {% endspoiler %}
 Make sure you've tried on your own first, before viewing the below!
 
-{% spoiler "Solution %"}
+{% spoiler "Solution" %}
 <code>
 triple.rgbtRed = 0x80;
 triple.rgbtGreen = 0x00;
