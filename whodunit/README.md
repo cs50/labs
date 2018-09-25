@@ -145,7 +145,7 @@ triple.rgbtBlue = 0x80;
 
 Now, instead of just ignoring the pixels in the source file, let's actually do something with them. Head back over to `copy.c` and replace the lines you deleted in the last example. Perhaps, to help Mr. Boddy, we can try and change the pixels at some point between reading from the source and writing to the destination?
 
-What if, say, we wanted to turn all of the white pixels black, reasoning that the higher contrast might make for better readability? Sounds reasonable enough! A white pixel, recall, is one whose red, green, **and** blue components are turned up all the way to the maximum (`0xff`). We can use some conditional logic, perhaps, to check that `triple` is white first, and then if it is, turn all of those components down to the minimum value (`0x00`) before writing the pixel to the destination file.
+What if, say, we wanted to turn all of the white pixels black, reasoning that the higher contrast might make for better readability? Or what if we just wanted to turn white all of that red "noise" in the image? Or if we wanted to better-simulate the idea of that red piece of plastic, and give everything a reddish shade? We can use some conditional logic, perhaps, to check the different properties of `triple` first, and then decide what to do with it based on evaluating that boolean expression.
 
 This is your final challenge for now -- do it for Mr. Boddy! If you succeed, then after recompiling your code,
 
