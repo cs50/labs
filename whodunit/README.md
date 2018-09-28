@@ -6,13 +6,13 @@
 
 ## A Murder Most Foul
 
-Welcome to Tudor Mansion. Your host, Mr. John Boddy, has met an untimely end—he's the victim of foul play. It is your job to determine whodunit.
+Welcome to Tudor Mansion. Your host, Mr. John Boddy, has met an untimely end—he's the victim of foul play. It is your job to determine whodunit (i.e., who has done it).
 
-Unfortunately for you (though even more unfortunately for Mr. Boddy), the only evidence you have is a 24-bit BMP file called `clue.bmp`, pictured below, that Mr. Boddy whipped up on his computer in his final moments (what a guy!). Hidden among this file's red "noise" is a drawing of whodunit.
+Unfortunately for you (though even more unfortunately for Mr. Boddy), the only evidence you have is a 24-bit BMP file called `clue.bmp`, pictured below, that Mr. Boddy whipped up on his computer in his final moments. Hidden among this file's red "noise" is a drawing of whodunit.
 
 ![the final clue](clue.bmp)
 
-You long ago threw away that piece of red plastic from your childhood which you could hold in front of this clue to solve this mystery for you, and so you must attack it as a computer scientist instead.
+You long ago threw away that [piece of red plastic](http://www.stitchcraftcreations.com/2010/06/10/secret-agent-kit/) from your (or, at least, my) childhood that you could hold in front of this clue to solve this mystery for you, and so you must attack it as a computer scientist instead.
 
 But, first, some background.
 
@@ -30,13 +30,13 @@ A 24-bit BMP like Mr. Boddy's uses 8 bits to signify the amount of red in a pixe
 
 If the R, G, and B values of some pixel in a BMP are, say, `0xff`, `0x00`, and `0x00` in hexadecimal, that pixel is purely red, as `0xff` (otherwise known as `255` in decimal) implies "a lot of red," while `0x00` and `0x00` imply "no green" and "no blue," respectively. Given how red Mr. Boddy's BMP is, it clearly has a lot of pixels with those RGB values. But it also has a few with other values.
 
-Incidentally, HTML and CSS (languages in which webpages can be written) model colors in this same way. If curious, see [http://en.wikipedia.org/wiki/Web_colors](http://en.wikipedia.org/wiki/Web_colors) for more details.
+Incidentally, HTML and CSS (languages in which webpages can be written) model [colors](https://en.wikipedia.org/wiki/Web_colors) in this same way.
 
 {% next %}
 
 ## A Bit(map) More Technical
 
-Recall that a file is just a sequence of bits, arranged in some fashion. A 24-bit BMP file, then, is essentially just a sequence of bits, (almost) every 24 of which happen to represent some pixel's color. But a BMP file also contains some "metadata," information like an image's height and width. That metadata is stored at the beginning of the file in the form of two data structures generally referred to as "headers," not to be confused with C's header files. (Incidentally, these headers have evolved over time. This problem only expects that you support the latest version of Microsoft's BMP format, 4.0, which debuted with Windows 95.) The first of these headers, called `BITMAPFILEHEADER`, is 14 bytes long. (Recall that 1 byte equals 8 bits.) The second of these headers, called `BITMAPINFOHEADER`, is 40 bytes long. Immediately following these headers is the actual bitmap: an array of bytes, triples of which represent a pixel's color. (In 1-, 4-, and 16-bit BMPs, but not 24- or 32-, there's an additional header right after `BITMAPINFOHEADER` called `RGBQUAD`, an array that defines "intensity values" for each of the colors in a device's palette.) However, BMP stores these triples backwards (i.e., as BGR), with 8 bits for blue, followed by 8 bits for green, followed by 8 bits for red. (Some BMPs also store the entire bitmap backwards, with an image's top row at the end of the BMP file. But we've stored this problem set's BMPs as described herein, with each bitmap's top row first and bottom row last.) In other words, were we to convert the 1-bit smiley above to a 24-bit smiley, substituting red for black, a 24-bit BMP would store this bitmap as follows, where `0000ff` signifies red and `ffffff` signifies white; we've highlighted in red and bolded all instances of `0000ff`.
+Recall that a file is just a sequence of bits, arranged in some fashion. A 24-bit BMP file, then, is essentially just a sequence of bits, (almost) every 24 of which happen to represent some pixel's color. But a BMP file also contains some "metadata," information like an image's height and width. That metadata is stored at the beginning of the file in the form of two data structures generally referred to as "headers," not to be confused with C's header files. The first of these headers, called `BITMAPFILEHEADER`, is 14 bytes long. (Recall that 1 byte equals 8 bits.) The second of these headers, called `BITMAPINFOHEADER`, is 40 bytes long. Immediately following these headers is the actual bitmap: an array of bytes, triples of which represent a pixel's color. (In 1-, 4-, and 16-bit BMPs, but not 24- or 32-, there's an additional header right after `BITMAPINFOHEADER` called `RGBQUAD`, an array that defines "intensity values" for each of the colors in a device's palette.) However, BMP stores these triples backwards (i.e., as BGR), with 8 bits for blue, followed by 8 bits for green, followed by 8 bits for red. (Some BMPs also store the entire bitmap backwards, with an image's top row at the end of the BMP file. But we've stored this problem set's BMPs as described herein, with each bitmap's top row first and bottom row last.) In other words, were we to convert the 1-bit smiley above to a 24-bit smiley, substituting red for black, a 24-bit BMP would store this bitmap as follows, where `0000ff` signifies red and `ffffff` signifies white; we've highlighted in red and bolded all instances of `0000ff`.
 
 <div style="font-family: courier">
 ffffff  ffffff  <span style="color:red;font-weight:bold">0000ff</span>  <span style="color:red;font-weight:bold">0000ff</span>  <span style="color:red;font-weight:bold">0000ff</span>  <span style="color:red;font-weight:bold">0000ff</span>  ffffff  ffffff<br/>
@@ -89,13 +89,13 @@ As this figure suggests, order does matter when it comes to `struct`s' members. 
 
 {% next %}
 
-## Q & A
+## Q&A
 
 Go ahead and pull up the URLs to which `BITMAPFILEHEADER` and `BITMAPINFOHEADER` are attributed, per the comments in `bmp.h`. Rather than hold your hand further on a stroll through `copy.c`, we're instead going to ask you some questions and let you teach yourself how the code therein works.
 
 Open up `questions.md` and replace every `TODO` therein with your answer to the question above it. That file happens to be written in Markdown, a lightweight format for text files that makes it easy to stylize text. For instance, we've prefixed each question with `##` so that, when viewed on GitHub, it renders in a larger, bold font. And we've surrounded code-related keywords with backticks so that they render on GitHub in a monospaced (i.e., code-like) font.
 
-No need to write your answers in Markdown; plaintext suffices. But if you'd like to format your answers somehow, see [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/) for a tutorial.
+No need to write your answers in Markdown; plain text suffices. But if you'd like to format your answers somehow, see [this tutorial](https://guides.github.com/features/mastering-markdown/).
 
 {% next %}
 
@@ -147,7 +147,7 @@ Now, instead of just ignoring the pixels in the source file, let's actually do s
 
 What if, perhaps. we wanted to turn all of the white pixels black, reasoning that the higher contrast might make for better readability? Or what if we just wanted to turn white all of that red "noise" in the image? Or if we wanted to better-simulate the idea of that red piece of plastic, and give everything a reddish shade? We can use some conditional logic, perhaps, to check the different properties of `triple` first, and then decide what to do with it based on evaluating that boolean expression.
 
-This is your final challenge for now -- do it for Mr. Boddy! If you succeed, then after recompiling your code,
+This is your final challenge for now--do it for Mr. Boddy! If you succeed, then after recompiling your code,
 
 ```
 ./whodunit clue.bmp verdict.bmp
