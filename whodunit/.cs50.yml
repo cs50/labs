@@ -1,4 +1,3 @@
 lab50:
-  cmd: alias check50="echo 'Unavailable for this lab'"
   files:
     - !exclude README.md
