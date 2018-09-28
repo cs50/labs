@@ -1,4 +1,5 @@
 lab50:
   files:
     - !exclude bitmap.png
+    - !exclude disk.png
     - !exclude README.md
