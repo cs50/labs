@@ -143,7 +143,7 @@ triple.rgbtBlue = 0x80;
 
 ## Digital Detective
 
-Now, instead of just ignoring the pixels in the source file, let's actually do something with them. Head back over to `copy.c` and replace the lines you deleted in the last example. Perhaps, to help Mr. Boddy, we can try and change the pixels at some point between reading from the source and writing to the destination?
+Now, instead of just ignoring the pixels in the source file, let's actually do something with them. Head back over to `copy.c` to get a copy of the lines you deleted in the last example, and paste them back where they belong in `whodunit.c`. Perhaps, to help Mr. Boddy, we can try and change the pixels at some point between reading from the source and writing to the destination?
 
 What if, perhaps. we wanted to turn all of the white pixels black, reasoning that the higher contrast might make for better readability? Or what if we just wanted to turn white all of that red "noise" in the image? Or if we wanted to better-simulate the idea of that red piece of plastic, and give everything a reddish shade? We can use some conditional logic, perhaps, to check the different properties of `triple` first, and then decide what to do with it based on evaluating that boolean expression.
 
