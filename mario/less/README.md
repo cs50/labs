@@ -101,7 +101,7 @@ How to begin? Let's approach this problem one step at a time.
 
 ## Pseudocode
 
-First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Recall how we wrote pseudocode for [finding Mike Smith](https://cdn.cs50.net/2018/fall/lectures/0/lecture0.pdf). Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
+First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Recall how we wrote pseudocode for [finding Mike Smith](https://cdn.cs50.net/2019/x/lectures/0/lecture0.pdf). Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
 
 {% spoiler %}
 
@@ -168,7 +168,7 @@ Modify `mario.c` at right such that it no longer simply prints the user's input 
 {% spoiler "Hints" %}
 
 * Keep in mind that a hash is just a character like any other, so you can print it with `printf`.
-* Just as Scratch has a [Repeat](https://cdn.cs50.net/2018/fall/lectures/0/lecture0.pdf) block, so does C have a [`for`](https://cdn.cs50.net/2018/fall/lectures/1/lecture1.pdf) loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many hashes?
+* Just as Scratch has a [Repeat](https://cdn.cs50.net/2019/x/lectures/0/lecture0.pdf) block, so does C have a [`for`](https://cdn.cs50.net/2019/x/lectures/1/lecture1.pdf) loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many hashes?
 * You can actually "nest" loops, iterating with one variable (e.g., `i`) in the "outer" loop and another (e.g., `j`) in the "inner" loop. For instance, here's how you might print a square of height and width `n`, below. Of course, it's not a square that you want to print!
 
     ```
@@ -239,5 +239,5 @@ A space is just a press of your space bar, just as a period is just a press of i
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/fall/mario/less
+submit50 cs50/2019/x/mario/less
 ```
