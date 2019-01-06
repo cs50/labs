@@ -90,7 +90,7 @@ To try out the staff's implementation of this problem, execute
 ./caesar key
 ```
 
-substituting a valid integer in place of `key`, within [this sandbox](https://sandbox.cs50.io/84a23ab4-95c6-4db1-9d80-356c3318616d).
+substituting a valid integer in place of `key`, within [this sandbox](http://bit.ly/2Vwi8n0).
 
 {% endspoiler %}
 
@@ -100,7 +100,7 @@ How to begin? Let's approach this problem one step at a time.
 
 ## Pseudocode
 
-First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Recall how we wrote pseudocode for [finding Mike Smith](https://cdn.cs50.net/2019/x/lectures/0/lecture0.pdf). Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
+First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Recall how we wrote pseudocode for [finding Mike Smith](https://cdn.cs50.net/2018/fall/lectures/0/lecture0.pdf). Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
 
 {% spoiler %}
 
