@@ -88,7 +88,7 @@ To try out the staff's own implementation of `mario`, execute
 ./mario
 ```
 
-within [this sandbox](https://sandbox.cs50.io/060e683a-837c-4bb0-96b2-04319987df17).
+within [this sandbox](http://bit.ly/2VrQcRr).
 
 {% endspoiler %}
 
