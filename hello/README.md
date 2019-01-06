@@ -116,7 +116,7 @@ To try out the staff's implementation of this problem, execute
 ./hello
 </pre>
 
-within <a href="http://bit.ly/2Qp0a2g">this sandbox</a>.
+within [this sandbox](http://bit.ly/2Qp0a2g).
 
 ### Hints
 
