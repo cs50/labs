@@ -80,7 +80,7 @@ To try out the staff's own implementation of `credit`, execute
 ./credit
 ```
 
-within [this sandbox](http://bit.ly/2VwocvT).
+within [this sandbox](http://bit.ly/2QnNB7n).
 
 {% endspoiler %}
 
