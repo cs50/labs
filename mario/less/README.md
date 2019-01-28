@@ -140,7 +140,7 @@ Stored: 4
 * Recall that you can print an `int` with `printf` using `%i`.
 * Recall that you can get an integer from the user with `get_int`.
 * Recall that `get_int` is declared in `cs50.h`.
-* Recall that we prompted the user for a positive integer in class via [`positive.c`](https://sandbox.cs50.io/b56865fd-c861-425f-aad7-4adcf6831139).
+* Recall that we used a `do while` loop to prompt the user for a positive integer in class via [`positive.c`](https://sandbox.cs50.io/b56865fd-c861-425f-aad7-4adcf6831139).
 
 {% endspoiler %}
 
