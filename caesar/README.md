@@ -126,7 +126,7 @@ It's okay to edit your own after seeing this pseudocode here, but don't simply c
 
 Whatever your pseudocode, let's first write only the C code that checks whether the program was run with a single command-line argument before adding additional functionality.
 
-Specifically, modify `caesar.c` at right in such a way that: if the user provides exactly one command-line argument, it prints `Success`; if the user provides no command-line arguments, or two or more, it prints `Usage: ./caesar key`. Remember, since this key is coming from the command line at runtime, and not via `get_string`, we don't have an opportunity to re-prompt the user. The behavior of the resulting program should be like the below.
+Specifically, modify `caesar.c` at right in such a way that: if the user provides exactly one command-line argument, it prints `Success`; if the user provides no command-line arguments, or two or more, it prints `Usage: ./caesar key` and returns from main a value of 1 (which tends to signify an error) immediately.  Remember, since this key is coming from the command line at runtime, and not via `get_string`, we don't have an opportunity to re-prompt the user. The behavior of the resulting program should be like the below.
 
 ```
 $ ./caesar 20
@@ -153,6 +153,7 @@ Usage: ./caesar key
 * Recall that you can print with `printf`.
 * Recall that `argc` and `argv` give you information about what was provided at the command line.
 * Recall that the name of the program itself (here, `./caesar`) is in `argv[0]`.
+* Know that `return 1;` in main will end the program immediately.
 
 {% endspoiler %}
 
@@ -190,7 +191,7 @@ Success
 
 ## Validating the Key
 
-Now that you know how to read the key, let's analyze it. Modify `caesar.c` at right such that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., `0`, `1`, `2`, etc.) and, if any of them are not, terminates after printing the message `Usage: ./caesar key`. But if the argument consists solely of digit characters, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer, and print out the *integer*, as via `%i` with `printf`. So, for example, the behavior might look like this:
+Now that you know how to read the key, let's analyze it. Modify `caesar.c` at right such that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., `0`, `1`, `2`, etc.) and, if any of them are not, terminates (with a return code of 1) after printing the message `Usage: ./caesar key`. But if the argument consists solely of digit characters, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer, and print out the *integer*, as via `%i` with `printf`. So, for example, the behavior might look like this: 
 
 ```
 $ ./caesar 20
@@ -224,7 +225,7 @@ Usage: ./caesar key
 
 As human beings it's easy for us to intuitively understand the formula described above, inasmuch as we can say "H + 1 = I". But can a computer understand that same logic? Let's find out. For now, we're going to temporarily ignore the key the user provided and instead prompt the user for a secret message and attempt to shift all of its characters by just 1.
 
-Extend the functionality of `caesar.c` at right such that, after validating the key, we prompt the user for a string and then shift all of its characters by 1, printing out the result. We can also at this point probably remove the line of code we wrote earlier that prints `Success`. All told, this might result in this behavior:
+Extend the functionality of `caesar.c` at right such that, after validating the key, we prompt the user for a string (using `"plaintext: "` for the prompt) and then shift all of its characters by 1, printing out `"ciphertext: "` followed by the result and a newline. Your program should then exit by returning `0` from `main`. We can also at this point probably remove the line of code we wrote earlier that prints `Success`. All told, this might result in this behavior:
 
 ```
 $ ./caesar 1
