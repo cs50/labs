@@ -35,14 +35,15 @@ Your task is to design and implement a program, `crack`, that cracks passwords. 
 man crypt
 ```
 
-in the terminal. Take particular note of that program's mention of "salt". Per that "`man` page", you'll likely want to put
+in the terminal. Take particular note of that program's mention of "salt". 
+
+In order to declare function `crypt` for use in your solution, you'll want to put
 
 ```
-#define _XOPEN_SOURCE
-#include <unistd.h>
+#include <crypt.h>
 ```
 
-at the top of your file in order to use `crypt`. Use `pseudocode.txt` as a notepad for ideas as to how you should organize your program!
+at the top of your file. Use `pseudocode.txt` as a notepad for ideas as to how you should organize your program!
 
 ### Specification
 
