@@ -43,7 +43,7 @@ In order to declare function `crypt` for use in your solution, you'll want to pu
 #include <crypt.h>
 ```
 
-at the top of your file. Use `pseudocode.txt` as a notepad for ideas as to how you should organize your program!
+near the top of your file. Use `pseudocode.txt` as a notepad for ideas as to how you should organize your program!
 
 ### Specification
 
