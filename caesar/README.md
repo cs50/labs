@@ -263,5 +263,5 @@ Now it's time to tie everything together! Instead of shifting the characters by 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/fall/caesar
+submit50 cs50/2019/spring/caesar
 ```

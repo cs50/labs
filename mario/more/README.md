@@ -15,7 +15,7 @@ Let's recreate those pyramids in C, albeit in text, using hashes (`#`) for brick
 ####  ####
 ```
 
-The program we'll write will be called `mario`. And let's allow the user to decide just how tall the pyramids should be by first prompting them for a positive integer between, say, 1 and 8, inclusive. 
+The program we'll write will be called `mario`. And let's allow the user to decide just how tall the pyramids should be by first prompting them for a positive integer between, say, 1 and 8, inclusive.
 
 Here's how the program might work if the user inputs `8` when prompted:
 
@@ -110,5 +110,5 @@ Does your code work as prescribed when you input
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/fall/mario/more
+submit50 cs50/2019/spring/mario/more
 ```

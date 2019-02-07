@@ -4,7 +4,7 @@ A credit (or debit) card, of course, is a plastic card with which you can pay fo
 
 Actually, that's a bit of an exaggeration, because credit card numbers actually have some structure to them. All American Express numbers start with 34 or 37; most MasterCard numbers start with 51, 52, 53, 54, or 55; and all Visa numbers start with 4. But credit card numbers also have a "checksum" built into them, a mathematical relationship between at least one number and others. That checksum enables computers (or humans who like math) to detect typos (e.g., transpositions), if not fraudulent numbers, without having to query a database, which can be slow. Of course, a dishonest mathematician could certainly craft a fake number that nonetheless respects the mathematical constraint, so a database lookup is still necessary for more rigorous checks.
 
-## Luhn's Algorithm 
+## Luhn's Algorithm
 
 So what's the secret formula?  Well, most cards use an algorithm invented by Hans Peter Luhn of IBM. According to Luhn's algorithm, you can determine if a credit card number is (syntactically) valid as follows:
 
@@ -15,7 +15,7 @@ So what's the secret formula?  Well, most cards use an algorithm invented by Han
 That's kind of confusing, so let's try an example with David's Visa: 4003600000000014.
 
 1. For the sake of discussion, let's first underline every other digit, starting with the number's second-to-last digit:
-   
+
    <u>4</u>0<u>0</u>3<u>6</u>0<u>0</u>0<u>0</u>0<u>0</u>0<u>0</u>0<u>1</u>4
 
    Okay, let's multiply each of the underlined digits by 2:
@@ -38,7 +38,7 @@ That's kind of confusing, so let's try an example with David's Visa: 40036000000
 
 So, validating credit card numbers isn't hard, but it does get a bit tedious by hand. Let's write a program.
 
-## Implementation Details 
+## Implementation Details
 
 In `credit.c` at right, write a program that prompts the user for a credit card number and then reports (via `printf`) whether it is a valid American Express, MasterCard, or Visa card number, per the definitions of each's format herein. So that we can automate some tests of your code, we ask that your program's last line of output be `AMEX\n` or `MASTERCARD\n` or `VISA\n` or `INVALID\n`, nothing more, nothing less. For simplicity, you may assume that the user's input will be entirely numeric (i.e., devoid of hyphens, as might be printed on an actual card). But do not assume that the user's input will fit in an `int`! Best to use `get_long` from CS50's library to get users' input. (Why?)
 
@@ -91,5 +91,5 @@ within [this sandbox](https://sandbox.cs50.io/f6ba8639-111c-4d66-9831-7fc781174c
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/fall/credit
+submit50 cs50/2019/spring/credit
 ```
