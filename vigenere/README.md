@@ -61,7 +61,7 @@ To try out the staff's implementation of this problem, execute
 ./vigenere keyword
 ```
 
-substituting a valid alphabetic string in place of `keyword` within [this sandbox](https://sandbox.cs50.io/00b9fb06-1219-46d9-a94c-210340ead1fb).
+substituting a valid alphabetic string in place of `keyword` within [this sandbox](http://bit.ly/2SsOOQo).
 
 {% endspoiler %}
 
