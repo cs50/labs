@@ -90,7 +90,7 @@ To try out the staff's implementation of this problem, execute
 ./caesar key
 ```
 
-substituting a valid integer in place of `key`, within [this sandbox](https://sandbox.cs50.io/84a23ab4-95c6-4db1-9d80-356c3318616d).
+substituting a valid integer in place of `key`, within [this sandbox](http://bit.ly/2SpOcv4).
 
 {% endspoiler %}
 

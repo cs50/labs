@@ -91,7 +91,7 @@ To try out the staff's implementation of this problem, execute
 ./mario
 ```
 
-within [this sandbox](https://sandbox.cs50.io/fd78b740-81f3-4ab4-adfa-c3e3636ccb2e) **beginning Mon 2/11**.
+within [this sandbox](http://bit.ly/2Stp9r2).
 
 {% endspoiler %}
 

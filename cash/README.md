@@ -67,7 +67,7 @@ To try out the staff's implementation of this problem, execute
 ./cash
 ```
 
-within [this sandbox](https://sandbox.cs50.io/0551a578-189e-4989-9e89-99e41a4f2c6d) **beginning Mon 2/11**.
+within [this sandbox](http://bit.ly/2SpZob0).
 
 ### How to Test Your Code
 
