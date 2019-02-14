@@ -32,11 +32,11 @@ TODO
 
 TODO
 
-## Why is the third argument to `fread` always `1` in our code? (For example, see lines 40, 44, and 75.)
+## Why is the third argument to `fread` always `1` in our code?
 
 TODO
 
-## What value does line 63 of `copy.c` assign to `padding` if `bi.biWidth` is `3`?
+## What value does `copy.c` assign to `padding` if `bi.biWidth` is `3`?
 
 TODO
 
