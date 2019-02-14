@@ -28,7 +28,7 @@ TODO
 
 TODO
 
-## Why might `fopen` return `NULL` in lines 22 and 30 of `copy.c`?
+## Why might `fopen` return `NULL` in `copy.c`?
 
 TODO
 
