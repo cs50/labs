@@ -112,7 +112,7 @@ There's more than one way to do this, so here's just one!
 1. Prompt user for plaintext
 1. Iterate over each character of the plaintext:
     1. If it is an uppercase letter, rotate it, preserving case, then print out the rotated character
-    1. If it is a lowercase letter, shift it, preserving case, then print out the rotated character
+    1. If it is a lowercase letter, rotate it, preserving case, then print out the rotated character
     1. If it is neither, print out the character as is
 1. Print a newline
 
