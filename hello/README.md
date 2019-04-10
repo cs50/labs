@@ -154,7 +154,9 @@ Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_st
 
 ## How to Submit
 
-Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+For this and all subsequent problems, you'll be using a built-in tool called `submit50` to submit your work.  No need to download your code and manually upload to GitHub as you did in Problem Set 0!
+
+Instead, execute the below in the terminal window, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password. 
 
 ```
 submit50 cs50/2019/x/hello
