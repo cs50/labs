@@ -11,7 +11,7 @@ Let's recreate that aspect of the game, albeit in text, using hashes (`#`) for b
 In `mario.py` in the text editor at top-right, implement a program that
 
 1. prompts the user for an integer between 1 and 4, inclusive, re-prompting the user (again and again as needed) if their input is less than 1 or greater than 4,
-1. prints precisely that many hashes, one per line.
+1. prints precisely that many hashes, one per line, followed by a newline.
 
 {% spoiler "Hints" %}
 
