@@ -1,6 +1,6 @@
 # Prices
 
-Recall that Alpha Vantage offers a [TIME\_SERIES\_DAILY](https://www.alphavantage.co/documentation/#daily) API, which allows you get a CSV file with the daily close prices of a stock from the past 20+ years.
+Recall that Alpha Vantage offers a [TIME\_SERIES\_DAILY](https://www.alphavantage.co/documentation/#daily) API, which allows you to get a CSV file with the daily close prices of a stock from the past 20+ years.
 
 And recall that you can query that API with code like we saw in `quote.py`.
 
