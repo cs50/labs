@@ -140,11 +140,3 @@ And if the user inputs `8`, your output should now resemble:
 ```
 
 {% endspoiler %}
-
-{% next %}
-
-To submit your work, execute the below.
-
-```
-submit50 cs50/labs/pdss/4/mario
-```
