@@ -6,6 +6,8 @@ Toward the end of World 1-1 in Super Mario Bros., Mario must ascend a right-alig
 
 Let's recreate that pyramid with Python, albeit in text, using hashes (`#`) for bricks.
 
+{% video https://www.youtube.com/watch?v=syt3NZhllwc %}
+
 {% next %}
 
 Let's start by building the opposite of that right-aligned half pyramid, a left-aligned half pyramid like this:
