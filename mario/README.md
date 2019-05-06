@@ -2,6 +2,8 @@
 
 {% video https://www.youtube.com/watch?v=syt3NZhllwc %}
 
+{% next %}
+
 Toward the end of World 1-1 in Super Mario Bros., Mario must ascend a right-aligned half pyramid of blocks before leaping (if he wants to maximize his score) toward a flag pole:
 
 ![right-aligned pyramid](mario_right_shifted.png)
