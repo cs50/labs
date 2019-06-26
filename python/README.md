@@ -25,7 +25,7 @@ Let's now run your program.
 Type precisely the below into the terminal window at bottom-right, to the right of the dollar sign (`$`), otherwise known as a prompt, followed by Enter:
 
 ```
-python3 hello.py
+python hello.py
 ```
 
 You should see `hello, world`, followed by another prompt? If so, nicely done! If not, simply review these instructions and try again!
@@ -35,7 +35,7 @@ You should see `hello, world`, followed by another prompt? If so, nicely done! I
 To submit your work, type precisely the below into the terminal window at bottom-right, followed by Enter. Put another way, "execute" the below.
 
 ```
-submit50 cs50/labs/pdss/3/python
+submit50 cs50/labs/cscip14300/python
 ```
 
 If prompted, input your GitHub username and password; for security, you'll see asterisks (`*`) instead of your actual password.

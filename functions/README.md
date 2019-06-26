@@ -9,7 +9,7 @@ In `print.py` in the text editor at top-right, write a program that prints anyth
 Recall that you can run (and therefore test) your program by executing (i.e., running) 
 
 ```
-python3 print.py
+python print.py
 ```
 
 in the terminal window at bottom-right.
@@ -19,5 +19,5 @@ in the terminal window at bottom-right.
 To submit your work, execute the below.
 
 ```
-submit50 cs50/labs/pdss/3/functions
+submit50 cs50/labs/cscip14300/functions
 ```

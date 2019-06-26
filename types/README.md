@@ -13,7 +13,7 @@ But let's look more closely.
 Type
 
 ```
-python3 types.py
+python types.py
 ```
 
 in the terminal window at bottom-right, followed by Enter. When prompted for `x`, input `1`, followed by Enter. When prompted for `y`, again input `1`, followed by Enter. You should see the result.
@@ -41,5 +41,5 @@ i = int(s)
 To submit your work, execute the below.
 
 ```
-submit50 cs50/labs/pdss/3/types
+submit50 cs50/labs/cscip14300/types
 ```

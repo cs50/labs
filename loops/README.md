@@ -62,5 +62,5 @@ Modify `mario.py` in the text editor at top-right in such a way that the program
 To submit your work, execute the below.
 
 ```
-submit50 cs50/labs/pdss/3/loops
+submit50 cs50/labs/cscip14300/loops
 ```

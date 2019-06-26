@@ -146,5 +146,5 @@ And if the user inputs `8`, your output should now resemble:
 To submit your work, execute the below.
 
 ```
-submit50 cs50/labs/pdss/4/mario
+submit50 cs50/labs/cscip14300/mario
 ```

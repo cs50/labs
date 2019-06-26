@@ -35,5 +35,5 @@ Modify `input.py` in the text editor at top-right in such a way that the program
 To submit your work, execute the below.
 
 ```
-submit50 cs50/labs/pdss/3/variables
+submit50 cs50/labs/cscip14300/variables
 ```

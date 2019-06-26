@@ -36,5 +36,5 @@ while True:
 To submit your work, execute the below.
 
 ```
-submit50 cs50/labs/pdss/3/conditions
+submit50 cs50/labs/cscip14300/conditions
 ```
