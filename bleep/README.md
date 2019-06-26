@@ -23,7 +23,7 @@ Modify `bleep.py` in such a way that the program:
 * Iterates over the words returned by calling `split`, checking to see if any of the words match (case-insensitively) any of the words in the banned list.
 * Prints back the message, but with all of the characters in any banned words replaced by a `*` character.
 * For example, `gosh` should be replaced with four `*` characters, while `fudge` should be replaced with five.
-* You should not censor words that merely contain a banned word as a substring. For example, if **bar** is a banned word in the provided list, then none of ***bar**ns* nor *crow**bar*** nor *wheel**bar**row* should be censored.
+* You should not censor words that merely contain a banned word as a substring. For example, if **bar** is a banned word in the provided list, then none of **bar**ns nor crow**bar** nor wheel**bar**row should be censored.
 
 {% spoiler "Hints" %}
 
