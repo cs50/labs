@@ -14,6 +14,7 @@ and experiment with the app to see what it does. Try to register a few students.
 1. `templates/index.html`,
 1. `templates/failure.html`,
 1. `templates/success.html`,
+1. `templates/registered.html`,
 
 in that order, to understand how the app works.
 
