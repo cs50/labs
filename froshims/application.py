@@ -26,7 +26,7 @@ def index():
 def register():
     if not request.form.get("email") or not request.form.get("dorm"):
         return render_template("failure.html")
-    file = open("registered.csv", "a")
+    file = open("registrants.csv", "a")
     writer = csv.writer(file)
     writer.writerow((request.form.get("email"), request.form.get("dorm")))
     file.close()
@@ -35,7 +35,7 @@ def register():
 
 @app.route("/registered")
 def registered():
-    file = open("registered.csv", "r")
+    file = open("registrants.csv", "r")
     reader = csv.reader(file)
     students = list(reader)
     file.close()
