@@ -17,7 +17,7 @@ Implement `lines` in such a way that, given two strings, `a` and `b`, it returns
 To test your implementation of `lines` (via a command-line program we've written for you), execute the below, where `FILE1` and `FILE2` are any two text files (e.g., those in `inputs/`):
 
 ```
-./compare --lines FILE1 FILE2
+python compare.py --lines FILE1 FILE2
 ```
 
 ### `sentences`
@@ -33,7 +33,7 @@ Per its http://www.nltk.org/api/nltk.tokenize.html#nltk.tokenize.sent_tokenize[d
 To test your implementation of `sentences` (via a command-line program we've written for you), execute the below, where `FILE1` and `FILE2` are any two text files (e.g., those in `inputs/`):
 
 ```
-./compare --sentences FILE1 FILE2
+python compare.py --sentences FILE1 FILE2
 ```
 
 ### `substrings`
@@ -45,7 +45,7 @@ Recall that a substring of length `n` of some string is just a sequence of `n` c
 To test your implementation of `substrings` (via a command-line program we've written for you), execute the below, where `FILE1` and `FILE2` are any two text files (e.g., those in `inputs/`) and `LENGTH` is an integer:
 
 ```
-./compare --substrings LENGTH FILE1 FILE2
+python compare.py --substrings LENGTH FILE1 FILE2
 ```
 
 ## `templates/index.html`
