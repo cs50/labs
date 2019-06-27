@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Frosh IMs</title>
+    </head>
+    <body>
+
+        <!-- https://getbootstrap.com/docs/4.3/layout/overview/ -->
+        <div class="container">
+
+            <!-- https://getbootstrap.com/docs/4.3/components/navbar/ -->
+            <nav class="bg-primary mb-3 navbar navbar-dark navbar-expand">
+                <a class="navbar-brand" href="/">Frosh IMs</a>
+                <ul class="ml-auto navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/registered">Registered</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main>
+                {% block main %}{% endblock %}
+            </main>
+
+        </div>
+    </body>
+</html>
