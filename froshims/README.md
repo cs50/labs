@@ -22,7 +22,7 @@ in that order, to understand how the app works.
 
 Enhance and personalize this app in, at least, the following ways:
 
-* Alter the colors and/or layout of the app's navigation bar and/or form using Bootstrap.
+* Customize the colors and/or layout of the app's navigation bar and/or form using Bootstrap.
 * Require that students provide, when registering, at least two values besides their email address and name; store those values in `registrants.csv` as well.
 * Display registrants using a [table](https://getbootstrap.com/docs/4.3/content/tables/) instead of an unordered list, the design of which is up to you.
 * Require that a student input an actual email address, not just text. You're welcome to use a Python library for such, or you might want to read up on Python's support for "regular expressions."
