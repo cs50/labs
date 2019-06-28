@@ -67,17 +67,17 @@ Provided you meet these specifications, you're welcome to alter the aesthetics o
 ## References
 
 * [Bootstrap](http://getbootstrap.com/docs/4.1/)
-** [Forms](https://getbootstrap.com/docs/4.1/components/forms/)
-** [Tables](https://getbootstrap.com/docs/4.1/content/tables/)
+    * [Forms](https://getbootstrap.com/docs/4.1/components/forms/)
+    * [Tables](https://getbootstrap.com/docs/4.1/content/tables/)
 * [`csv`](https://docs.python.org/3/library/csv.html)
-** [`csv.writer`](https://docs.python.org/3/library/csv.html#csv.writer)
-** [`csv.DictWriter`](https://docs.python.org/3/library/csv.html#csv.DictWriter)
+    * [`csv.writer`](https://docs.python.org/3/library/csv.html#csv.writer)
+    * [`csv.DictWriter`](https://docs.python.org/3/library/csv.html#csv.DictWriter)
 * [DataTables](https://datatables.net/examples/styling/bootstrap4)
-** [Options](https://datatables.net/reference/option/)
+    * [Options](https://datatables.net/reference/option/)
 * [HTML Forms](https://www.w3schools.com/html/html_forms.asp)
-** [HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
-** [HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
-** [HTML Input Attributes](https://www.w3schools.com/html/html_form_attributes.asp)
+    * [HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
+    * [HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
+    * [HTML Input Attributes](https://www.w3schools.com/html/html_form_attributes.asp)
 
 {% next %}
 
