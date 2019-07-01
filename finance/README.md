@@ -142,7 +142,7 @@ Complete the implementation of `buy` in such a way that it enables a user to buy
 * Render an apology, without completing a purchase, if the user cannot afford the number of shares at the current price.
 * You don't need to worry about race conditions (or use transactions).
 
-Once you've implemented `buy` correctly, you should be able to see users' stock holdings by running `sqlite3 finance.db "SELECT * FROM stocks;".
+Once you've implemented `buy` correctly, you should be able to see users' stock holdings by running `sqlite3 finance.db "SELECT * FROM stocks;"`.
 
 ### `index`
 
