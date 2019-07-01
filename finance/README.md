@@ -175,7 +175,7 @@ Implement at least one personal touch of your choice:
 * Instead of `pwd_context.encrypt`, which Zamyla mentions, be sure to use `generate_password_hash` instead.*
 * You need not worry about the "history" step described in the video.
 
-video::sy1o1yLob5U[youtube,list=PLhQjrBD2T380UP0XpPRhaUNxWbhftko_b]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLhQjrBD2T380UP0XpPRhaUNxWbhftko_b" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Testing
 
