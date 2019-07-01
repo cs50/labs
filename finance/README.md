@@ -1,12 +1,14 @@
 # C$50 Finance
 
-In this project, you'll implement a website via which users can "buy" and "sell" stocks.
+In this project, you'll implement a website via which users can "buy" and "sell" stocks, a la the below.
+
+![screenshot of C$50 Finance](finance.png)
 
 {% next %}
 
 ## Background
 
-If you're not quite sure what it means to buy and sell stocks (i.e., shares of a company), head to http://www.investopedia.com/university/stocks/ for a tutorial.
+If you're not quite sure what it means to buy and sell stocks (i.e., shares of a company), head to [http://www.investopedia.com/university/stocks/](http://www.investopedia.com/university/stocks/) for a tutorial.
 
 You're about to implement C$50 Finance, a web app via which you can manage portfolios of stocks. Not only will this tool allow you to check real stocks' actual prices and portfolios' values, it will also let you buy (okay, "buy") and sell (okay, "sell") stocks by querying [IEX](https://iextrading.com/developer/) for stocks' prices.
 

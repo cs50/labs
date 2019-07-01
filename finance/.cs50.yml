@@ -1,2 +1,4 @@
-lab50: true
+lab50:
+    files:
+        - !exclude finance.png
 submit50: true
