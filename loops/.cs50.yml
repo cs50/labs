@@ -1,5 +1,5 @@
 lab50:
-  file:
+  files:
     - mario.py
 
 submit50:
