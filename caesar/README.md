@@ -191,7 +191,11 @@ Success
 
 ## Validating the Key
 
-Now that you know how to read the key, let's analyze it. Modify `caesar.c` at right such that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., `0`, `1`, `2`, etc.) and, if any of them are not, terminates (with a return code of 1) after printing the message `Usage: ./caesar key`. But if the argument consists solely of digit characters, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer, and print out the *integer*, as via `%i` with `printf`. So, for example, the behavior might look like this: 
+Now that you know how to read the key, let's analyze it. Modify `caesar.c` at right such that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., `0`, `1`, `2`, etc.) and, if any of them are not, terminates (with a return code of 1) after printing the message `Usage: ./caesar key`. But if the argument consists solely of digit characters, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer.  As luck would have it, a function, [`atoi`](https://man.cs50.io/3/atoi), exists for exactly that purpose.  Here's how you might use it:
+```
+    int k = atoi(argv[1]);
+```
+Once saved, print out the *integer*, as via `%i` with `printf`.  So, for example, the behavior might look like this: 
 
 ```
 $ ./caesar 20
@@ -215,7 +219,6 @@ Usage: ./caesar key
 * Recall that the `ctype.h` header file contains a number of useful functions that tell us things about characters.
 * Recall that we can `return` nonzero values from `main` to indicate that our program did not finish successfully.
 * Recall that with `printf` we can print an integer using `%i` as the placeholder.
-* Recall that the `atoi` function converts a string that looks like a number into that number.
 
 {% endspoiler %}
 
