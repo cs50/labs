@@ -1,6 +1,6 @@
 lab50:
   files:
-    - mario.py
+    - !include mario.py
 
 submit50:
   files: &files
