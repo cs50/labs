@@ -202,5 +202,7 @@ And as before, be sure to preserve case, but do so only based on the case of the
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2019/x/vigenere
+submit50 cs50/problems/2019/x/vigenere
 ```
+
+You can then go to [https://cs50.me/cs50x](https://cs50.me/cs50x) to view your current scores!

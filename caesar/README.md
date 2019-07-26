@@ -195,7 +195,7 @@ Now that you know how to read the key, let's analyze it. Modify `caesar.c` at ri
 ```
     int k = atoi(argv[1]);
 ```
-Once saved, print out the *integer*, as via `%i` with `printf`.  So, for example, the behavior might look like this: 
+Once saved, print out the *integer*, as via `%i` with `printf`.  So, for example, the behavior might look like this:
 
 ```
 $ ./caesar 20
@@ -267,5 +267,7 @@ Now it's time to tie everything together! Instead of shifting the characters by 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2019/x/caesar
+submit50 cs50/problems/2019/x/caesar
 ```
+
+You can then go to [https://cs50.me/cs50x](https://cs50.me/cs50x) to view your current scores!
