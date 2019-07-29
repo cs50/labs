@@ -40,6 +40,5 @@ but replace `YOURS` with your own API key.
 To submit your work, execute the below.
 
 ```
-pip3 install --upgrade 'submit50<3'
-submit50 cs50/labs/pdss/4/prices
+pip3 install --upgrade 'submit50<3' &>/dev/null && submit50 cs50/labs/pdss/4/prices
 ```
