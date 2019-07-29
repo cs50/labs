@@ -146,5 +146,6 @@ And if the user inputs `8`, your output should now resemble:
 To submit your work, execute the below.
 
 ```
+pip3 install --upgrade 'submit50<3'
 submit50 cs50/labs/pdss/4/mario
 ```
