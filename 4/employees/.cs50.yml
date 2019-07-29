@@ -1,2 +1,3 @@
-lab50: true
+lab50:
+  cmd: "pip3 install --upgrade 'submit50<3'"
 submit50: true
