@@ -132,6 +132,6 @@ if favorites["someone"] == 50:
 To submit your work, execute the below.
 
 ```
-pip3 install --upgrade 'submit50<3'
-submit50 cs50/labs/pdss/4/employees
+
+pip3 install --upgrade git+git://github.com/cs50/submit50@hbap &>/dev/null && submit50 cs50/labs/pdss/4/employees
 ```
