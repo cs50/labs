@@ -35,7 +35,7 @@ Your task is to design and implement a program, `crack`, that cracks passwords. 
 man crypt
 ```
 
-in the terminal. Take particular note of that program's mention of "salt". 
+in the terminal. Take particular note of that program's mention of "salt".
 
 In order to declare function `crypt` for use in your solution, you'll want to put
 
@@ -84,5 +84,7 @@ LOL
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2019/x/crack
+submit50 cs50/problems/2019/x/crack
 ```
+
+You can then go to [https://cs50.me/cs50x](https://cs50.me/cs50x) to view your current scores!
