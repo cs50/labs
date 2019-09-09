@@ -113,6 +113,12 @@ You can also execute the below to evaluate the correctness of your code using `c
 check50 cs50/problems/2019/yale/mario/more
 ```
 
+Execute the below to evaluate the style of your code using `style50`.
+
+```
+style50 mario.c
+```
+
 {% next %}
 
 ## How to Submit
