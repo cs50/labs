@@ -93,5 +93,5 @@ within [this sandbox](http://bit.ly/2QnNB7n).
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/problems/2019/fall/credit
+submit50 cs50/problems/2019/yale/credit
 ```

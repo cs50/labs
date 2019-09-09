@@ -157,5 +157,5 @@ Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_st
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/problems/2019/fall/hello
+submit50 cs50/problems/2019/yale/hello
 ```
