@@ -110,7 +110,7 @@ Does your code work as prescribed when you input
 You can also execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```
-check50 cs50/problems/2019/fall/mario/more
+check50 cs50/problems/2019/yale/mario/more
 ```
 
 {% next %}

@@ -229,7 +229,7 @@ All that remains now is a finishing flourish! Modify `mario.c` in such a way tha
 Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```
-check50 cs50/problems/2019/fall/mario/less
+check50 cs50/problems/2019/yale/mario/less
 ```
 
 {% spoiler "Hint" %}
