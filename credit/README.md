@@ -93,7 +93,13 @@ within [this sandbox](http://bit.ly/2QnNB7n).
 You can also execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```
-check50 cs50/problems/2019/fall/cash
+check50 cs50/problems/2019/fall/credit
+```
+
+Execute the below to evaluate the style of your code using `style50`.
+
+```
+style50 credit.c
 ```
 
 {% next %}

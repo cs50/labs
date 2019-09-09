@@ -158,6 +158,12 @@ Execute the below to evaluate the correctness of your code using `check50`. But 
 check50 cs50/problems/2019/fall/hello
 ```
 
+Execute the below to evaluate the style of your code using `style50`.
+
+```
+style50 hello.c
+```
+
 {% next %}
 
 ## How to Submit

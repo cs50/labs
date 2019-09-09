@@ -232,6 +232,12 @@ Execute the below to evaluate the correctness of your code using `check50`. But 
 check50 cs50/problems/2019/fall/mario/less
 ```
 
+Execute the below to evaluate the style of your code using `style50`.
+
+```
+style50 mario.c
+```
+
 {% spoiler "Hint" %}
 
 A space is just a press of your space bar, just as a period is just a press of its key! Just remember that `printf` requires that you surround both with double quotes!
