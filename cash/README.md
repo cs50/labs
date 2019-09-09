@@ -1,7 +1,5 @@
 # Cash
 
-{% next %}
-
 ## Greedy Algorithms
 
 <!-- http://mypieceofthe31415927.blogspot.com/2014/04/whats-wrong-with-these-us-coins.html -->
