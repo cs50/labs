@@ -1,12 +1,10 @@
 # Hello
 
-{% video https://www.youtube.com/watch?v=wSk1KSDUEYA %}
-
 ## Listing Files
 
 Hello, world! At right, in the *text editor*, is the very first program we wrote in C, in a file called `hello.c`.
 
-Click the folder icon, and you'll see that `hello.c` is the only file that's present at the moment. Per the mention of `/root/sandbox` below that icon, `hello.c` happens to be in a folder (otherwise known as a *directory*) called `sandbox`, which itself is in another folder called `root`. Click the folder icon again to hide all that.
+Click the folder icon, and you'll see that `hello.c` is the only file that's present at the moment. Click the folder icon again to hide all that.
 
 Next, in the *terminal window* at right, immediately to the right of the dollar sign (`$`), otherwise known as a *prompt*, type precisely the below (in lowercase), then hit Enter:
 
@@ -115,6 +113,10 @@ To try out the staff's implementation of this problem, execute
 </pre>
 
 within [this sandbox](http://bit.ly/2Qp0a2g).
+
+### Walkthrough
+
+{% video https://www.youtube.com/watch?v=wSk1KSDUEYA %}
 
 ### Hints
 
