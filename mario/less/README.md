@@ -1,7 +1,5 @@
 # Mario
 
-{% video https://www.youtube.com/watch?v=axPtLynZDXY %}
-
 ## World 1-1
 
 Toward the end of World 1-1 in Nintendo's Super Mario Brothers, Mario must ascend right-aligned pyramid of blocks, a la the below.
@@ -94,6 +92,8 @@ within [this sandbox](http://bit.ly/2VAClIi).
 {% endspoiler %}
 
 How to begin? Let's approach this problem one step at a time.
+
+{% video https://www.youtube.com/watch?v=axPtLynZDXY %}
 
 {% next %}
 
@@ -223,6 +223,14 @@ Does your code work as prescribed when you input
 ## Removing the Dots
 
 All that remains now is a finishing flourish! Modify `mario.c` in such a way that it prints spaces instead of those dots!
+
+### How to Test Your Code
+
+Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
+
+```
+check50 cs50/problems/2019/fall/mario/less
+```
 
 {% spoiler "Hint" %}
 

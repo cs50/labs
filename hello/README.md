@@ -150,6 +150,14 @@ Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_st
 #include <cs50.h>
 ```
 
+### How to Test Your Code
+
+Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
+
+```
+check50 cs50/problems/2019/fall/hello
+```
+
 {% next %}
 
 ## How to Submit
