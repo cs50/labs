@@ -92,7 +92,7 @@ within [this sandbox](http://bit.ly/2VrQcRr).
 
 {% endspoiler %}
 
-### Walkthorugh
+### Walkthrough
 
 {% video https://www.youtube.com/watch?v=7TJoEodsVBo %}
 
