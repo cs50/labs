@@ -1,8 +1,6 @@
 # Mario
 
-{% video https://www.youtube.com/watch?v=C-5-22ZvW40 %}
-
-{% next %}
+{% video https://www.youtube.com/watch?v=axPtLynZDXY %}
 
 ## World 1-1
 
@@ -23,7 +21,7 @@ Let's recreate that pyramid in C, albeit in text, using hashes (`#`) for bricks,
 ########
 ```
 
-The program we'll write will be called `mario`. And let's allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between, say, 1 and 8, inclusive. 
+The program we'll write will be called `mario`. And let's allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between, say, 1 and 8, inclusive.
 
 Here's how the program might work if the user inputs `8` when prompted:
 
@@ -120,7 +118,7 @@ It's okay to edit your own after seeing this pseudocode here, but don't simply c
 
 ## Prompting for Input
 
-Whatever your pseudocode, let's first write only the C code that prompts (and re-prompts, as needed) the user for input. 
+Whatever your pseudocode, let's first write only the C code that prompts (and re-prompts, as needed) the user for input.
 
 Specifically, modify `mario.c` at right in such a way that it prompts the user for the pyramid's height, storing their input in a variable, re-prompting the user again and again as needed if their input is not a positive integer between 1 and 8, inclusive. Then, simply print the value of that variable, thereby confirming (for yourself) that you've indeed stored the user's input successfully, a la the below.
 
@@ -239,5 +237,5 @@ A space is just a press of your space bar, just as a period is just a press of i
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/fall/mario/less
+submit50 cs50/problems/2019/fall/mario/less
 ```

@@ -1,6 +1,6 @@
 # Cash
 
-{% video https://www.youtube.com/watch?v=sxXQ-jgUIg8 %}
+{% video https://www.youtube.com/watch?v=Iza6F8sjdBM %}
 
 {% next %}
 
@@ -28,7 +28,7 @@ Implement, in `cash.c` at right, a program that first asks the user how much cha
 * You need not try to check whether a user's input is too large to fit in a `float`. Using `get_float` alone will ensure that the user's input is indeed a floating-point (or integral) value but not that it is non-negative.
 * If the user fails to provide a non-negative value, your program should re-prompt the user for a valid amount again and again until the user complies.
 * So that we can automate some tests of your code, be sure that your program's last line of output is only the minimum number of coins possible: an integer followed by `\n`.
-* Beware the inherent imprecision of floating-point values. Recall [`floats.c`](https://sandbox.cs50.io/575cd269-8b4e-4a01-bc9f-3de38614b43e) from class, wherein, if `x` is `2`, and `y` is `10`, `x / y` is not precisely two tenths! And so, before making change, you'll probably want to convert the user's inputted dollars to cents (i.e., from a `float` to an `int`) to avoid tiny errors that might otherwise add up! 
+* Beware the inherent imprecision of floating-point values. Recall [`floats.c`](https://sandbox.cs50.io/575cd269-8b4e-4a01-bc9f-3de38614b43e) from class, wherein, if `x` is `2`, and `y` is `10`, `x / y` is not precisely two tenths! And so, before making change, you'll probably want to convert the user's inputted dollars to cents (i.e., from a `float` to an `int`) to avoid tiny errors that might otherwise add up!
 * Take care to round your cents to the nearest penny, as with `round`, which is declared in `math.h`. For instance, if `dollars` is a `float` with the user's input (e.g., `0.20`), then code like
 
   ```
@@ -86,5 +86,5 @@ Does your code work as prescribed when you input
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/fall/cash
+submit50 cs50/problems/2019/fall/cash
 ```
