@@ -1,7 +1,5 @@
 # Mario
 
-{% video https://www.youtube.com/watch?v=7TJoEodsVBo %}
-
 ## World 1-1
 
 Toward the beginning of World 1-1 in Nintendo's Super Mario Brothers, Mario must hop over adjacent pyramids of blocks, per the below.
@@ -94,6 +92,10 @@ within [this sandbox](http://bit.ly/2VrQcRr).
 
 {% endspoiler %}
 
+### Walkthorugh
+
+{% video https://www.youtube.com/watch?v=7TJoEodsVBo %}
+
 ### How to Test Your Code
 
 Does your code work as prescribed when you input
@@ -104,6 +106,12 @@ Does your code work as prescribed when you input
 * `9` or other positive numbers?
 * letters or words?
 * no input at all, when you only hit Enter?
+
+You can also execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
+
+```
+check50 cs50/problems/2019/fall/mario/more
+```
 
 {% next %}
 

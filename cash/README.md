@@ -1,7 +1,5 @@
 # Cash
 
-{% video https://www.youtube.com/watch?v=Iza6F8sjdBM %}
-
 {% next %}
 
 ## Greedy Algorithms
@@ -59,6 +57,11 @@ Change owed: 0.41
 
 {% endspoiler %}
 
+### Walkthrough
+
+{% video https://www.youtube.com/watch?v=Iza6F8sjdBM %}
+
+
 ### Staff's Solution
 
 To try out the staff's implementation of this problem, execute
@@ -78,6 +81,12 @@ Does your code work as prescribed when you input
 * `0.01` (or other positive numbers)?
 * letters or words?
 * no input at all, when you only hit Enter?
+
+You can also execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
+
+```
+check50 cs50/problems/2019/fall/cash
+```
 
 {% next %}
 
