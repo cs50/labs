@@ -53,7 +53,7 @@ Change owed: 0.41
 
 {% spoiler "Hints" %}
 
-{% video https://www.youtube.com/watch?v=2QZSsaSfB3A %}
+{% video https://www.youtube.com/watch?v=Y3nWGvqt_Cg %}
 
 {% endspoiler %}
 
