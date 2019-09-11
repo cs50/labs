@@ -93,7 +93,7 @@ within [this sandbox](http://bit.ly/2VAClIi).
 
 How to begin? Let's approach this problem one step at a time.
 
-{% video https://www.youtube.com/watch?v=axPtLynZDXY %}
+{% video https://www.youtube.com/watch?v=NAs4FIWkJ4s %}
 
 {% next %}
 
