@@ -94,7 +94,7 @@ within [this sandbox](http://bit.ly/2VrQcRr).
 
 ### Walkthrough
 
-{% video https://www.youtube.com/watch?v=7TJoEodsVBo %}
+{% video https://www.youtube.com/watch?v=FzN9RAjYG_Q %}
 
 ### How to Test Your Code
 
