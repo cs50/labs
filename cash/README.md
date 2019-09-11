@@ -51,15 +51,9 @@ Change owed: 0.41
 4
 ```
 
-{% spoiler "Hints" %}
-
-{% video https://www.youtube.com/watch?v=Y3nWGvqt_Cg %}
-
-{% endspoiler %}
-
 ### Walkthrough
 
-{% video https://www.youtube.com/watch?v=Iza6F8sjdBM %}
+{% video https://www.youtube.com/watch?v=Y3nWGvqt_Cg %}
 
 
 ### Staff's Solution
