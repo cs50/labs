@@ -1,0 +1,4 @@
+lab50:
+  files:
+    - !exclude "*"
+    - !include variables.c

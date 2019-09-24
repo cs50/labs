@@ -1,4 +1,0 @@
-lab50:
-  files:
-    - !exclude "*"
-    - !include mario.c

@@ -1,0 +1,6 @@
+lab50:
+  files:
+    - !exclude "*"
+    - !include typecasting.c
+    - !include ascii0.c
+    - !include ascii1.c

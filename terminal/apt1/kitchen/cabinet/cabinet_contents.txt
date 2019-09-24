@@ -1,0 +1,4 @@
+dishes
+glasses
+cups
+saucers
