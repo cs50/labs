@@ -6,7 +6,7 @@ And recall that you can query that API with code like we saw in `quote.py`.
 
 In `prices.py` in the code editor at top-right, implement a program that
 
-1. prompts the user for a stock symbol and
+1. prompts the user for a stock symbol (via the command line) and
 1. outputs, line by line, a date followed by the close price of that stock on that date.
 
 If the user inputs `MSFT`, your output should resemble:
