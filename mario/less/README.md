@@ -229,7 +229,7 @@ All that remains now is a finishing flourish! Modify `mario.c` in such a way tha
 Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```
-check50 cs50/problems/2019/fall/mario/less
+check50 cs50/problems/2020/x/mario/less
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -251,5 +251,5 @@ A space is just a press of your space bar, just as a period is just a press of i
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/problems/2019/fall/mario/less
+submit50 cs50/problems/2020/x/mario/less
 ```
