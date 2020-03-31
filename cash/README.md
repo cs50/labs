@@ -28,7 +28,7 @@ Implement, in `cash.c` at right, a program that first asks the user how much cha
 * Take care to round your cents to the nearest penny, as with `round`, which is declared in `math.h`. For instance, if `dollars` is a `float` with the user's input (e.g., `0.20`), then code like
 
   ```
-  int coins = round(dollars * 100);
+  int cents = round(dollars * 100);
   ```
 
   will safely convert `0.20` (or even `0.200000002980232238769531250`) to `20`.
