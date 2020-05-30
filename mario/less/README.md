@@ -64,7 +64,7 @@ Height: 1
 #
 ```
 
-If the user doesn't, in fact, input a positive integer between 1 and 8, inclusive, when prompted, the program should re-prompt the user until they cooperate:
+If the user, when prompted, doesn't input a positive integer between 1 and 8, inclusive, the program should re-prompt the user until they cooperate:
 
 ```
 $ ./mario
