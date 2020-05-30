@@ -12,7 +12,7 @@ Next, in the *terminal window* at right, immediately to the right of the dollar 
 ls
 ```
 
-You should see just `hello.c`? That's because you've just listed the files in that same folder, this time using a command-line interface (CLI), using just your keyboard, rather than the graphical user interface (GUI) represented by that folder icon. In particular, you *executed* (i.e., ran) a command called `ls`, which is shorthand for "list." (It's such a frequently used command that its authors called it just `ls` to save keystrokes.) Make sense?
+You should see just `hello.c`? That's because you've just listed the files in that same folder, this time using a command-line interface (CLI), using just your keyboard, rather than the graphical user interface (GUI) represented by that folder icon. In particular, you *executed* (i.e., ran) a command called `ls`, which is shorthand for "list" (it's such a frequently used command that its authors called it just `ls` to save keystrokes). Make sense?
 
 Here on out, to execute (i.e., run) a command means to type it into a terminal window and then hit Enter. Commands are "case-sensitive," so be sure not to type in uppercase when you mean lowercase or vice versa.
 
@@ -32,7 +32,7 @@ And then execute this one again:
 ls
 ```
 
-This time, you should see not only `hello.c` but `a.out` listed as well? (You can see the same graphically if you click that folder icon again.) That's because `clang` has translated the source code in `hello.c` into machine code in `a.out`, which happens to stand for "assembler output," but more on that another time.
+This time, you should see not only `hello.c` but `a.out` listed as well (you can see the same graphically if you click that folder icon again)? That's because `clang` has translated the source code in `hello.c` into machine code in `a.out`, which happens to stand for "assembler output," but more on that another time.
 
 Now run the program by executing the below.
 
@@ -152,7 +152,7 @@ Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_st
 
 ### How to Test Your Code
 
-Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
+Execute the below to evaluate the correctness of your code using `check50`, but be sure to compile and test it yourself!
 
 ```
 check50 cs50/problems/2020/spring/hello
