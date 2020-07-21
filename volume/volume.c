@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define HEADER_SIZE 44
-
 int main(int argc, string argv[])
 {
     // Check command-line arguments
