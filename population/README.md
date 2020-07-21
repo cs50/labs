@@ -1,4 +1,4 @@
-# Population Control
+# Population Growth
 
 Determine how long it takes for a population to reach a particular size.
 
@@ -9,7 +9,9 @@ End size: 200
 9 years
 ```
 
-## Population Growth
+## Populations
+
+Say we have a popluation of `n` llamas. Each year, `n/3` new llamas are born.
 
  TODO
 
