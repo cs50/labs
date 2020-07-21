@@ -39,17 +39,17 @@ Complete the implementation of `volume.c` at right, such that it changes the vol
 Your program should behave per the examples below.
 
 ```
-$ ./volume scale.wav output.wav 2.0
+$ ./volume input.wav output.wav 2.0
 ```
 
-When you listen to `output.wav`, it should be twice as loud as `scale.wav`!
+When you listen to `output.wav`, it should be twice as loud as `input.wav`!
 
 
 ```
-$ ./volume scale.wav output.wav 0.5
+$ ./volume input.wav output.wav 0.5
 ```
 
-When you listen to `output.wav`, it should be half as loud as `scale.wav`!
+When you listen to `output.wav`, it should be half as loud as `input.wav`!
 
 {% next %}
 
