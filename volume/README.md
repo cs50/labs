@@ -25,7 +25,7 @@ Complete the implementation of `volume.c` at right, such that it changes the vol
 
 ### Hints
 
-* Note that this file includes the header file `stdint.h`, which includes the types `uint8_t` (for storing an 8-bit unsigned integer) and `uint16_t` (for storing a 16-bit unsigned integer). Both may prove helpful to you!
+* Note that this file includes the header file `stdint.h`, which includes the types `uint8_t` (for storing an 8-bit unsigned integer) and `uint16_t` (for storing a 16-bit unsigned integer). Both may prove helpful to you! For instance, to store a 16-bit sample value, you might use a variable of type `uint16_t`.
 * You may find the documentation for [`fread`](https://man.cs50.io/3/fread) and [`fwrite`](https://man.cs50.io/3/fwrite) helpful here.
     * In particular, note that both functions accept the following arguments:
         * `ptr`: a pointer to the location in memory to store data (when reading from a file) or from which to write data (when writing data to a file)
