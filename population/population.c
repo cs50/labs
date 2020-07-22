@@ -3,8 +3,12 @@
 
 int main()
 {
-    // Prompt for start and end sizes
+    // Prompt for start size
     int start = get_int("Start size: ");
+
+    // TODO: Ensure start size at least 9
+
+    // Prompt for end size
     int end = get_int("End size: ");
 
     // TODO: Ensure end size greater than start size
