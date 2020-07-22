@@ -2,9 +2,20 @@
 
 Determine which of two Scrabble words is worth more.
 
+```
+$ ./scrabble 
+Player 1: COMPUTER
+Player 2: science
+Player 1 wins!
+```
+
 ## Background
 
 In the game of [Scrabble](https://scrabble.hasbro.com/en-us/rules), players create words to score points, and the number of points is the sum of the point values of each letter in the word. 
+
+|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|
+|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+|1|3|3|2|1|4|2|4|1|8|5|1|3|1|1|3|10|1|1|1|1|4|4|8|4|10|
 
 For example, if we wanted to score the word `Code`, we would note that in general Scrabble rules, the `C` is worth `3` points, the `o` is worth `1` point, the `d` is worth `2` points, and the `e` is worth `1` point. Summing these, we get that `Code` is worth `3+1+2+1 = 7` points. 
 
@@ -12,13 +23,13 @@ For example, if we wanted to score the word `Code`, we would note that in genera
 
 Complete the implementation of `scrabble.c` at right, such that it determines the winner of a short scrabble-like game, where two players each enter their word, and the higher scoring player wins.
 
-* We've stored the point values of each letter of the alphabet in an integer array named `POINTS`. 
-  * For example, `A` or `a` is worth `1` point, `B` or `b` is worth `3` points, etc.
-* We've created a header for a helper function called `score()` that takes a string as input and returns an `int`. Whenever we would like to assign point values to a particular word, we can call this function. Note that this header is required for C to know that `score()` exists later in the program. 
+* Notice that we've stored the point values of each letter of the alphabet in an integer array named `POINTS`. 
+  * For example, `A` or `a` is worth 1 point (represented by `POINTS[0]`), `B` or `b` is worth 3 points (represented by `POINTS[1]`), etc.
+* Notice that we've created a prototype for a helper function called `score()` that takes a string as input and returns an `int`. Whenever we would like to assign point values to a particular word, we can call this function. Note that this prototype is required for C to know that `score()` exists later in the program. 
 * In `main()`, the program prompts the two players for their words using the `get_string()` function. These values are stored inside variables named `p1` and `p2`.
 * In `score()`, your program should compute, using the `POINTS` array, and return the score for the string argument. Characters that are not letters should be given zero points, and uppercase and lowercase letters should be given the same point values. 
-  * `!` is worth `0` points while `A` and `a` are both worth `1` point.
-* In `main()`, your program should print the winner, whether `Player 1` or `Player 2`, via their scores. If the scores are the same, there is a tie.  
+  * For example, `!` is worth `0` points while `A` and `a` are both worth `1` point.
+* In `main()`, your program should print, depending on the players' scores, `"Player 1 Wins!"`, `"Player 2 Wins!"`, or `"Tie!"`. 
   
 ### Hints
 
@@ -26,7 +37,7 @@ Complete the implementation of `scrabble.c` at right, such that it determines th
   
 * To find the value at the `n`th index of an array called `arr`, we can write `arr[n]`. We can apply this to strings as well, as strings are arrays of characters. 
 
-* The ASCII standardized system may prove to be helpful to you, as it maps characters to numbers. 
+* Recall that computers represent characters using [ASCII](http://asciitable.com/), a standard that represents each character as a number.
 
 ### How to Test Your Code
 
@@ -49,7 +60,7 @@ Player 2 wins!
 ```
 $ ./scrabble 
 Player 1: COMPUTER
-Player 2: Science
+Player 2: science
 Player 1 wins!
 ```
 
