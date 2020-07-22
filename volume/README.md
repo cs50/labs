@@ -20,12 +20,12 @@ Complete the implementation of `volume.c` at right, such that it changes the vol
     * For example, if `factor` is `2.0`, then your program should double the volume of the audio file in `input` and save the newly generated audio file in `output`.
 * Your program should first read the header from the input file and write the header to the output file. Recall that this header is always exactly 44 bytes long.
 * Your program should then read the rest of the data from the WAV file, one 16-bit (2-byte) sample at a time. Your program should multiply each sample by the `factor` and write the new sample to the output file.
-    * You may assume that the WAV file will use 16-bit samples. In practice, WAV files can have varying numbers of bits per sample, but we'll assume 16-bit samples for simplicity here.
+    * You may assume that the WAV file will use 16-bit signed values as samples. In practice, WAV files can have varying numbers of bits per sample, but we'll assume 16-bit samples for simplicity here.
 * Your program, if it uses `malloc`, must not leak any memory.
 
 ### Hints
 
-* Note that this file includes the header file `stdint.h`, which includes the types `uint8_t` (for storing an 8-bit unsigned integer) and `uint16_t` (for storing a 16-bit unsigned integer). Both may prove helpful to you! For instance, to store a 16-bit sample value, you might use a variable of type `uint16_t`.
+* Note that this file includes the header file `stdint.h`, which includes the types `uint8_t` (for storing an 8-bit unsigned integer) and `int16_t` (for storing a 16-bit signed integer). Both may prove helpful to you! For instance, to store a 16-bit sample value, you might use a variable of type `int16_t`.
 * You may find the documentation for [`fread`](https://man.cs50.io/3/fread) and [`fwrite`](https://man.cs50.io/3/fwrite) helpful here.
     * In particular, note that both functions accept the following arguments:
         * `ptr`: a pointer to the location in memory to store data (when reading from a file) or from which to write data (when writing data to a file)
