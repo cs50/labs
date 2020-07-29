@@ -1,0 +1,6 @@
+lab50:
+  files:
+    - !exclude "*"
+    - !include tournament.py
+    - !include 2018m.csv
+    - !include 2019w.csv
