@@ -1,0 +1,16 @@
+lab50:
+  files:
+    - !exclude "*"
+    - !include sort1
+    - !include sort2
+    - !include sort3
+    - !include sorted10000.txt
+    - !include sorted50000.txt
+    - !include sorted100000.txt
+    - !include reversed10000.txt
+    - !include reversed50000.txt
+    - !include reversed100000.txt
+    - !include shuffled10000.txt
+    - !include shuffled50000.txt
+    - !include shuffled100000.txt
+    - !include answers.txt
