@@ -22,7 +22,7 @@ Mexico: 0.1% chance of winning
 
 ## Background
 
-* In soccer, teams are given [FIFA Ratings](https://en.wikipedia.org/wiki/FIFA_World_Rankings#Current_calculation_method), which are numerical values representing the team's relative skill levels. Higher FIFA ratings indicate better previous game results, and we can determine the probability that a team wins a matchup if we have both teams' FIFA ratings.
+* In soccer, teams are given [FIFA Ratings](https://en.wikipedia.org/wiki/FIFA_World_Rankings#Current_calculation_method), which are numerical values representing the team's relative skill levels. Higher FIFA ratings indicate better previous game results, and we can determine the probability that a team wins a matchup if we have both teams' FIFA ratings via this formula: $P(W_1) = \dfrac{1}{10^{(-\frac{T_2-T_1}{600})} + 1}$ where $P(W_1)$ is the probability that Team 1 wins, $T1$ is the FIFA rating for Team 1, and $T2$ is the FIFA rating for Team 2.
 
 * In the World Cup, 16 teams begin in the knockout round. At each round, half the teams are eliminated. When two teams remain, the winner of the final match is the champion and the loser is the runner-up. 
 
@@ -31,9 +31,9 @@ Mexico: 0.1% chance of winning
 
 ## Implementation Details
 
-* Complete the implementation of `volume.c` at right, such that it simulates a number of tournaments and outputs each team's probability of winning, for all probabilities greater than `0%`.
+* Complete the implementation of `tournament.py` at right, such that it simulates a number of tournaments and outputs each team's probability of winning, for all probabilities greater than `0%`.
 
-* In `main()`, your program should read in the file indicated by the user into the list `bracket`. This list should be a list of dictionaries, each dictionary containing `team` and `rating` keys, where the `rating` is a numerical value. 
+* In `main()`, your program should read in the file indicated by the user into the list `bracket`. This list should be a list of dictionaries, each dictionary containing `team` and `rating` keys, where the `rating` is of type `int`. 
 
   * Two files are provided: `2018m.csv` and `2019w.csv`. 
 
@@ -58,7 +58,7 @@ Mexico: 0.1% chance of winning
 
 * In `simulate_round(bracket)`, your program should simulate a single round of the tournament and return the winners of each game in that round.  
   
-  * Note that in the first round, the first team should play the second, the third team should play the fourth, and so on. 
+  * Note that in the first round, the first team should play the second, the third team should play the fourth, and so on. The results of the game should appear in order, where the winner between the first two teams appears before the winner of the next two teams in the resulting list. 
 
   * Additionally, for example, if the bracket given has 4 teams (third round), your program should simulate 2 games and return a list of the 2 winning teams. 
 
@@ -74,7 +74,7 @@ Mexico: 0.1% chance of winning
         reader = csv.DictReader(var)
     ```
 
-* Recall that a dictionary looks like this: `[('team', 'Uruguay'), ('rating', 976)]`. If this dictionary had variable name `example`, then `example["team"] = Uruguay` and `example["rating"] = 976`. 
+* Recall that a dictionary looks like this: `{'team': 'Uruguay', 'rating': 976}`. If this dictionary had variable name `example`, then `example["team"] = Uruguay` and `example["rating"] = 976`. 
 
 * In Python, to add to a list, one can simply use the `.append()` function. 
 

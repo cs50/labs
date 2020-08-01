@@ -16,15 +16,15 @@ Generation 0, blood type OO
 
 ## Background
 
-Blood types are determined by two alleles (forms of a gene), and the possible alleles include A, B, and O. We get one allele from each parent, and the determination of which allele is random.
+Blood types are determined by two alleles (forms of a gene), and the possible alleles include A, B, and O. Each of a child's parents will randomly pass one of their two blood type alleles to their child. 
 
 For example, if one parent has blood type AO and the other parent has blood type BB, then the child's possible blood types would be AB and OB, depending on which allele is received from each parent. Similarly, if one parent has blood type AO and the other OB, then the child's possible blood types would be AO, OB, AB, and OO.
 
 ## Implementation Details
 
-Complete the implementation of `blood.c` at right, such that it creates a family of a specified generation size and assigns blood type alleles to each family member. The highest generation will have alleles assigned randomly to them.
+Complete the implementation of `inheritance.c` at right, such that it creates a family of a specified generation size and assigns blood type alleles to each family member. The oldest generation will have alleles assigned randomly to them.
 
-* First, notice that we've created a `struct` named `person`. Each `person` will have two pointers, pointing to the person's parents. Each parent is of type `person` as well, and they're stored in an array named `parents`. Additionally, each `person` will have two alleles, one from each parent, stored in an array named `alleles`. 
+* First, notice that we've created a `struct` named `person`. Each `person` will have two parents, each being a pointer that points to a `person`. They are stored in an array named `parents`. Additionally, each `person` will have two alleles, one from each parent, stored in an array named `alleles`. 
 * Notice that there are four helper functions. 
   * `create_family()` takes as input an integer, allocates memory for the family, and returns a person with a family of that specified number of generations.
     * For example, `create_family(3)` will return a person with parents and grandparents.  
@@ -38,8 +38,8 @@ Complete the implementation of `blood.c` at right, such that it creates a family
   * Finally, the memory associated with this family is freed with `free_family(p)`. 
 * In `create_family()`, your program should create a family with the specified number of generations. 
   * When creating a family, first allocate memory for a new person. 
-  * Then, if necessary, recursively create the person's parents and use the parents' alleles to assign the child's alleles. Note the rules for assigning alleles described above—the determination of which of the two alleles the child gets from a parent is random.
-  * If it is not necessary to create parents, set the person's parent pointers to `NULL` and randomly assign its alleles. 
+  * Then, if the input to the function is not `1`, recursively create the person's parents and use the parents' alleles to assign the child's alleles. Note the rules for assigning alleles described above—the determination of which of the two alleles the child gets from a parent is random.
+  * If the input to the function is `1`, set the person's parent pointers to `NULL` and randomly assign its alleles. 
   * For example, your program should work as follows for a family of generation size three. 
     * A person, the child, is created. Currently, the child has no parents and no alleles. 
     * The person's parents are created. Neither parent has parents or alleles. 
