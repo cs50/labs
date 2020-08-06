@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main()
+int main(void)
 {
     // Prompt for start size
     int start = get_int("Start size: ");
