@@ -2,4 +2,4 @@ lab50:
   files:
     - !exclude "*"
     - !include volume.c
-    - !include scale.wav
+    - !include input.wav
