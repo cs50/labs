@@ -3,7 +3,7 @@
 Determine the blood types of each member of a family. 
 
 ```
-$ ./blood
+$ ./inheritance
 Generation 0, blood type OO
     Generation 1, blood type AO
         Generation 2, blood type OA
@@ -61,12 +61,12 @@ Complete the implementation of `inheritance.c` at right, such that it creates a 
 
 ### How to Test Your Code
 
-Upon running `./blood`, your program should adhere to the rules described in the background. The child should have two alleles, one from each parent. The parents should each have two alleles, one from each of their parents. 
+Upon running `./inheritance`, your program should adhere to the rules described in the background. The child should have two alleles, one from each parent. The parents should each have two alleles, one from each of their parents. 
 
 For example, in the example below, the child in Generation 0 received an O allele from both Generation 1 parents. The first parent received an A from the first grandparent and a O from the second grandparent. Similarly, the second parent recieved an O and a B from their grandparents.
 
 ```
-$ ./blood
+$ ./inheritance
 Generation 0, blood type OO
     Generation 1, blood type AO
         Generation 2, blood type OA
