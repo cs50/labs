@@ -2,3 +2,8 @@ lab50:
   files:
     - !exclude "*"
     - !include scrabble.c
+
+check50:
+  files:
+    - !exclude "*"
+    - !include scrabble.c

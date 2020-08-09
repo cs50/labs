@@ -3,3 +3,8 @@ lab50:
     - !exclude "*"
     - !include volume.c
     - !include input.wav
+
+check50:
+  files:
+    - !exclude "*"
+    - !include volume.c

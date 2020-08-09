@@ -2,3 +2,9 @@ lab50:
   files:
     - !exclude "*"
     - !include inheritance.c
+
+check50:
+  files:
+    - !exclude "*"
+    - !include inheritance.c
+    - !include testing.c
