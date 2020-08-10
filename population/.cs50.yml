@@ -2,3 +2,8 @@ lab50:
   files:
     - !exclude "*"
     - !include population.c
+
+check50:
+  files:
+    - !exclude "*"
+    - !include population.c

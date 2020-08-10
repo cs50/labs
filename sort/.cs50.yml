@@ -14,3 +14,8 @@ lab50:
     - !include random10000.txt
     - !include random50000.txt
     - !include answers.txt
+
+check50:
+  files:
+    - !exclude "*"
+    - !include answers.txt
