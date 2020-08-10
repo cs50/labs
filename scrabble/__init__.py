@@ -23,26 +23,26 @@ def tie_punctuation():
 
 @check50.check(compiles)
 def test1():
-    """handles specification test 1"""
+    """correctly identifies 'Question?' and 'Question!' as a tie"""
     check50.run("./scrabble").stdin("Question?").stdin("Question!").stdout("Tie!").exit(0)
 
 @check50.check(compiles)
 def test2():
-    """handles specification test 2"""
+    """correctly identifies 'hai!' as winner over 'Oh,'"""
     check50.run("./scrabble").stdin("Oh,").stdin("hai!").stdout("Player 2 wins!").exit(0)
 
 @check50.check(compiles)
 def test3():
-    """handles specification test 3"""
+    """correctly identifies 'COMPUTER' as winner over 'science'"""
     check50.run("./scrabble").stdin("COMPUTER").stdin("science").stdout("Player 1 wins!").exit(0)
 
 @check50.check(compiles)
 def test4():
-    """handles specification test 4"""
+    """correctly identifies 'Scrabble' as winner over 'wiNNeR'"""
     check50.run("./scrabble").stdin("Scrabble").stdin("wiNNeR").stdout("Player 1 wins!").exit(0)
 
 @check50.check(compiles)
 def complex_case():
-    """handles complex cases"""
+    """correctly identifies 'Skating!' as winner over 'figure?'"""
     check50.run("./scrabble").stdin("figure?").stdin("Skating!").stdout("Player 2 wins!").exit(0)
 

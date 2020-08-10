@@ -6,6 +6,7 @@ import re
 def exists():
     """inheritance.c exists"""
     check50.exists("inheritance.c")
+    check50.include("testing.c")
 
 @check50.check(exists)
 def compiles():
@@ -23,11 +24,6 @@ def compiles():
         f.write("\n")
         f.write(testing)
     check50.c.compile("inheritance_test.c", lcs50=True)
-
-@check50.check(compiles)
-def frees_memory():
-    """free_family results in no memory leakages"""
-    check50.c.valgrind("./inheritance").exit(0)
 
 @check50.check(compiles)
 def correct_size():
@@ -49,3 +45,8 @@ def inheritance_rules_2():
 def inheritance_rules_3():
     """create_family follows inheritance rules 3"""
     check50.run("./inheritance_test").stdout(".*allele_true.*").exit(0)
+
+@check50.check(compiles)
+def frees_memory():
+    """free_family results in no memory leakages"""
+    check50.c.valgrind("./inheritance").exit(0)

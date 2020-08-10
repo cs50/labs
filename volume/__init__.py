@@ -17,21 +17,21 @@ def compiles():
 @check50.check(compiles)
 def audio_half():
     """reduces audio volume, factor of 0.5 correctly"""
-    check50.run("./volume input.wav output.wav 0.5").exit(0, timeout=10)
+    check50.run("./volume input.wav output.wav 0.5").exit(0)
     if check50.hash("output.wav") != HASHES[0]:
         raise check50.Failure("audio is not correctly altered, factor of 0.5")
 
 @check50.check(compiles)
 def audio_tenth():
     """reduces audio volume, factor of 0.1 correctly"""
-    check50.run("./volume input.wav output.wav 0.1").exit(0, timeout=10)
+    check50.run("./volume input.wav output.wav 0.1").exit(0)
     if check50.hash("output.wav") != HASHES[1]:
         raise check50.Failure("audio is not correctly altered, factor of 0.1")
 
 @check50.check(compiles)
 def audio_x2():
     """increases audio volume, factor of 2 correctly"""
-    check50.run("./volume input.wav output.wav 2").exit(0, timeout=10)
+    check50.run("./volume input.wav output.wav 2").exit(0)
     if check50.hash("output.wav") != HASHES[2]:
         raise check50.Failure("audio is not correctly altered, factor of 2")
 
