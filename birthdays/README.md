@@ -4,7 +4,7 @@ Create a webpage that keeps track of friends' birthdays.
 
 ## Implementation Details
 
-Build a webpage that keeps track of friends' birthdays in a database and displays the birthdays by implementing `application.py`, `index.html`, and `styles.css` at right.
+Complete the implementations of `application.py` and `index.html` at right, such that the webpage keeps track of names and birthdays in a database and displays the birthdays in a table.
 
 * Note that the database `birthdays.db` has been linked to `application.py`. Check out the structure of this database – there's a `name` column of data type `varchar(255)`, a `month` and a `day` column of data type `smallint`. 
 
