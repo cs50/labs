@@ -9,6 +9,16 @@ db = SQL("sqlite:///birthdays.db")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    # TODO: If the request method is GET, display the entries in the database. If the method is POST, add the entry into the database.
-    return render_template("index.html")
+    if request.method == "POST":
 
+        # TODO: Add the user's entry into the database
+
+        return redirect("/")
+
+    else:
+
+        # TODO: Display the entries in the database on index.html
+
+        return render_template("index.html")
+
+    

@@ -16,7 +16,7 @@ Complete the implementations of `application.py` and `index.html` at right, such
   
 ### Hints
 
-* Recall that when a user inputs information into a form, this information should be `posted` upon submission. 
+* Recall that when a user inputs information into a form, this information should be `POST`ed upon submission. 
   
 * In `application.py`, we can obtain the information posted by the user via `request.form.get("args")` where `args` is the `name` attribute of the `input` in `index.html`.
   * For example, if in `index.html`, we have `<input name="value" type="text"></input>`, we can write `request.form.get("value")` in `application.py` to extract the user's input.
@@ -30,7 +30,7 @@ Complete the implementations of `application.py` and `index.html` at right, such
 You should see your webpage upon running the following in the terminal window: 
 
 ```
-$ flask-run
+$ flask run
 ```
 
 
