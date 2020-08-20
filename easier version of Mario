@@ -1,0 +1,8 @@
+if (easier version of Mario < than comfortable with programming)
+{
+ printf("easier version of Mario is less than comfortable with programming\n"); 
+}
+ else 
+{
+printf("easier version of Mario is not less than comfortable with programming\n");
+}
