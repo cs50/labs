@@ -1,0 +1,6 @@
+lab50:
+  files:
+    - !include trivia.html
+    - !include styles.css
+
+
