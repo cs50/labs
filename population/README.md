@@ -6,7 +6,7 @@ Determine how long it takes for a population to reach a particular size.
 $ ./population
 Start size: 100
 End size: 200
-9 years
+Years: 9
 ```
 
 ## Populations
