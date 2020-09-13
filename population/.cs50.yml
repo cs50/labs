@@ -6,4 +6,4 @@ lab50:
 check50:
   files:
     - !exclude "*"
-    - !include population.c
+    - !require population.c

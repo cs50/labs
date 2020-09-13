@@ -18,4 +18,4 @@ lab50:
 check50:
   files:
     - !exclude "*"
-    - !include answers.txt
+    - !require answers.txt

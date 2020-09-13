@@ -8,4 +8,4 @@ lab50:
 check50:
   files:
     - !exclude "*"
-    - !include tournament.py
+    - !require tournament.py

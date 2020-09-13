@@ -3,15 +3,9 @@
 
 int main(void)
 {
-    // Prompt for start size
-    int start = get_int("Start size: ");
+    // TODO: Prompt for start size
 
-    // TODO: Ensure start size at least 9
-
-    // Prompt for end size
-    int end = get_int("End size: ");
-
-    // TODO: Ensure end size greater than start size
+    // TODO: Prompt for end size
 
     // TODO: Calculate number of years until we reach threshold
 
