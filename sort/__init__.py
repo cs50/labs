@@ -13,7 +13,7 @@ def sorts():
 
     check50.log("checking that sorts are classified correctly...")
 
-    expected = ["sort1 uses: [Bb]ubble", "sort2 uses: [Mm]erge", "sort3 uses: [Ss]election"]
+    expected = ["sort1 uses:\s*[Bb]ubble", "sort2 uses:\s*[Mm]erge", "sort3 uses:\s*[Ss]election"]
     actual = open("answers.txt", "r").read()
 
     if (len(findall("sort[1-3]", actual)) != 3):
