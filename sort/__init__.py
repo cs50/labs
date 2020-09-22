@@ -16,9 +16,6 @@ def sorts():
     expected = ["sort1 uses:\s*[Bb]ubble", "sort2 uses:\s*[Mm]erge", "sort3 uses:\s*[Ss]election"]
     actual = open("answers.txt", "r").read()
 
-    if (len(findall("sort[1-3]", actual)) != 3):
-        raise check50.Failure("Incorrect formatting.")
-
     for e in expected:
         if not search(e, actual):
             raise check50.Failure("Incorrect assignment of sorts.")
