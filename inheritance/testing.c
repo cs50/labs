@@ -1,4 +1,4 @@
-bool check_alleles(person *p)
+int check_alleles(person *p)
 {
     if (p -> parents[0] == NULL)
     {
@@ -21,7 +21,7 @@ bool check_alleles(person *p)
     }
 }
 
-bool check_size(person *p, int n)
+int check_size(person *p, int n)
 {
     if (p -> parents[0] == NULL)
     {
