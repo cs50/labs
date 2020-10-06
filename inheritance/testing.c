@@ -2,19 +2,19 @@ bool check_alleles(person *p)
 {
     if (p -> parents[0] == NULL)
     {
-        return true;
+        return 1;
     }
 
     else
     {
         if ((p->alleles[0] != p->parents[0]->alleles[0]) && (p->alleles[0] != p->parents[0]->alleles[1]))
         {
-            return false;
+            return 0;
         }
 
         if ((p->alleles[1] != p->parents[1]->alleles[0]) && (p->alleles[1] != p->parents[1]->alleles[1]))
         {
-            return false;
+            return 0;
         }
 
         return (check_alleles(p -> parents[0]) && check_alleles(p -> parents[1]));
