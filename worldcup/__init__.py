@@ -16,46 +16,27 @@ def exists():
 
 @check50.check(exists)
 def imports():
+    """tournament.py imports"""
     check50.py.import_("tournament.py")
 
 @check50.check(imports)
-def sim_round_2():
-    """simulate round function handling a bracket of size 2"""
-    check_round(BRACKET2)
-
-@check50.check(imports)
-def sim_round_4():
-    """simulate round function handling a bracket of size 4"""
-    check_round(BRACKET4)
-
-@check50.check(imports)
-def sim_round_8():
-    """simulate round function handling a bracket of size 8"""
-    check_round(BRACKET8)
-
-@check50.check(imports)
-def sim_round_16():
-    """simulate round function handling a bracket of size 16"""
-    check_round(BRACKET16)
-
-@check50.check(imports)
 def sim_tournament_2():
-    """simulate round function handling a bracket of size 2"""
+    """simulate_tournament handles a bracket of size 2"""
     check_tournament(BRACKET2)
 
 @check50.check(imports)
 def sim_tournament_4():
-    """simulate round function handling a bracket of size 4"""
+    """simulate_tournament handles a bracket of size 4"""
     check_tournament(BRACKET4)
 
 @check50.check(imports)
 def sim_tournament_8():
-    """simulate round function handling a bracket of size 8"""
+    """simulate_tournament handles a bracket of size 8"""
     check_tournament(BRACKET8)
 
 @check50.check(imports)
 def sim_tournament_16():
-    """simulate round function handling a bracket of size 16"""
+    """simulate_tournament handles a bracket of size 16"""
     check_tournament(BRACKET16)
 
 @check50.check(imports)
@@ -67,6 +48,36 @@ def counts():
     if (sum(percents) < 99 or sum(percents) > 101):
         raise check50.Failure("fails to keep track of wins")
 
+@check50.check(imports)
+def correct_teams1():
+    """correctly reports team information for Men's World Cup"""
+    actual = check50.run("python3 tournament.py 2018m.csv").stdout()
+    expected = ["Belgium", "Brazil", "Portugal", "Spain"]
+    not_expected = ["Germany"]
+    for team in expected:
+        if team not in actual:
+            raise check50.Failure(f"did not find team {team}")
+    for team in not_expected:
+        if team in actual:
+            raise check50.Failure(f"incorrectly found team {team}")
+
+@check50.check(imports)
+def correct_teams2():
+    """correctly reports team information for Women's World Cup"""
+    actual = check50.run("python3 tournament.py 2019w.csv").stdout()
+    expected = ["Germany", "United States", "England"]
+    not_expected = ["Belgium"]
+    for team in expected:
+        if team not in actual:
+            raise check50.Failure(f"did not find team {team}")
+    for team in not_expected:
+        if team in actual:
+            raise check50.Failure(f"incorrectly found team {team}")
+
+    percents = re.findall("[0-9]*\.[0-9]", actual)
+    percents = [float(x) for x in percents]
+    if (sum(percents) < 99 or sum(percents) > 101):
+        raise check50.Failure("fails to keep track of wins")
 
 def check_round(*args):
     tournament = check50.py.import_("tournament.py")
