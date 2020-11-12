@@ -1,6 +1,7 @@
 lab50:
-  files:
+  files: &lab50_files
     - !include trivia.html
     - !include styles.css
 
-
+submit50:
+  files: *lab50_files
