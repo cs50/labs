@@ -20,8 +20,8 @@ def sorts():
 
     check50.log("checking that sorts are classified correctly...")
 
-    expected = ["sort1 uses:\s*[Bb]ubble", "sort2 uses:\s*[Mm]erge", "sort3 uses:\s*[Ss]election"]
-    actual = open("answers.txt", "r").read()
+    expected = ["sort1 uses:\s*bubble", "sort2 uses:\s*merge", "sort3 uses:\s*selection"]
+    actual = open("answers.txt", "r").read().lower()
 
     for e in expected:
         if not search(e, actual):
