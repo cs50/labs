@@ -5,6 +5,7 @@ lab50:
 
 submit50:
   files: *lab50_files
+  style: false
 
 check50:
   files: *lab50_files
