@@ -28,18 +28,28 @@ def test1():
 
 @check50.check(compiles)
 def test2():
+    """correctly identifies 'drawing' and 'illustration' as a tie"""
+    check50.run("./scrabble").stdin("drawing").stdin("illustration").stdout("[Tt]ie!?", "Tie!").exit(0)
+
+@check50.check(compiles)
+def test3():
     """correctly identifies 'hai!' as winner over 'Oh,'"""
     check50.run("./scrabble").stdin("Oh,").stdin("hai!").stdout("[Pp]layer 2 [Ww]ins!?", "Player 2 wins!").exit(0)
 
 @check50.check(compiles)
-def test3():
+def test4():
     """correctly identifies 'COMPUTER' as winner over 'science'"""
     check50.run("./scrabble").stdin("COMPUTER").stdin("science").stdout("[Pp]layer 1 [Ww]ins!?", "Player 1 wins!").exit(0)
 
 @check50.check(compiles)
-def test4():
+def test5():
     """correctly identifies 'Scrabble' as winner over 'wiNNeR'"""
     check50.run("./scrabble").stdin("Scrabble").stdin("wiNNeR").stdout("[Pp]layer 1 [Ww]ins!?", "Player 1 wins!").exit(0)
+
+@check50.check(compiles)
+def test6():
+    """correctly identifies 'pig' as winner over 'dog'"""
+    check50.run("./scrabble").stdin("pig").stdin("dog").stdout("[Pp]layer 1 [Ww]ins!?", "Player 1 wins!").exit(0)
 
 @check50.check(compiles)
 def complex_case():
