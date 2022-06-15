@@ -1,6 +1,5 @@
 import check50
-from re import search
-from re import findall
+from re import search, IGNORECASE
 
 @check50.check()
 def exists():
@@ -20,10 +19,10 @@ def sorts():
 
     check50.log("checking that sorts are classified correctly...")
 
-    expected = ["sort1 uses:\s*[Bb]ubble", "sort2 uses:\s*[Mm]erge", "sort3 uses:\s*[Ss]election"]
+    expected = ["sort1 uses:\s*bubble", "sort2 uses:\s*merge", "sort3 uses:\s*selection"]
     actual = open("answers.txt", "r").read()
 
     for e in expected:
-        if not search(e, actual):
+        if not search(e, actual, IGNORECASE):
             raise check50.Failure("Incorrect assignment of sorts.")
 
