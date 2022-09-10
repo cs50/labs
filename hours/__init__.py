@@ -17,30 +17,30 @@ def compiles():
 @check50.check(compiles)
 def sum_3_weeks():
     """hours sums hours over 3 weeks."""
-    check_hours(type="T", weeks="3", data=[8, 8, 10], expected="26")
+    check_hours(type="T", data=[8, 8, 10], expected="26")
 
 
 @check50.check(compiles)
 def sum_5_weeks():
     """hours sums hours over 5 weeks."""
-    check_hours(type="T", weeks="5", data=[5, 5, 6, 7, 8], expected="31")
+    check_hours(type="T", data=[5, 5, 6, 7, 8], expected="31")
 
 
 @check50.check(compiles)
 def average_3_weeks():
     """hours averages hours over 3 weeks."""
-    check_hours(type="A", weeks="3", data=[8, 9, 10], expected="9")
+    check_hours(type="A", data=[8, 9, 10], expected="9")
 
 
 @check50.check(compiles)
 def average_5_weeks():
     """hours averages hours over 4 weeks."""
-    check_hours(type="A", weeks="4", data=[8, 8, 8, 6], expected="7.5")
+    check_hours(type="A", data=[8, 8, 8, 6], expected="7.5")
 
 
 # Helpers
-def check_hours(type: str, weeks: str, data: list, expected: str):
-    program = check50.run("./hours").stdin(weeks)
+def check_hours(type: str, data: list, expected: str):
+    program = check50.run("./hours").stdin(str(len(data)))
     for hours in data:
         program.stdin(str(hours))
     program.stdin(type).stdout(expected)
