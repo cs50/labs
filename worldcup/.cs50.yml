@@ -9,6 +9,7 @@ check50:
   files: &check50_files
     - !exclude "*"
     - !require tournament.py
+    - !require answers.txt
 
 submit50:
   files: *check50_files

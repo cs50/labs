@@ -4,7 +4,7 @@ import check50
 import check50.py
 
 BRACKET2 = [
-    {"team": "Uruguay", "rating": 976}, 
+    {"team": "Uruguay", "rating": 976},
     {"team": "Portugal", "rating": 1306},
 ]
 BRACKET4 = [
@@ -41,12 +41,24 @@ BRACKET16 = [
     {"team": "Colombia", "rating": 989},
     {"team": "England", "rating": 1040},
 ]
+QUESTIONS = [
+    "What predictions did you notice changing as you increased the number of simulations?",
+    'Suppose you\'re charged a fee for each second of compute time your program uses.\nAfter how many simulations would you call the predictions "good enough"?',
+]
+SIMULATION_RUNS = [
+    "10",
+    "100",
+    "1000",
+    "10000",
+    "100000",
+    "1000000",
+]
 
 
 @check50.check()
 def exists():
     """tournament.py exists"""
-    check50.exists("tournament.py")
+    check50.exists("tournament.py", "answers.txt")
     check50.include("2018m.csv", "2019w.csv")
 
 
@@ -121,6 +133,49 @@ def correct_teams2():
     percents = [float(x) for x in percents]
     if sum(percents) < 99 or sum(percents) > 101:
         raise check50.Failure("fails to keep track of wins")
+
+
+@check50.check(imports)
+def check_answers():
+    """answers.txt is complete"""
+    with open("answers.txt") as f:
+        contents = f.read()
+
+        # Check timings
+        for runs in SIMULATION_RUNS:
+            match = re.search(
+                rf"(?i){re.escape(runs)} simulations:\s*(\d+m\d\.\d\d\ds)(?<!0m0\.000s)",
+                contents,
+            )
+            if not match:
+                raise check50.Failure(
+                    "answers.txt does not include timings for each number of simulation runs",
+                    help="Did you put all of your answers in 0m0.000s format?",
+                )
+
+        # Check free response
+        num_questions = len(QUESTIONS)
+        for i, question in enumerate(QUESTIONS):
+
+            # Search for question, with at least 3 words afterwards
+            if i + 1 < num_questions:
+                regex = (
+                    rf"(?i){re.escape(question)}"
+                    + r":\s*(\S+\s+){3,}"
+                    + rf"{re.escape(QUESTIONS[i + 1])}"
+                )
+            else:
+                regex = rf"(?i){re.escape(question)}" + r":\s*(\S+\s+){3,}"
+
+            match = re.search(regex, contents)
+            if not match:
+                raise check50.Failure(
+                    "answers.txt does not include answers to free response questions",
+                    help="Did you write a sufficient response to each question?",
+                )
+
+
+# Helpers
 
 
 def check_round(*args):
