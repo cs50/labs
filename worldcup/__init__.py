@@ -144,7 +144,7 @@ def check_answers():
         # Check timings
         for runs in SIMULATION_RUNS:
             match = re.search(
-                rf"(?i){re.escape(runs)} simulations:\s*(\d+m\d\.\d\d\ds)(?<!0m0\.000s)",
+                rf"(?i){re.escape(runs)} simulations:\s*(\d+m\d+\.\d\d\ds)(?<!0m0\.000s)",
                 contents,
             )
             if not match:
