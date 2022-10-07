@@ -159,12 +159,16 @@ def check_answers():
 
             # Search for question, with at least 3 words afterwards
             if i + 1 < num_questions:
+
+                # Regex includes question being asked, response, and following question
                 regex = (
                     rf"(?i){re.escape(question)}"
                     + r":\s*(\S+\s+){3,}"
                     + rf"{re.escape(QUESTIONS[i + 1])}"
                 )
             else:
+
+                # Last regex includes question being asked and response
                 regex = rf"(?i){re.escape(question)}" + r":\s*(\S+\s+){3,}"
 
             match = re.search(regex, contents)
