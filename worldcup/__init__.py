@@ -42,7 +42,7 @@ BRACKET16 = [
     {"team": "England", "rating": 1040},
 ]
 QUESTIONS = [
-    "What predictions did you notice changing as you increased the number of simulations?",
+    "Which predictions, if any, proved incorrect as you increased the number of simulations?",
     'Suppose you\'re charged a fee for each second of compute time your program uses.\nAfter how many simulations would you call the predictions "good enough"?',
 ]
 SIMULATION_RUNS = [
