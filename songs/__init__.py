@@ -5,14 +5,20 @@ import sqlparse
 
 
 @check50.check()
-def exists():
+def sql_exists():
     """SQL files exists"""
     for i in range(1, 8):
         check50.exists(f"{i}.sql")
     check50.include("songs.db")
 
 
-@check50.check(exists)
+@check50.check()
+def answers_exists():
+    """answers.txt exists"""
+    check50.exists("answers.txt")
+
+
+@check50.check(sql_exists)
 def test1():
     """1.sql produces correct result"""
     solution = {
@@ -120,7 +126,7 @@ def test1():
     check_single_col(run_query("1.sql"), solution, ordered=False)
 
 
-@check50.check(exists)
+@check50.check(sql_exists)
 def test2():
     """2.sql produces correct result"""
     solution = [
@@ -228,7 +234,7 @@ def test2():
     check_single_col(run_query("2.sql"), solution, ordered=True)
 
 
-@check50.check(exists)
+@check50.check(sql_exists)
 def test3():
     """3.sql produces correct result"""
     check_single_col(
@@ -244,7 +250,7 @@ def test3():
     )
 
 
-@check50.check(exists)
+@check50.check(sql_exists)
 def test4():
     """4.sql produces correct result"""
     check_single_col(
@@ -260,13 +266,13 @@ def test4():
     )
 
 
-@check50.check(exists)
+@check50.check(sql_exists)
 def test5():
     """5.sql produces correct result"""
     check_single_cell(run_query("5.sql"), "0.65906", floating=True)
 
 
-@check50.check(exists)
+@check50.check(sql_exists)
 def test6():
     """6.sql produces correct result"""
     check_single_col(
@@ -283,13 +289,13 @@ def test6():
     )
 
 
-@check50.check(exists)
+@check50.check(sql_exists)
 def test7():
     """7.sql produces correct result"""
     check_single_cell(run_query("7.sql"), "0.599", floating=True)
 
 
-@check50.check(exists)
+@check50.check(sql_exists)
 def test8():
     """8.sql produces correct result"""
     check_single_col(
@@ -316,6 +322,16 @@ def test8():
         },
         ordered=False,
     )
+
+
+@check50.check(answers_exists)
+def answers():
+    """answers.txt includes reflection"""
+    with open("answers.txt", "r") as f:
+        contents = f.read()
+
+    if len(contents.split()) < 10:
+        raise check50.Failure("answers.txt does not contain a sufficiently long reflection")
 
 
 def run_query(filename):
