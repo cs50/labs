@@ -46,4 +46,12 @@ def regex(input):
 
 
 def check_half(bill: str, tax: str, tip: str, expected: str):
-    check50.run("./half").stdin(bill).stdin(tax).stdin(tip).stdout(regex(expected), expected, regex=True)
+    output = check50.run("./half").stdin(bill).stdin(tax).stdin(tip).stdout()
+    regex_output = re.search(regex(expected), output)
+    if regex_output == None:
+        if "$" not in output:
+            help = "Are you sure you included a dollar sign?"
+        else:
+            help = "Are you sure the string contains the correct dollar amount?"
+
+        raise check50.Missing(f"${expected}", output, help=help)
